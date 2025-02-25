@@ -18,6 +18,7 @@ type RosAccelerator interface {
 	AttrAcceleratorName() alicloudroscdkcore.IResolvable
 	AttrAutoPay() alicloudroscdkcore.IResolvable
 	AttrAutoUseCoupon() alicloudroscdkcore.IResolvable
+	AttrDnsName() alicloudroscdkcore.IResolvable
 	AttrDuration() alicloudroscdkcore.IResolvable
 	AttrOrderId() alicloudroscdkcore.IResolvable
 	AttrPaymentType() alicloudroscdkcore.IResolvable
@@ -134,6 +135,9 @@ type RosAccelerator interface {
 	AddRosDependency(target *string)
 	// Sets the deletion policy of the resource based on the removal policy specified.
 	ApplyRemovalPolicy(policy alicloudroscdkcore.RemovalPolicy, options *alicloudroscdkcore.RemovalPolicyOptions)
+	FetchCondition() alicloudroscdkcore.RosCondition
+	FetchDesc() *string
+	FetchRosDependency() *[]*string
 	// Returns a token for an runtime attribute of this resource.
 	//
 	// Ideally, use generated attribute accessors (e.g. `resource.arn`), but this can be used for future compatibility
@@ -241,6 +245,16 @@ func (j *jsiiProxy_RosAccelerator) AttrAutoUseCoupon() alicloudroscdkcore.IResol
 	_jsii_.Get(
 		j,
 		"attrAutoUseCoupon",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_RosAccelerator) AttrDnsName() alicloudroscdkcore.IResolvable {
+	var returns alicloudroscdkcore.IResolvable
+	_jsii_.Get(
+		j,
+		"attrDnsName",
 		&returns,
 	)
 	return returns
@@ -848,6 +862,45 @@ func (r *jsiiProxy_RosAccelerator) ApplyRemovalPolicy(policy alicloudroscdkcore.
 		"applyRemovalPolicy",
 		[]interface{}{policy, options},
 	)
+}
+
+func (r *jsiiProxy_RosAccelerator) FetchCondition() alicloudroscdkcore.RosCondition {
+	var returns alicloudroscdkcore.RosCondition
+
+	_jsii_.Invoke(
+		r,
+		"fetchCondition",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (r *jsiiProxy_RosAccelerator) FetchDesc() *string {
+	var returns *string
+
+	_jsii_.Invoke(
+		r,
+		"fetchDesc",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (r *jsiiProxy_RosAccelerator) FetchRosDependency() *[]*string {
+	var returns *[]*string
+
+	_jsii_.Invoke(
+		r,
+		"fetchRosDependency",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
 }
 
 func (r *jsiiProxy_RosAccelerator) GetAtt(attributeName *string) alicloudroscdkcore.Reference {

@@ -14,6 +14,7 @@ type RosActivation interface {
 	alicloudroscdkcore.RosResource
 	AttrActivationCode() alicloudroscdkcore.IResolvable
 	AttrActivationId() alicloudroscdkcore.IResolvable
+	AttrArn() alicloudroscdkcore.IResolvable
 	AttrDeregisteredCount() alicloudroscdkcore.IResolvable
 	AttrRegisteredCount() alicloudroscdkcore.IResolvable
 	// Returns: the stack trace of the point where this Resource was created from, sourced
@@ -47,6 +48,8 @@ type RosActivation interface {
 	// If, by any chance, the intrinsic reference of a resource is not a string, you could
 	// coerce it to an IResolvable through `Lazy.any({ produce: resource.ref })`.
 	Ref() *string
+	ResourceGroupId() interface{}
+	SetResourceGroupId(val interface{})
 	// Options for this resource, such as condition, update policy etc.
 	RosOptions() alicloudroscdkcore.IRosResourceOptions
 	RosProperties() *map[string]interface{}
@@ -119,6 +122,9 @@ type RosActivation interface {
 	AddRosDependency(target *string)
 	// Sets the deletion policy of the resource based on the removal policy specified.
 	ApplyRemovalPolicy(policy alicloudroscdkcore.RemovalPolicy, options *alicloudroscdkcore.RemovalPolicyOptions)
+	FetchCondition() alicloudroscdkcore.RosCondition
+	FetchDesc() *string
+	FetchRosDependency() *[]*string
 	// Returns a token for an runtime attribute of this resource.
 	//
 	// Ideally, use generated attribute accessors (e.g. `resource.arn`), but this can be used for future compatibility
@@ -196,6 +202,16 @@ func (j *jsiiProxy_RosActivation) AttrActivationId() alicloudroscdkcore.IResolva
 	_jsii_.Get(
 		j,
 		"attrActivationId",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_RosActivation) AttrArn() alicloudroscdkcore.IResolvable {
+	var returns alicloudroscdkcore.IResolvable
+	_jsii_.Get(
+		j,
+		"attrArn",
 		&returns,
 	)
 	return returns
@@ -306,6 +322,16 @@ func (j *jsiiProxy_RosActivation) Ref() *string {
 	_jsii_.Get(
 		j,
 		"ref",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_RosActivation) ResourceGroupId() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"resourceGroupId",
 		&returns,
 	)
 	return returns
@@ -460,6 +486,17 @@ func (j *jsiiProxy_RosActivation)SetIpAddressRange(val interface{}) {
 	_jsii_.Set(
 		j,
 		"ipAddressRange",
+		val,
+	)
+}
+
+func (j *jsiiProxy_RosActivation)SetResourceGroupId(val interface{}) {
+	if err := j.validateSetResourceGroupIdParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"resourceGroupId",
 		val,
 	)
 }
@@ -678,6 +715,45 @@ func (r *jsiiProxy_RosActivation) ApplyRemovalPolicy(policy alicloudroscdkcore.R
 		"applyRemovalPolicy",
 		[]interface{}{policy, options},
 	)
+}
+
+func (r *jsiiProxy_RosActivation) FetchCondition() alicloudroscdkcore.RosCondition {
+	var returns alicloudroscdkcore.RosCondition
+
+	_jsii_.Invoke(
+		r,
+		"fetchCondition",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (r *jsiiProxy_RosActivation) FetchDesc() *string {
+	var returns *string
+
+	_jsii_.Invoke(
+		r,
+		"fetchDesc",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (r *jsiiProxy_RosActivation) FetchRosDependency() *[]*string {
+	var returns *[]*string
+
+	_jsii_.Invoke(
+		r,
+		"fetchRosDependency",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
 }
 
 func (r *jsiiProxy_RosActivation) GetAtt(attributeName *string) alicloudroscdkcore.Reference {

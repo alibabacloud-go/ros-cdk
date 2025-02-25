@@ -9,9 +9,10 @@ import (
 	"github.com/aws/constructs-go/constructs/v3"
 )
 
-// This class is a base encapsulation around the ROS resource type `ALIYUN::VPC::VpnGateway`, which is used to create a VPN gateway.
+// This class is a base encapsulation around the ROS resource type `ALIYUN::VPC::VpnGateway`.
 type RosVpnGateway interface {
 	alicloudroscdkcore.RosResource
+	AttrArn() alicloudroscdkcore.IResolvable
 	AttrDisasterRecoveryInternetIp() alicloudroscdkcore.IResolvable
 	AttrDisasterRecoveryVSwitchId() alicloudroscdkcore.IResolvable
 	AttrInternetIp() alicloudroscdkcore.IResolvable
@@ -144,6 +145,9 @@ type RosVpnGateway interface {
 	AddRosDependency(target *string)
 	// Sets the deletion policy of the resource based on the removal policy specified.
 	ApplyRemovalPolicy(policy alicloudroscdkcore.RemovalPolicy, options *alicloudroscdkcore.RemovalPolicyOptions)
+	FetchCondition() alicloudroscdkcore.RosCondition
+	FetchDesc() *string
+	FetchRosDependency() *[]*string
 	// Returns a token for an runtime attribute of this resource.
 	//
 	// Ideally, use generated attribute accessors (e.g. `resource.arn`), but this can be used for future compatibility
@@ -204,6 +208,16 @@ type RosVpnGateway interface {
 // The jsii proxy struct for RosVpnGateway
 type jsiiProxy_RosVpnGateway struct {
 	internal.Type__alicloudroscdkcoreRosResource
+}
+
+func (j *jsiiProxy_RosVpnGateway) AttrArn() alicloudroscdkcore.IResolvable {
+	var returns alicloudroscdkcore.IResolvable
+	_jsii_.Get(
+		j,
+		"attrArn",
+		&returns,
+	)
+	return returns
 }
 
 func (j *jsiiProxy_RosVpnGateway) AttrDisasterRecoveryInternetIp() alicloudroscdkcore.IResolvable {
@@ -962,6 +976,45 @@ func (r *jsiiProxy_RosVpnGateway) ApplyRemovalPolicy(policy alicloudroscdkcore.R
 		"applyRemovalPolicy",
 		[]interface{}{policy, options},
 	)
+}
+
+func (r *jsiiProxy_RosVpnGateway) FetchCondition() alicloudroscdkcore.RosCondition {
+	var returns alicloudroscdkcore.RosCondition
+
+	_jsii_.Invoke(
+		r,
+		"fetchCondition",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (r *jsiiProxy_RosVpnGateway) FetchDesc() *string {
+	var returns *string
+
+	_jsii_.Invoke(
+		r,
+		"fetchDesc",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (r *jsiiProxy_RosVpnGateway) FetchRosDependency() *[]*string {
+	var returns *[]*string
+
+	_jsii_.Invoke(
+		r,
+		"fetchRosDependency",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
 }
 
 func (r *jsiiProxy_RosVpnGateway) GetAtt(attributeName *string) alicloudroscdkcore.Reference {

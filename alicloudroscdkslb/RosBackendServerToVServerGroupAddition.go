@@ -9,7 +9,7 @@ import (
 	"github.com/aws/constructs-go/constructs/v3"
 )
 
-// This class is a base encapsulation around the ROS resource type `ALIYUN::SLB::BackendServerToVServerGroupAddition`, which is used to add backend servers to an existing server group.
+// This class is a base encapsulation around the ROS resource type `ALIYUN::SLB::BackendServerToVServerGroupAddition`.
 type RosBackendServerToVServerGroupAddition interface {
 	alicloudroscdkcore.RosResource
 	AttrVServerGroupId() alicloudroscdkcore.IResolvable
@@ -108,6 +108,9 @@ type RosBackendServerToVServerGroupAddition interface {
 	AddRosDependency(target *string)
 	// Sets the deletion policy of the resource based on the removal policy specified.
 	ApplyRemovalPolicy(policy alicloudroscdkcore.RemovalPolicy, options *alicloudroscdkcore.RemovalPolicyOptions)
+	FetchCondition() alicloudroscdkcore.RosCondition
+	FetchDesc() *string
+	FetchRosDependency() *[]*string
 	// Returns a token for an runtime attribute of this resource.
 	//
 	// Ideally, use generated attribute accessors (e.g. `resource.arn`), but this can be used for future compatibility
@@ -553,6 +556,45 @@ func (r *jsiiProxy_RosBackendServerToVServerGroupAddition) ApplyRemovalPolicy(po
 		"applyRemovalPolicy",
 		[]interface{}{policy, options},
 	)
+}
+
+func (r *jsiiProxy_RosBackendServerToVServerGroupAddition) FetchCondition() alicloudroscdkcore.RosCondition {
+	var returns alicloudroscdkcore.RosCondition
+
+	_jsii_.Invoke(
+		r,
+		"fetchCondition",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (r *jsiiProxy_RosBackendServerToVServerGroupAddition) FetchDesc() *string {
+	var returns *string
+
+	_jsii_.Invoke(
+		r,
+		"fetchDesc",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (r *jsiiProxy_RosBackendServerToVServerGroupAddition) FetchRosDependency() *[]*string {
+	var returns *[]*string
+
+	_jsii_.Invoke(
+		r,
+		"fetchRosDependency",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
 }
 
 func (r *jsiiProxy_RosBackendServerToVServerGroupAddition) GetAtt(attributeName *string) alicloudroscdkcore.Reference {

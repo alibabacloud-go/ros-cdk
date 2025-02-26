@@ -16,6 +16,8 @@ type DBInstanceProps struct {
 	// You can call the DescribeRegions
 	// operation to query the most recent zone list.
 	ZoneId interface{} `field:"required" json:"zoneId" yaml:"zoneId"`
+	// Property aiNodeSpecInfos: AI node spec infos.
+	AiNodeSpecInfos interface{} `field:"optional" json:"aiNodeSpecInfos" yaml:"aiNodeSpecInfos"`
 	// Property createSampleData: Whether to load the sample data set after the instance is created.
 	//
 	// The value can be:
@@ -40,6 +42,8 @@ type DBInstanceProps struct {
 	//
 	// Valid values: StorageElastic, Serverless, Classic.
 	DbInstanceMode interface{} `field:"optional" json:"dbInstanceMode" yaml:"dbInstanceMode"`
+	// Property deployMode: The deployment mode of the instance.
+	DeployMode interface{} `field:"optional" json:"deployMode" yaml:"deployMode"`
 	// Property encryptionKey: If the EncryptionType parameter is set to CloudDisk, you must specify this parameter to the encryption key that is in the same region with the disks that is specified by the EncryptionType parameter.
 	//
 	// Otherwise, leave this parameter empty.
@@ -62,6 +66,10 @@ type DBInstanceProps struct {
 	// - When DBInstanceCategory is Serverless, Valid values: 4C16G, 8C32G.
 	// This parameter must be passed to create a storage elastic mode instance and a serverless version instance.
 	InstanceSpec interface{} `field:"optional" json:"instanceSpec" yaml:"instanceSpec"`
+	// Property masterCu: Master resources.
+	//
+	// Default is 8.
+	MasterCu interface{} `field:"optional" json:"masterCu" yaml:"masterCu"`
 	// Property masterNodeNum: The number of master nodes.
 	//
 	// Minimum is 1, max is 2.
@@ -120,6 +128,10 @@ type DBInstanceProps struct {
 	// The value ranges from 8 to 32. The step length is 8.
 	// The unit is ACU. The default value is 32.
 	ServerlessResource interface{} `field:"optional" json:"serverlessResource" yaml:"serverlessResource"`
+	// Property standbyVSwitchId: The standby VSwitch ID of the instance.
+	StandbyVSwitchId interface{} `field:"optional" json:"standbyVSwitchId" yaml:"standbyVSwitchId"`
+	// Property standbyZoneId: The standby zone ID of the instance.
+	StandbyZoneId interface{} `field:"optional" json:"standbyZoneId" yaml:"standbyZoneId"`
 	// Property storageSize: The storage capacity of per segment node.
 	//
 	// Unit: GB. Minimum is 50, max is 4000, step is 50.

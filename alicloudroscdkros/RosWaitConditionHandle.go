@@ -9,9 +9,7 @@ import (
 	"github.com/aws/constructs-go/constructs/v3"
 )
 
-// This class is a base encapsulation around the ROS resource type `ALIYUN::ROS::WaitConditionHandle`, which is used to receive signals.
-//
-// You can use ALIYUN::ROS::WaitConditionHandle together with ALIYUN::ROS::WaitCondition to manage the execution process of a stack. When you create an Elastic Compute Service (ECS) instance, a signal is sent during the execution of the user data.
+// This class is a base encapsulation around the ROS resource type `ALIYUN::ROS::WaitConditionHandle`.
 type RosWaitConditionHandle interface {
 	alicloudroscdkcore.RosResource
 	AttrCurlCli() alicloudroscdkcore.IResolvable
@@ -114,6 +112,9 @@ type RosWaitConditionHandle interface {
 	AddRosDependency(target *string)
 	// Sets the deletion policy of the resource based on the removal policy specified.
 	ApplyRemovalPolicy(policy alicloudroscdkcore.RemovalPolicy, options *alicloudroscdkcore.RemovalPolicyOptions)
+	FetchCondition() alicloudroscdkcore.RosCondition
+	FetchDesc() *string
+	FetchRosDependency() *[]*string
 	// Returns a token for an runtime attribute of this resource.
 	//
 	// Ideally, use generated attribute accessors (e.g. `resource.arn`), but this can be used for future compatibility
@@ -599,6 +600,45 @@ func (r *jsiiProxy_RosWaitConditionHandle) ApplyRemovalPolicy(policy alicloudros
 		"applyRemovalPolicy",
 		[]interface{}{policy, options},
 	)
+}
+
+func (r *jsiiProxy_RosWaitConditionHandle) FetchCondition() alicloudroscdkcore.RosCondition {
+	var returns alicloudroscdkcore.RosCondition
+
+	_jsii_.Invoke(
+		r,
+		"fetchCondition",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (r *jsiiProxy_RosWaitConditionHandle) FetchDesc() *string {
+	var returns *string
+
+	_jsii_.Invoke(
+		r,
+		"fetchDesc",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (r *jsiiProxy_RosWaitConditionHandle) FetchRosDependency() *[]*string {
+	var returns *[]*string
+
+	_jsii_.Invoke(
+		r,
+		"fetchRosDependency",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
 }
 
 func (r *jsiiProxy_RosWaitConditionHandle) GetAtt(attributeName *string) alicloudroscdkcore.Reference {

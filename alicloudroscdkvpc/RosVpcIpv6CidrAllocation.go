@@ -9,7 +9,7 @@ import (
 	"github.com/aws/constructs-go/constructs/v3"
 )
 
-// This class is a base encapsulation around the ROS resource type `ALIYUN::VPC::VpcIpv6CidrAllocation`, which is used to reserve an IPv6 CIDR block.
+// This class is a base encapsulation around the ROS resource type `ALIYUN::VPC::VpcIpv6CidrAllocation`.
 type RosVpcIpv6CidrAllocation interface {
 	alicloudroscdkcore.RosResource
 	AddressPoolType() interface{}
@@ -110,6 +110,9 @@ type RosVpcIpv6CidrAllocation interface {
 	AddRosDependency(target *string)
 	// Sets the deletion policy of the resource based on the removal policy specified.
 	ApplyRemovalPolicy(policy alicloudroscdkcore.RemovalPolicy, options *alicloudroscdkcore.RemovalPolicyOptions)
+	FetchCondition() alicloudroscdkcore.RosCondition
+	FetchDesc() *string
+	FetchRosDependency() *[]*string
 	// Returns a token for an runtime attribute of this resource.
 	//
 	// Ideally, use generated attribute accessors (e.g. `resource.arn`), but this can be used for future compatibility
@@ -576,6 +579,45 @@ func (r *jsiiProxy_RosVpcIpv6CidrAllocation) ApplyRemovalPolicy(policy alicloudr
 		"applyRemovalPolicy",
 		[]interface{}{policy, options},
 	)
+}
+
+func (r *jsiiProxy_RosVpcIpv6CidrAllocation) FetchCondition() alicloudroscdkcore.RosCondition {
+	var returns alicloudroscdkcore.RosCondition
+
+	_jsii_.Invoke(
+		r,
+		"fetchCondition",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (r *jsiiProxy_RosVpcIpv6CidrAllocation) FetchDesc() *string {
+	var returns *string
+
+	_jsii_.Invoke(
+		r,
+		"fetchDesc",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (r *jsiiProxy_RosVpcIpv6CidrAllocation) FetchRosDependency() *[]*string {
+	var returns *[]*string
+
+	_jsii_.Invoke(
+		r,
+		"fetchRosDependency",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
 }
 
 func (r *jsiiProxy_RosVpcIpv6CidrAllocation) GetAtt(attributeName *string) alicloudroscdkcore.Reference {

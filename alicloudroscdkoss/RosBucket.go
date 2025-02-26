@@ -14,6 +14,7 @@ type RosBucket interface {
 	alicloudroscdkcore.RosResource
 	AccessControl() interface{}
 	SetAccessControl(val interface{})
+	AttrArn() alicloudroscdkcore.IResolvable
 	AttrDomainName() alicloudroscdkcore.IResolvable
 	AttrInternalDomainName() alicloudroscdkcore.IResolvable
 	AttrName() alicloudroscdkcore.IResolvable
@@ -138,6 +139,9 @@ type RosBucket interface {
 	AddRosDependency(target *string)
 	// Sets the deletion policy of the resource based on the removal policy specified.
 	ApplyRemovalPolicy(policy alicloudroscdkcore.RemovalPolicy, options *alicloudroscdkcore.RemovalPolicyOptions)
+	FetchCondition() alicloudroscdkcore.RosCondition
+	FetchDesc() *string
+	FetchRosDependency() *[]*string
 	// Returns a token for an runtime attribute of this resource.
 	//
 	// Ideally, use generated attribute accessors (e.g. `resource.arn`), but this can be used for future compatibility
@@ -205,6 +209,16 @@ func (j *jsiiProxy_RosBucket) AccessControl() interface{} {
 	_jsii_.Get(
 		j,
 		"accessControl",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_RosBucket) AttrArn() alicloudroscdkcore.IResolvable {
+	var returns alicloudroscdkcore.IResolvable
+	_jsii_.Get(
+		j,
+		"attrArn",
 		&returns,
 	)
 	return returns
@@ -894,6 +908,45 @@ func (r *jsiiProxy_RosBucket) ApplyRemovalPolicy(policy alicloudroscdkcore.Remov
 		"applyRemovalPolicy",
 		[]interface{}{policy, options},
 	)
+}
+
+func (r *jsiiProxy_RosBucket) FetchCondition() alicloudroscdkcore.RosCondition {
+	var returns alicloudroscdkcore.RosCondition
+
+	_jsii_.Invoke(
+		r,
+		"fetchCondition",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (r *jsiiProxy_RosBucket) FetchDesc() *string {
+	var returns *string
+
+	_jsii_.Invoke(
+		r,
+		"fetchDesc",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (r *jsiiProxy_RosBucket) FetchRosDependency() *[]*string {
+	var returns *[]*string
+
+	_jsii_.Invoke(
+		r,
+		"fetchRosDependency",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
 }
 
 func (r *jsiiProxy_RosBucket) GetAtt(attributeName *string) alicloudroscdkcore.Reference {

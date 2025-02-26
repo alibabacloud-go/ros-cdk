@@ -12,6 +12,7 @@ import (
 // This class is a base encapsulation around the ROS resource type `ALIYUN::ECS::Snapshot`, which is used to create a snapshot for a disk.
 type RosSnapshot interface {
 	alicloudroscdkcore.RosResource
+	AttrArn() alicloudroscdkcore.IResolvable
 	AttrSnapshotId() alicloudroscdkcore.IResolvable
 	// Returns: the stack trace of the point where this Resource was created from, sourced
 	// from the +metadata+ entry typed +aliyun:ros:logicalId+, and with the bottom-most
@@ -122,6 +123,9 @@ type RosSnapshot interface {
 	AddRosDependency(target *string)
 	// Sets the deletion policy of the resource based on the removal policy specified.
 	ApplyRemovalPolicy(policy alicloudroscdkcore.RemovalPolicy, options *alicloudroscdkcore.RemovalPolicyOptions)
+	FetchCondition() alicloudroscdkcore.RosCondition
+	FetchDesc() *string
+	FetchRosDependency() *[]*string
 	// Returns a token for an runtime attribute of this resource.
 	//
 	// Ideally, use generated attribute accessors (e.g. `resource.arn`), but this can be used for future compatibility
@@ -182,6 +186,16 @@ type RosSnapshot interface {
 // The jsii proxy struct for RosSnapshot
 type jsiiProxy_RosSnapshot struct {
 	internal.Type__alicloudroscdkcoreRosResource
+}
+
+func (j *jsiiProxy_RosSnapshot) AttrArn() alicloudroscdkcore.IResolvable {
+	var returns alicloudroscdkcore.IResolvable
+	_jsii_.Get(
+		j,
+		"attrArn",
+		&returns,
+	)
+	return returns
 }
 
 func (j *jsiiProxy_RosSnapshot) AttrSnapshotId() alicloudroscdkcore.IResolvable {
@@ -714,6 +728,45 @@ func (r *jsiiProxy_RosSnapshot) ApplyRemovalPolicy(policy alicloudroscdkcore.Rem
 		"applyRemovalPolicy",
 		[]interface{}{policy, options},
 	)
+}
+
+func (r *jsiiProxy_RosSnapshot) FetchCondition() alicloudroscdkcore.RosCondition {
+	var returns alicloudroscdkcore.RosCondition
+
+	_jsii_.Invoke(
+		r,
+		"fetchCondition",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (r *jsiiProxy_RosSnapshot) FetchDesc() *string {
+	var returns *string
+
+	_jsii_.Invoke(
+		r,
+		"fetchDesc",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (r *jsiiProxy_RosSnapshot) FetchRosDependency() *[]*string {
+	var returns *[]*string
+
+	_jsii_.Invoke(
+		r,
+		"fetchRosDependency",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
 }
 
 func (r *jsiiProxy_RosSnapshot) GetAtt(attributeName *string) alicloudroscdkcore.Reference {

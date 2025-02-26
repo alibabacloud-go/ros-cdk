@@ -8,6 +8,32 @@ import (
 )
 
 func init() {
+	_jsii_.RegisterInterface(
+		"@alicloud/ros-cdk-elasticsearch.IInstance",
+		reflect.TypeOf((*IInstance)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberProperty{JsiiProperty: "attrArn", GoGetter: "AttrArn"},
+			_jsii_.MemberProperty{JsiiProperty: "attrDomain", GoGetter: "AttrDomain"},
+			_jsii_.MemberProperty{JsiiProperty: "attrInstanceChargeType", GoGetter: "AttrInstanceChargeType"},
+			_jsii_.MemberProperty{JsiiProperty: "attrInstanceId", GoGetter: "AttrInstanceId"},
+			_jsii_.MemberProperty{JsiiProperty: "attrKibanaDomain", GoGetter: "AttrKibanaDomain"},
+			_jsii_.MemberProperty{JsiiProperty: "attrKibanaPort", GoGetter: "AttrKibanaPort"},
+			_jsii_.MemberProperty{JsiiProperty: "attrPort", GoGetter: "AttrPort"},
+			_jsii_.MemberProperty{JsiiProperty: "attrPublicDomain", GoGetter: "AttrPublicDomain"},
+			_jsii_.MemberProperty{JsiiProperty: "attrStatus", GoGetter: "AttrStatus"},
+			_jsii_.MemberProperty{JsiiProperty: "attrVersion", GoGetter: "AttrVersion"},
+			_jsii_.MemberProperty{JsiiProperty: "attrVSwitchId", GoGetter: "AttrVSwitchId"},
+			_jsii_.MemberProperty{JsiiProperty: "env", GoGetter: "Env"},
+			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
+			_jsii_.MemberProperty{JsiiProperty: "props", GoGetter: "Props"},
+			_jsii_.MemberProperty{JsiiProperty: "stack", GoGetter: "Stack"},
+		},
+		func() interface{} {
+			j := jsiiProxy_IInstance{}
+			_jsii_.InitJsiiProxy(&j.Type__alicloudroscdkcoreIResource)
+			return &j
+		},
+	)
 	_jsii_.RegisterClass(
 		"@alicloud/ros-cdk-elasticsearch.Instance",
 		reflect.TypeOf((*Instance)(nil)).Elem(),
@@ -17,6 +43,7 @@ func init() {
 			_jsii_.MemberMethod{JsiiMethod: "addDependency", GoMethod: "AddDependency"},
 			_jsii_.MemberMethod{JsiiMethod: "addResourceDesc", GoMethod: "AddResourceDesc"},
 			_jsii_.MemberMethod{JsiiMethod: "applyRemovalPolicy", GoMethod: "ApplyRemovalPolicy"},
+			_jsii_.MemberProperty{JsiiProperty: "attrArn", GoGetter: "AttrArn"},
 			_jsii_.MemberProperty{JsiiProperty: "attrDomain", GoGetter: "AttrDomain"},
 			_jsii_.MemberProperty{JsiiProperty: "attrInstanceChargeType", GoGetter: "AttrInstanceChargeType"},
 			_jsii_.MemberProperty{JsiiProperty: "attrInstanceId", GoGetter: "AttrInstanceId"},
@@ -28,6 +55,10 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "attrVersion", GoGetter: "AttrVersion"},
 			_jsii_.MemberProperty{JsiiProperty: "attrVSwitchId", GoGetter: "AttrVSwitchId"},
 			_jsii_.MemberProperty{JsiiProperty: "enableResourcePropertyConstraint", GoGetter: "EnableResourcePropertyConstraint"},
+			_jsii_.MemberProperty{JsiiProperty: "env", GoGetter: "Env"},
+			_jsii_.MemberMethod{JsiiMethod: "fetchCondition", GoMethod: "FetchCondition"},
+			_jsii_.MemberMethod{JsiiMethod: "fetchDependency", GoMethod: "FetchDependency"},
+			_jsii_.MemberMethod{JsiiMethod: "fetchResourceDesc", GoMethod: "FetchResourceDesc"},
 			_jsii_.MemberMethod{JsiiMethod: "generatePhysicalName", GoMethod: "GeneratePhysicalName"},
 			_jsii_.MemberMethod{JsiiMethod: "getAtt", GoMethod: "GetAtt"},
 			_jsii_.MemberProperty{JsiiProperty: "id", GoGetter: "Id"},
@@ -50,6 +81,7 @@ func init() {
 		func() interface{} {
 			j := jsiiProxy_Instance{}
 			_jsii_.InitJsiiProxy(&j.Type__alicloudroscdkcoreResource)
+			_jsii_.InitJsiiProxy(&j.jsiiProxy_IInstance)
 			return &j
 		},
 	)
@@ -72,6 +104,7 @@ func init() {
 			_jsii_.MemberMethod{JsiiMethod: "addPropertyOverride", GoMethod: "AddPropertyOverride"},
 			_jsii_.MemberMethod{JsiiMethod: "addRosDependency", GoMethod: "AddRosDependency"},
 			_jsii_.MemberMethod{JsiiMethod: "applyRemovalPolicy", GoMethod: "ApplyRemovalPolicy"},
+			_jsii_.MemberProperty{JsiiProperty: "attrArn", GoGetter: "AttrArn"},
 			_jsii_.MemberProperty{JsiiProperty: "attrDomain", GoGetter: "AttrDomain"},
 			_jsii_.MemberProperty{JsiiProperty: "attrInstanceChargeType", GoGetter: "AttrInstanceChargeType"},
 			_jsii_.MemberProperty{JsiiProperty: "attrInstanceId", GoGetter: "AttrInstanceId"},
@@ -89,6 +122,9 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "enableKibanaPublic", GoGetter: "EnableKibanaPublic"},
 			_jsii_.MemberProperty{JsiiProperty: "enablePublic", GoGetter: "EnablePublic"},
 			_jsii_.MemberProperty{JsiiProperty: "enableResourcePropertyConstraint", GoGetter: "EnableResourcePropertyConstraint"},
+			_jsii_.MemberMethod{JsiiMethod: "fetchCondition", GoMethod: "FetchCondition"},
+			_jsii_.MemberMethod{JsiiMethod: "fetchDesc", GoMethod: "FetchDesc"},
+			_jsii_.MemberMethod{JsiiMethod: "fetchRosDependency", GoMethod: "FetchRosDependency"},
 			_jsii_.MemberMethod{JsiiMethod: "getAtt", GoMethod: "GetAtt"},
 			_jsii_.MemberProperty{JsiiProperty: "instanceCategory", GoGetter: "InstanceCategory"},
 			_jsii_.MemberProperty{JsiiProperty: "instanceChargeType", GoGetter: "InstanceChargeType"},

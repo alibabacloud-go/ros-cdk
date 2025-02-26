@@ -9,7 +9,7 @@ import (
 	"github.com/aws/constructs-go/constructs/v3"
 )
 
-// This class is a base encapsulation around the ROS resource type `DATASOURCE::VPC::HaVip`, which is used to query a high-availability virtual IP address (HAVIP).
+// This class is a base encapsulation around the ROS resource type `DATASOURCE::VPC::HaVip`.
 type RosHaVip interface {
 	alicloudroscdkcore.RosResource
 	AttrAssociatedEipAddresses() alicloudroscdkcore.IResolvable
@@ -118,6 +118,9 @@ type RosHaVip interface {
 	AddRosDependency(target *string)
 	// Sets the deletion policy of the resource based on the removal policy specified.
 	ApplyRemovalPolicy(policy alicloudroscdkcore.RemovalPolicy, options *alicloudroscdkcore.RemovalPolicyOptions)
+	FetchCondition() alicloudroscdkcore.RosCondition
+	FetchDesc() *string
+	FetchRosDependency() *[]*string
 	// Returns a token for an runtime attribute of this resource.
 	//
 	// Ideally, use generated attribute accessors (e.g. `resource.arn`), but this can be used for future compatibility
@@ -663,6 +666,45 @@ func (r *jsiiProxy_RosHaVip) ApplyRemovalPolicy(policy alicloudroscdkcore.Remova
 		"applyRemovalPolicy",
 		[]interface{}{policy, options},
 	)
+}
+
+func (r *jsiiProxy_RosHaVip) FetchCondition() alicloudroscdkcore.RosCondition {
+	var returns alicloudroscdkcore.RosCondition
+
+	_jsii_.Invoke(
+		r,
+		"fetchCondition",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (r *jsiiProxy_RosHaVip) FetchDesc() *string {
+	var returns *string
+
+	_jsii_.Invoke(
+		r,
+		"fetchDesc",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (r *jsiiProxy_RosHaVip) FetchRosDependency() *[]*string {
+	var returns *[]*string
+
+	_jsii_.Invoke(
+		r,
+		"fetchRosDependency",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
 }
 
 func (r *jsiiProxy_RosHaVip) GetAtt(attributeName *string) alicloudroscdkcore.Reference {

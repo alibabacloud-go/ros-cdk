@@ -9,19 +9,27 @@ import (
 	"github.com/aws/constructs-go/constructs/v3"
 )
 
-// This class encapsulates and extends the ROS resource type `ALIYUN::VPC::VpnAttachment`, which is used to create an IPsec-VPN connection.
-//
-// After you create the IPsec-VPN connection, you can associate the IPsec-VPN connection with a transit router.
+// This class encapsulates and extends the ROS resource type `ALIYUN::VPC::VpnAttachment`.
 type VpnAttachment interface {
 	alicloudroscdkcore.Resource
+	IVpnAttachment
 	// Attribute InternetIp: The gateway IP address of the IPsec connection.
-	AttrInternetIp() alicloudroscdkcore.IResolvable
+	AttrInternetIp() interface{}
 	// Attribute PeerVpnAttachmentConfig: Peer vpc Attachment config.
-	AttrPeerVpnAttachmentConfig() alicloudroscdkcore.IResolvable
+	AttrPeerVpnAttachmentConfig() interface{}
 	// Attribute VpnAttachmentId: ID of the IPsec attachment.
-	AttrVpnAttachmentId() alicloudroscdkcore.IResolvable
+	AttrVpnAttachmentId() interface{}
 	EnableResourcePropertyConstraint() *bool
 	SetEnableResourcePropertyConstraint(val *bool)
+	// The environment this resource belongs to.
+	//
+	// For resources that are created and managed by the CDK
+	// (generally, those created by creating new class instances like Role, Bucket, etc.),
+	// this is always the same as the environment of the stack they belong to;
+	// however, for imported resources
+	// (those obtained from static methods like fromRoleArn, fromBucketName, etc.),
+	// that might be different than the stack they were imported into.
+	Env() alicloudroscdkcore.IResourceEnvironment
 	Id() *string
 	SetId(val *string)
 	// The construct tree node associated with this construct.
@@ -36,7 +44,6 @@ type VpnAttachment interface {
 	// Experimental.
 	PhysicalName() *string
 	Props() *VpnAttachmentProps
-	SetProps(val *VpnAttachmentProps)
 	Ref() *string
 	Resource() alicloudroscdkcore.RosResource
 	SetResource(val alicloudroscdkcore.RosResource)
@@ -49,6 +56,9 @@ type VpnAttachment interface {
 	AddDependency(resource alicloudroscdkcore.Resource)
 	AddResourceDesc(desc *string)
 	ApplyRemovalPolicy(policy alicloudroscdkcore.RemovalPolicy)
+	FetchCondition() alicloudroscdkcore.RosCondition
+	FetchDependency() *[]*string
+	FetchResourceDesc() *string
 	GeneratePhysicalName() *string
 	GetAtt(name *string) alicloudroscdkcore.IResolvable
 	// Perform final modifications before synthesis.
@@ -101,10 +111,11 @@ type VpnAttachment interface {
 // The jsii proxy struct for VpnAttachment
 type jsiiProxy_VpnAttachment struct {
 	internal.Type__alicloudroscdkcoreResource
+	jsiiProxy_IVpnAttachment
 }
 
-func (j *jsiiProxy_VpnAttachment) AttrInternetIp() alicloudroscdkcore.IResolvable {
-	var returns alicloudroscdkcore.IResolvable
+func (j *jsiiProxy_VpnAttachment) AttrInternetIp() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"attrInternetIp",
@@ -113,8 +124,8 @@ func (j *jsiiProxy_VpnAttachment) AttrInternetIp() alicloudroscdkcore.IResolvabl
 	return returns
 }
 
-func (j *jsiiProxy_VpnAttachment) AttrPeerVpnAttachmentConfig() alicloudroscdkcore.IResolvable {
-	var returns alicloudroscdkcore.IResolvable
+func (j *jsiiProxy_VpnAttachment) AttrPeerVpnAttachmentConfig() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"attrPeerVpnAttachmentConfig",
@@ -123,8 +134,8 @@ func (j *jsiiProxy_VpnAttachment) AttrPeerVpnAttachmentConfig() alicloudroscdkco
 	return returns
 }
 
-func (j *jsiiProxy_VpnAttachment) AttrVpnAttachmentId() alicloudroscdkcore.IResolvable {
-	var returns alicloudroscdkcore.IResolvable
+func (j *jsiiProxy_VpnAttachment) AttrVpnAttachmentId() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"attrVpnAttachmentId",
@@ -138,6 +149,16 @@ func (j *jsiiProxy_VpnAttachment) EnableResourcePropertyConstraint() *bool {
 	_jsii_.Get(
 		j,
 		"enableResourcePropertyConstraint",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_VpnAttachment) Env() alicloudroscdkcore.IResourceEnvironment {
+	var returns alicloudroscdkcore.IResourceEnvironment
+	_jsii_.Get(
+		j,
+		"env",
 		&returns,
 	)
 	return returns
@@ -275,17 +296,6 @@ func (j *jsiiProxy_VpnAttachment)SetId(val *string) {
 	)
 }
 
-func (j *jsiiProxy_VpnAttachment)SetProps(val *VpnAttachmentProps) {
-	if err := j.validateSetPropsParameters(val); err != nil {
-		panic(err)
-	}
-	_jsii_.Set(
-		j,
-		"props",
-		val,
-	)
-}
-
 func (j *jsiiProxy_VpnAttachment)SetResource(val alicloudroscdkcore.RosResource) {
 	_jsii_.Set(
 		j,
@@ -377,6 +387,45 @@ func (v *jsiiProxy_VpnAttachment) ApplyRemovalPolicy(policy alicloudroscdkcore.R
 		"applyRemovalPolicy",
 		[]interface{}{policy},
 	)
+}
+
+func (v *jsiiProxy_VpnAttachment) FetchCondition() alicloudroscdkcore.RosCondition {
+	var returns alicloudroscdkcore.RosCondition
+
+	_jsii_.Invoke(
+		v,
+		"fetchCondition",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (v *jsiiProxy_VpnAttachment) FetchDependency() *[]*string {
+	var returns *[]*string
+
+	_jsii_.Invoke(
+		v,
+		"fetchDependency",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (v *jsiiProxy_VpnAttachment) FetchResourceDesc() *string {
+	var returns *string
+
+	_jsii_.Invoke(
+		v,
+		"fetchResourceDesc",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
 }
 
 func (v *jsiiProxy_VpnAttachment) GeneratePhysicalName() *string {

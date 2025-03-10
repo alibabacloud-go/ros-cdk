@@ -6,20 +6,33 @@ import (
 
 	"github.com/alibabacloud-go/ros-cdk/alicloudroscdkcore"
 	"github.com/alibabacloud-go/ros-cdk/alicloudroscdkoss/internal"
+	"github.com/alibabacloud-go/ros-cdk/alicloudroscdkram"
 	"github.com/aws/constructs-go/constructs/v3"
 )
 
-// This class encapsulates and extends the ROS resource type `ALIYUN::OSS::Bucket`, which is used to create a bucket in Object Storage Service (OSS).
+// This class encapsulates and extends the ROS resource type `ALIYUN::OSS::Bucket`.
 type Bucket interface {
 	alicloudroscdkcore.Resource
+	IBucket
+	// Attribute Arn: The Alibaba Cloud Resource Name (ARN).
+	AttrArn() interface{}
 	// Attribute DomainName: The public DNS name of the specified bucket.
-	AttrDomainName() alicloudroscdkcore.IResolvable
+	AttrDomainName() interface{}
 	// Attribute InternalDomainName: The internal DNS name of the specified bucket.
-	AttrInternalDomainName() alicloudroscdkcore.IResolvable
+	AttrInternalDomainName() interface{}
 	// Attribute Name: The name of Bucket.
-	AttrName() alicloudroscdkcore.IResolvable
+	AttrName() interface{}
 	EnableResourcePropertyConstraint() *bool
 	SetEnableResourcePropertyConstraint(val *bool)
+	// The environment this resource belongs to.
+	//
+	// For resources that are created and managed by the CDK
+	// (generally, those created by creating new class instances like Role, Bucket, etc.),
+	// this is always the same as the environment of the stack they belong to;
+	// however, for imported resources
+	// (those obtained from static methods like fromRoleArn, fromBucketName, etc.),
+	// that might be different than the stack they were imported into.
+	Env() alicloudroscdkcore.IResourceEnvironment
 	Id() *string
 	SetId(val *string)
 	// The construct tree node associated with this construct.
@@ -34,7 +47,6 @@ type Bucket interface {
 	// Experimental.
 	PhysicalName() *string
 	Props() *BucketProps
-	SetProps(val *BucketProps)
 	Ref() *string
 	Resource() alicloudroscdkcore.RosResource
 	SetResource(val alicloudroscdkcore.RosResource)
@@ -47,8 +59,27 @@ type Bucket interface {
 	AddDependency(resource alicloudroscdkcore.Resource)
 	AddResourceDesc(desc *string)
 	ApplyRemovalPolicy(policy alicloudroscdkcore.RemovalPolicy)
+	// Returns an ARN that represents all objects within the bucket that match the key pattern specified.
+	//
+	// To represent all keys, specify ``"*"``.
+	//
+	// If you need to specify a keyPattern with multiple components, concatenate them into a single string, e.g.:
+	//
+	// arnForObjects(`home/${team}/${user}/*`).
+	ArnForObjects(keyPattern *string) *string
+	FetchCondition() alicloudroscdkcore.RosCondition
+	FetchDependency() *[]*string
+	FetchResourceDesc() *string
 	GeneratePhysicalName() *string
 	GetAtt(name *string) alicloudroscdkcore.IResolvable
+	// Grant an RAM principal (Role/Group/User) full control over this bucket.
+	GrantFullAccess(identity alicloudroscdkram.IPrincipal, objectsKeyPattern *string) alicloudroscdkram.ManagedPolicy
+	// Grant an RAM principal (Role/Group/User) permission to list resources for this bucket.
+	GrantList(identity alicloudroscdkram.IPrincipal, objectsKeyPattern *string) alicloudroscdkram.ManagedPolicy
+	// Grant an RAM principal (Role/Group/User) permission to list and read all resources for this bucket.
+	GrantRead(identity alicloudroscdkram.IPrincipal, objectsKeyPattern *string) alicloudroscdkram.ManagedPolicy
+	// Grant an RAM principal (Role/Group/User) permission to read and write resources for this bucket.
+	GrantReadWrite(identity alicloudroscdkram.IPrincipal, objectsKeyPattern *string) alicloudroscdkram.ManagedPolicy
 	// Perform final modifications before synthesis.
 	//
 	// This method can be implemented by derived constructs in order to perform
@@ -99,10 +130,21 @@ type Bucket interface {
 // The jsii proxy struct for Bucket
 type jsiiProxy_Bucket struct {
 	internal.Type__alicloudroscdkcoreResource
+	jsiiProxy_IBucket
 }
 
-func (j *jsiiProxy_Bucket) AttrDomainName() alicloudroscdkcore.IResolvable {
-	var returns alicloudroscdkcore.IResolvable
+func (j *jsiiProxy_Bucket) AttrArn() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"attrArn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Bucket) AttrDomainName() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"attrDomainName",
@@ -111,8 +153,8 @@ func (j *jsiiProxy_Bucket) AttrDomainName() alicloudroscdkcore.IResolvable {
 	return returns
 }
 
-func (j *jsiiProxy_Bucket) AttrInternalDomainName() alicloudroscdkcore.IResolvable {
-	var returns alicloudroscdkcore.IResolvable
+func (j *jsiiProxy_Bucket) AttrInternalDomainName() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"attrInternalDomainName",
@@ -121,8 +163,8 @@ func (j *jsiiProxy_Bucket) AttrInternalDomainName() alicloudroscdkcore.IResolvab
 	return returns
 }
 
-func (j *jsiiProxy_Bucket) AttrName() alicloudroscdkcore.IResolvable {
-	var returns alicloudroscdkcore.IResolvable
+func (j *jsiiProxy_Bucket) AttrName() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"attrName",
@@ -136,6 +178,16 @@ func (j *jsiiProxy_Bucket) EnableResourcePropertyConstraint() *bool {
 	_jsii_.Get(
 		j,
 		"enableResourcePropertyConstraint",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Bucket) Env() alicloudroscdkcore.IResourceEnvironment {
+	var returns alicloudroscdkcore.IResourceEnvironment
+	_jsii_.Get(
+		j,
+		"env",
 		&returns,
 	)
 	return returns
@@ -273,17 +325,6 @@ func (j *jsiiProxy_Bucket)SetId(val *string) {
 	)
 }
 
-func (j *jsiiProxy_Bucket)SetProps(val *BucketProps) {
-	if err := j.validateSetPropsParameters(val); err != nil {
-		panic(err)
-	}
-	_jsii_.Set(
-		j,
-		"props",
-		val,
-	)
-}
-
 func (j *jsiiProxy_Bucket)SetResource(val alicloudroscdkcore.RosResource) {
 	_jsii_.Set(
 		j,
@@ -391,6 +432,61 @@ func (b *jsiiProxy_Bucket) ApplyRemovalPolicy(policy alicloudroscdkcore.RemovalP
 	)
 }
 
+func (b *jsiiProxy_Bucket) ArnForObjects(keyPattern *string) *string {
+	if err := b.validateArnForObjectsParameters(keyPattern); err != nil {
+		panic(err)
+	}
+	var returns *string
+
+	_jsii_.Invoke(
+		b,
+		"arnForObjects",
+		[]interface{}{keyPattern},
+		&returns,
+	)
+
+	return returns
+}
+
+func (b *jsiiProxy_Bucket) FetchCondition() alicloudroscdkcore.RosCondition {
+	var returns alicloudroscdkcore.RosCondition
+
+	_jsii_.Invoke(
+		b,
+		"fetchCondition",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (b *jsiiProxy_Bucket) FetchDependency() *[]*string {
+	var returns *[]*string
+
+	_jsii_.Invoke(
+		b,
+		"fetchDependency",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (b *jsiiProxy_Bucket) FetchResourceDesc() *string {
+	var returns *string
+
+	_jsii_.Invoke(
+		b,
+		"fetchResourceDesc",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (b *jsiiProxy_Bucket) GeneratePhysicalName() *string {
 	var returns *string
 
@@ -414,6 +510,70 @@ func (b *jsiiProxy_Bucket) GetAtt(name *string) alicloudroscdkcore.IResolvable {
 		b,
 		"getAtt",
 		[]interface{}{name},
+		&returns,
+	)
+
+	return returns
+}
+
+func (b *jsiiProxy_Bucket) GrantFullAccess(identity alicloudroscdkram.IPrincipal, objectsKeyPattern *string) alicloudroscdkram.ManagedPolicy {
+	if err := b.validateGrantFullAccessParameters(identity); err != nil {
+		panic(err)
+	}
+	var returns alicloudroscdkram.ManagedPolicy
+
+	_jsii_.Invoke(
+		b,
+		"grantFullAccess",
+		[]interface{}{identity, objectsKeyPattern},
+		&returns,
+	)
+
+	return returns
+}
+
+func (b *jsiiProxy_Bucket) GrantList(identity alicloudroscdkram.IPrincipal, objectsKeyPattern *string) alicloudroscdkram.ManagedPolicy {
+	if err := b.validateGrantListParameters(identity); err != nil {
+		panic(err)
+	}
+	var returns alicloudroscdkram.ManagedPolicy
+
+	_jsii_.Invoke(
+		b,
+		"grantList",
+		[]interface{}{identity, objectsKeyPattern},
+		&returns,
+	)
+
+	return returns
+}
+
+func (b *jsiiProxy_Bucket) GrantRead(identity alicloudroscdkram.IPrincipal, objectsKeyPattern *string) alicloudroscdkram.ManagedPolicy {
+	if err := b.validateGrantReadParameters(identity); err != nil {
+		panic(err)
+	}
+	var returns alicloudroscdkram.ManagedPolicy
+
+	_jsii_.Invoke(
+		b,
+		"grantRead",
+		[]interface{}{identity, objectsKeyPattern},
+		&returns,
+	)
+
+	return returns
+}
+
+func (b *jsiiProxy_Bucket) GrantReadWrite(identity alicloudroscdkram.IPrincipal, objectsKeyPattern *string) alicloudroscdkram.ManagedPolicy {
+	if err := b.validateGrantReadWriteParameters(identity); err != nil {
+		panic(err)
+	}
+	var returns alicloudroscdkram.ManagedPolicy
+
+	_jsii_.Invoke(
+		b,
+		"grantReadWrite",
+		[]interface{}{identity, objectsKeyPattern},
 		&returns,
 	)
 

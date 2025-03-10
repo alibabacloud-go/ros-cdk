@@ -13,6 +13,7 @@ import (
 type RosListener interface {
 	alicloudroscdkcore.RosResource
 	AttrListenerId() alicloudroscdkcore.IResolvable
+	AttrLoadBalancerId() alicloudroscdkcore.IResolvable
 	CaCertificates() interface{}
 	SetCaCertificates(val interface{})
 	CaEnabled() interface{}
@@ -43,6 +44,8 @@ type RosListener interface {
 	SetListenerStatus(val interface{})
 	LoadBalancerId() interface{}
 	SetLoadBalancerId(val interface{})
+	LogConfig() interface{}
+	SetLogConfig(val interface{})
 	// The logical ID for this stack element.
 	//
 	// The logical ID of the element
@@ -136,6 +139,9 @@ type RosListener interface {
 	AddRosDependency(target *string)
 	// Sets the deletion policy of the resource based on the removal policy specified.
 	ApplyRemovalPolicy(policy alicloudroscdkcore.RemovalPolicy, options *alicloudroscdkcore.RemovalPolicyOptions)
+	FetchCondition() alicloudroscdkcore.RosCondition
+	FetchDesc() *string
+	FetchRosDependency() *[]*string
 	// Returns a token for an runtime attribute of this resource.
 	//
 	// Ideally, use generated attribute accessors (e.g. `resource.arn`), but this can be used for future compatibility
@@ -203,6 +209,16 @@ func (j *jsiiProxy_RosListener) AttrListenerId() alicloudroscdkcore.IResolvable 
 	_jsii_.Get(
 		j,
 		"attrListenerId",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_RosListener) AttrLoadBalancerId() alicloudroscdkcore.IResolvable {
+	var returns alicloudroscdkcore.IResolvable
+	_jsii_.Get(
+		j,
+		"attrLoadBalancerId",
 		&returns,
 	)
 	return returns
@@ -343,6 +359,16 @@ func (j *jsiiProxy_RosListener) LoadBalancerId() interface{} {
 	_jsii_.Get(
 		j,
 		"loadBalancerId",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_RosListener) LogConfig() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"logConfig",
 		&returns,
 	)
 	return returns
@@ -639,6 +665,17 @@ func (j *jsiiProxy_RosListener)SetLoadBalancerId(val interface{}) {
 	)
 }
 
+func (j *jsiiProxy_RosListener)SetLogConfig(val interface{}) {
+	if err := j.validateSetLogConfigParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"logConfig",
+		val,
+	)
+}
+
 func (j *jsiiProxy_RosListener)SetQuicConfig(val interface{}) {
 	if err := j.validateSetQuicConfigParameters(val); err != nil {
 		panic(err)
@@ -875,6 +912,45 @@ func (r *jsiiProxy_RosListener) ApplyRemovalPolicy(policy alicloudroscdkcore.Rem
 		"applyRemovalPolicy",
 		[]interface{}{policy, options},
 	)
+}
+
+func (r *jsiiProxy_RosListener) FetchCondition() alicloudroscdkcore.RosCondition {
+	var returns alicloudroscdkcore.RosCondition
+
+	_jsii_.Invoke(
+		r,
+		"fetchCondition",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (r *jsiiProxy_RosListener) FetchDesc() *string {
+	var returns *string
+
+	_jsii_.Invoke(
+		r,
+		"fetchDesc",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (r *jsiiProxy_RosListener) FetchRosDependency() *[]*string {
+	var returns *[]*string
+
+	_jsii_.Invoke(
+		r,
+		"fetchRosDependency",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
 }
 
 func (r *jsiiProxy_RosListener) GetAtt(attributeName *string) alicloudroscdkcore.Reference {

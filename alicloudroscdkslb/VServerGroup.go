@@ -9,17 +9,29 @@ import (
 	"github.com/aws/constructs-go/constructs/v3"
 )
 
-// This class encapsulates and extends the ROS resource type `ALIYUN::SLB::VServerGroup`, which is used to create a server group and attach backend servers to a Server Load Balancer (SLB) instance.
+// This class encapsulates and extends the ROS resource type `ALIYUN::SLB::VServerGroup`.
 type VServerGroup interface {
 	alicloudroscdkcore.Resource
+	IVServerGroup
+	// Attribute Arn: The Alibaba Cloud Resource Name (ARN).
+	AttrArn() interface{}
 	// Attribute BackendServers: Backend server list in this VServerGroup.
-	AttrBackendServers() alicloudroscdkcore.IResolvable
+	AttrBackendServers() interface{}
 	// Attribute LoadBalancerId: The id of load balancer.
-	AttrLoadBalancerId() alicloudroscdkcore.IResolvable
+	AttrLoadBalancerId() interface{}
 	// Attribute VServerGroupId: The id of VServerGroup created.
-	AttrVServerGroupId() alicloudroscdkcore.IResolvable
+	AttrVServerGroupId() interface{}
 	EnableResourcePropertyConstraint() *bool
 	SetEnableResourcePropertyConstraint(val *bool)
+	// The environment this resource belongs to.
+	//
+	// For resources that are created and managed by the CDK
+	// (generally, those created by creating new class instances like Role, Bucket, etc.),
+	// this is always the same as the environment of the stack they belong to;
+	// however, for imported resources
+	// (those obtained from static methods like fromRoleArn, fromBucketName, etc.),
+	// that might be different than the stack they were imported into.
+	Env() alicloudroscdkcore.IResourceEnvironment
 	Id() *string
 	SetId(val *string)
 	// The construct tree node associated with this construct.
@@ -34,7 +46,6 @@ type VServerGroup interface {
 	// Experimental.
 	PhysicalName() *string
 	Props() *VServerGroupProps
-	SetProps(val *VServerGroupProps)
 	Ref() *string
 	Resource() alicloudroscdkcore.RosResource
 	SetResource(val alicloudroscdkcore.RosResource)
@@ -47,6 +58,9 @@ type VServerGroup interface {
 	AddDependency(resource alicloudroscdkcore.Resource)
 	AddResourceDesc(desc *string)
 	ApplyRemovalPolicy(policy alicloudroscdkcore.RemovalPolicy)
+	FetchCondition() alicloudroscdkcore.RosCondition
+	FetchDependency() *[]*string
+	FetchResourceDesc() *string
 	GeneratePhysicalName() *string
 	GetAtt(name *string) alicloudroscdkcore.IResolvable
 	// Perform final modifications before synthesis.
@@ -99,10 +113,21 @@ type VServerGroup interface {
 // The jsii proxy struct for VServerGroup
 type jsiiProxy_VServerGroup struct {
 	internal.Type__alicloudroscdkcoreResource
+	jsiiProxy_IVServerGroup
 }
 
-func (j *jsiiProxy_VServerGroup) AttrBackendServers() alicloudroscdkcore.IResolvable {
-	var returns alicloudroscdkcore.IResolvable
+func (j *jsiiProxy_VServerGroup) AttrArn() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"attrArn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_VServerGroup) AttrBackendServers() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"attrBackendServers",
@@ -111,8 +136,8 @@ func (j *jsiiProxy_VServerGroup) AttrBackendServers() alicloudroscdkcore.IResolv
 	return returns
 }
 
-func (j *jsiiProxy_VServerGroup) AttrLoadBalancerId() alicloudroscdkcore.IResolvable {
-	var returns alicloudroscdkcore.IResolvable
+func (j *jsiiProxy_VServerGroup) AttrLoadBalancerId() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"attrLoadBalancerId",
@@ -121,8 +146,8 @@ func (j *jsiiProxy_VServerGroup) AttrLoadBalancerId() alicloudroscdkcore.IResolv
 	return returns
 }
 
-func (j *jsiiProxy_VServerGroup) AttrVServerGroupId() alicloudroscdkcore.IResolvable {
-	var returns alicloudroscdkcore.IResolvable
+func (j *jsiiProxy_VServerGroup) AttrVServerGroupId() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"attrVServerGroupId",
@@ -136,6 +161,16 @@ func (j *jsiiProxy_VServerGroup) EnableResourcePropertyConstraint() *bool {
 	_jsii_.Get(
 		j,
 		"enableResourcePropertyConstraint",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_VServerGroup) Env() alicloudroscdkcore.IResourceEnvironment {
+	var returns alicloudroscdkcore.IResourceEnvironment
+	_jsii_.Get(
+		j,
+		"env",
 		&returns,
 	)
 	return returns
@@ -273,17 +308,6 @@ func (j *jsiiProxy_VServerGroup)SetId(val *string) {
 	)
 }
 
-func (j *jsiiProxy_VServerGroup)SetProps(val *VServerGroupProps) {
-	if err := j.validateSetPropsParameters(val); err != nil {
-		panic(err)
-	}
-	_jsii_.Set(
-		j,
-		"props",
-		val,
-	)
-}
-
 func (j *jsiiProxy_VServerGroup)SetResource(val alicloudroscdkcore.RosResource) {
 	_jsii_.Set(
 		j,
@@ -375,6 +399,45 @@ func (v *jsiiProxy_VServerGroup) ApplyRemovalPolicy(policy alicloudroscdkcore.Re
 		"applyRemovalPolicy",
 		[]interface{}{policy},
 	)
+}
+
+func (v *jsiiProxy_VServerGroup) FetchCondition() alicloudroscdkcore.RosCondition {
+	var returns alicloudroscdkcore.RosCondition
+
+	_jsii_.Invoke(
+		v,
+		"fetchCondition",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (v *jsiiProxy_VServerGroup) FetchDependency() *[]*string {
+	var returns *[]*string
+
+	_jsii_.Invoke(
+		v,
+		"fetchDependency",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (v *jsiiProxy_VServerGroup) FetchResourceDesc() *string {
+	var returns *string
+
+	_jsii_.Invoke(
+		v,
+		"fetchResourceDesc",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
 }
 
 func (v *jsiiProxy_VServerGroup) GeneratePhysicalName() *string {

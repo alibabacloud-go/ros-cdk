@@ -9,15 +9,14 @@ import (
 	"github.com/aws/constructs-go/constructs/v3"
 )
 
-// This class is a base encapsulation around the ROS resource type `ALIYUN::SLB::Certificate`, which is used to upload a certificate to a Server Load Balancer (SLB) instance.
-//
-// Server certificates and certificate authority (CA) certificates are supported.
+// This class is a base encapsulation around the ROS resource type `ALIYUN::SLB::Certificate`.
 type RosCertificate interface {
 	alicloudroscdkcore.RosResource
 	AliCloudCertificateId() interface{}
 	SetAliCloudCertificateId(val interface{})
 	AliCloudCertificateName() interface{}
 	SetAliCloudCertificateName(val interface{})
+	AttrArn() alicloudroscdkcore.IResolvable
 	AttrCertificateId() alicloudroscdkcore.IResolvable
 	AttrFingerprint() alicloudroscdkcore.IResolvable
 	Certificate() interface{}
@@ -123,6 +122,9 @@ type RosCertificate interface {
 	AddRosDependency(target *string)
 	// Sets the deletion policy of the resource based on the removal policy specified.
 	ApplyRemovalPolicy(policy alicloudroscdkcore.RemovalPolicy, options *alicloudroscdkcore.RemovalPolicyOptions)
+	FetchCondition() alicloudroscdkcore.RosCondition
+	FetchDesc() *string
+	FetchRosDependency() *[]*string
 	// Returns a token for an runtime attribute of this resource.
 	//
 	// Ideally, use generated attribute accessors (e.g. `resource.arn`), but this can be used for future compatibility
@@ -200,6 +202,16 @@ func (j *jsiiProxy_RosCertificate) AliCloudCertificateName() interface{} {
 	_jsii_.Get(
 		j,
 		"aliCloudCertificateName",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_RosCertificate) AttrArn() alicloudroscdkcore.IResolvable {
+	var returns alicloudroscdkcore.IResolvable
+	_jsii_.Get(
+		j,
+		"attrArn",
 		&returns,
 	)
 	return returns
@@ -704,6 +716,45 @@ func (r *jsiiProxy_RosCertificate) ApplyRemovalPolicy(policy alicloudroscdkcore.
 		"applyRemovalPolicy",
 		[]interface{}{policy, options},
 	)
+}
+
+func (r *jsiiProxy_RosCertificate) FetchCondition() alicloudroscdkcore.RosCondition {
+	var returns alicloudroscdkcore.RosCondition
+
+	_jsii_.Invoke(
+		r,
+		"fetchCondition",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (r *jsiiProxy_RosCertificate) FetchDesc() *string {
+	var returns *string
+
+	_jsii_.Invoke(
+		r,
+		"fetchDesc",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (r *jsiiProxy_RosCertificate) FetchRosDependency() *[]*string {
+	var returns *[]*string
+
+	_jsii_.Invoke(
+		r,
+		"fetchRosDependency",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
 }
 
 func (r *jsiiProxy_RosCertificate) GetAtt(attributeName *string) alicloudroscdkcore.Reference {

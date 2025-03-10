@@ -9,21 +9,39 @@ import (
 	"github.com/aws/constructs-go/constructs/v3"
 )
 
-// This class encapsulates and extends the ROS resource type `ALIYUN::APIG::Service`.
+// This class encapsulates and extends the ROS resource type `ALIYUN::APIG::Service`, which is used to create a service.
 type Service interface {
 	alicloudroscdkcore.Resource
+	IService
 	// Attribute Addresses: Service Address List.
-	AttrAddresses() alicloudroscdkcore.IResolvable
+	AttrAddresses() interface{}
+	// Attribute AiServiceConfig: AI service configuration when SourceType equals AI.
+	AttrAiServiceConfig() interface{}
 	// Attribute GatewayId: The ID of the Cloud Native API Gateway.
-	AttrGatewayId() alicloudroscdkcore.IResolvable
+	AttrGatewayId() interface{}
+	// Attribute GroupName: The service group name.
+	AttrGroupName() interface{}
+	// Attribute Namespace: The namespace of the service:.
+	AttrNamespace() interface{}
+	// Attribute Qualifier: The function version or alias.
+	AttrQualifier() interface{}
+	// Attribute ResourceGroupId: The ID of the resource group.
+	AttrResourceGroupId() interface{}
 	// Attribute ServiceId: The ID of the service.
-	AttrServiceId() alicloudroscdkcore.IResolvable
-	// Attribute ServiceName: The Name of the service .
-	AttrServiceName() alicloudroscdkcore.IResolvable
-	// Attribute SourceType: Service source type.
-	AttrSourceType() alicloudroscdkcore.IResolvable
+	AttrServiceId() interface{}
+	// Attribute ServiceName: Service Name, need to fill in manually when SourceType is VIP/DNS/AI.
+	AttrServiceName() interface{}
 	EnableResourcePropertyConstraint() *bool
 	SetEnableResourcePropertyConstraint(val *bool)
+	// The environment this resource belongs to.
+	//
+	// For resources that are created and managed by the CDK
+	// (generally, those created by creating new class instances like Role, Bucket, etc.),
+	// this is always the same as the environment of the stack they belong to;
+	// however, for imported resources
+	// (those obtained from static methods like fromRoleArn, fromBucketName, etc.),
+	// that might be different than the stack they were imported into.
+	Env() alicloudroscdkcore.IResourceEnvironment
 	Id() *string
 	SetId(val *string)
 	// The construct tree node associated with this construct.
@@ -38,7 +56,6 @@ type Service interface {
 	// Experimental.
 	PhysicalName() *string
 	Props() *ServiceProps
-	SetProps(val *ServiceProps)
 	Ref() *string
 	Resource() alicloudroscdkcore.RosResource
 	SetResource(val alicloudroscdkcore.RosResource)
@@ -51,6 +68,9 @@ type Service interface {
 	AddDependency(resource alicloudroscdkcore.Resource)
 	AddResourceDesc(desc *string)
 	ApplyRemovalPolicy(policy alicloudroscdkcore.RemovalPolicy)
+	FetchCondition() alicloudroscdkcore.RosCondition
+	FetchDependency() *[]*string
+	FetchResourceDesc() *string
 	GeneratePhysicalName() *string
 	GetAtt(name *string) alicloudroscdkcore.IResolvable
 	// Perform final modifications before synthesis.
@@ -103,10 +123,11 @@ type Service interface {
 // The jsii proxy struct for Service
 type jsiiProxy_Service struct {
 	internal.Type__alicloudroscdkcoreResource
+	jsiiProxy_IService
 }
 
-func (j *jsiiProxy_Service) AttrAddresses() alicloudroscdkcore.IResolvable {
-	var returns alicloudroscdkcore.IResolvable
+func (j *jsiiProxy_Service) AttrAddresses() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"attrAddresses",
@@ -115,8 +136,18 @@ func (j *jsiiProxy_Service) AttrAddresses() alicloudroscdkcore.IResolvable {
 	return returns
 }
 
-func (j *jsiiProxy_Service) AttrGatewayId() alicloudroscdkcore.IResolvable {
-	var returns alicloudroscdkcore.IResolvable
+func (j *jsiiProxy_Service) AttrAiServiceConfig() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"attrAiServiceConfig",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Service) AttrGatewayId() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"attrGatewayId",
@@ -125,8 +156,48 @@ func (j *jsiiProxy_Service) AttrGatewayId() alicloudroscdkcore.IResolvable {
 	return returns
 }
 
-func (j *jsiiProxy_Service) AttrServiceId() alicloudroscdkcore.IResolvable {
-	var returns alicloudroscdkcore.IResolvable
+func (j *jsiiProxy_Service) AttrGroupName() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"attrGroupName",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Service) AttrNamespace() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"attrNamespace",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Service) AttrQualifier() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"attrQualifier",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Service) AttrResourceGroupId() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"attrResourceGroupId",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Service) AttrServiceId() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"attrServiceId",
@@ -135,21 +206,11 @@ func (j *jsiiProxy_Service) AttrServiceId() alicloudroscdkcore.IResolvable {
 	return returns
 }
 
-func (j *jsiiProxy_Service) AttrServiceName() alicloudroscdkcore.IResolvable {
-	var returns alicloudroscdkcore.IResolvable
+func (j *jsiiProxy_Service) AttrServiceName() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"attrServiceName",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_Service) AttrSourceType() alicloudroscdkcore.IResolvable {
-	var returns alicloudroscdkcore.IResolvable
-	_jsii_.Get(
-		j,
-		"attrSourceType",
 		&returns,
 	)
 	return returns
@@ -160,6 +221,16 @@ func (j *jsiiProxy_Service) EnableResourcePropertyConstraint() *bool {
 	_jsii_.Get(
 		j,
 		"enableResourcePropertyConstraint",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Service) Env() alicloudroscdkcore.IResourceEnvironment {
+	var returns alicloudroscdkcore.IResourceEnvironment
+	_jsii_.Get(
+		j,
+		"env",
 		&returns,
 	)
 	return returns
@@ -297,17 +368,6 @@ func (j *jsiiProxy_Service)SetId(val *string) {
 	)
 }
 
-func (j *jsiiProxy_Service)SetProps(val *ServiceProps) {
-	if err := j.validateSetPropsParameters(val); err != nil {
-		panic(err)
-	}
-	_jsii_.Set(
-		j,
-		"props",
-		val,
-	)
-}
-
 func (j *jsiiProxy_Service)SetResource(val alicloudroscdkcore.RosResource) {
 	_jsii_.Set(
 		j,
@@ -399,6 +459,45 @@ func (s *jsiiProxy_Service) ApplyRemovalPolicy(policy alicloudroscdkcore.Removal
 		"applyRemovalPolicy",
 		[]interface{}{policy},
 	)
+}
+
+func (s *jsiiProxy_Service) FetchCondition() alicloudroscdkcore.RosCondition {
+	var returns alicloudroscdkcore.RosCondition
+
+	_jsii_.Invoke(
+		s,
+		"fetchCondition",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (s *jsiiProxy_Service) FetchDependency() *[]*string {
+	var returns *[]*string
+
+	_jsii_.Invoke(
+		s,
+		"fetchDependency",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (s *jsiiProxy_Service) FetchResourceDesc() *string {
+	var returns *string
+
+	_jsii_.Invoke(
+		s,
+		"fetchResourceDesc",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
 }
 
 func (s *jsiiProxy_Service) GeneratePhysicalName() *string {

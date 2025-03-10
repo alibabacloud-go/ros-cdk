@@ -20,6 +20,10 @@ func (r *jsiiProxy_Role) validateAddResourceDescParameters(desc *string) error {
 	return nil
 }
 
+func (r *jsiiProxy_Role) validateAddToPolicyParameters(policyDocument *RosManagedPolicy_PolicyDocumentProperty) error {
+	return nil
+}
+
 func (r *jsiiProxy_Role) validateApplyRemovalPolicyParameters(policy alicloudroscdkcore.RemovalPolicy) error {
 	return nil
 }
@@ -49,10 +53,6 @@ func (j *jsiiProxy_Role) validateSetEnableResourcePropertyConstraintParameters(v
 }
 
 func (j *jsiiProxy_Role) validateSetIdParameters(val *string) error {
-	return nil
-}
-
-func (j *jsiiProxy_Role) validateSetPropsParameters(val *RoleProps) error {
 	return nil
 }
 

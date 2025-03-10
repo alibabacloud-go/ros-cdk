@@ -84,6 +84,10 @@ func validateRosDBInstance_IsRosResourceParameters(construct alicloudroscdkcore.
 	return nil
 }
 
+func (j *jsiiProxy_RosDBInstance) validateSetAiNodeSpecInfosParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_RosDBInstance) validateSetCreateSampleDataParameters(val interface{}) error {
 	return nil
 }
@@ -108,6 +112,10 @@ func (j *jsiiProxy_RosDBInstance) validateSetDbInstanceModeParameters(val interf
 	return nil
 }
 
+func (j *jsiiProxy_RosDBInstance) validateSetDeployModeParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_RosDBInstance) validateSetEnableResourcePropertyConstraintParameters(val *bool) error {
 	return nil
 }
@@ -129,6 +137,10 @@ func (j *jsiiProxy_RosDBInstance) validateSetIdleTimeParameters(val interface{})
 }
 
 func (j *jsiiProxy_RosDBInstance) validateSetInstanceSpecParameters(val interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_RosDBInstance) validateSetMasterCuParameters(val interface{}) error {
 	return nil
 }
 
@@ -177,6 +189,14 @@ func (j *jsiiProxy_RosDBInstance) validateSetServerlessModeParameters(val interf
 }
 
 func (j *jsiiProxy_RosDBInstance) validateSetServerlessResourceParameters(val interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_RosDBInstance) validateSetStandbyVSwitchIdParameters(val interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_RosDBInstance) validateSetStandbyZoneIdParameters(val interface{}) error {
 	return nil
 }
 

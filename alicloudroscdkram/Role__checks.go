@@ -95,6 +95,17 @@ func (r *jsiiProxy_Role) validateAddResourceDescParameters(desc *string) error {
 	return nil
 }
 
+func (r *jsiiProxy_Role) validateAddToPolicyParameters(policyDocument *RosManagedPolicy_PolicyDocumentProperty) error {
+	if policyDocument == nil {
+		return fmt.Errorf("parameter policyDocument is required, but nil was provided")
+	}
+	if err := _jsii_.ValidateStruct(policyDocument, func() string { return "parameter policyDocument" }); err != nil {
+		return err
+	}
+
+	return nil
+}
+
 func (r *jsiiProxy_Role) validateApplyRemovalPolicyParameters(policy alicloudroscdkcore.RemovalPolicy) error {
 	if policy == "" {
 		return fmt.Errorf("parameter policy is required, but nil was provided")
@@ -158,17 +169,6 @@ func (j *jsiiProxy_Role) validateSetEnableResourcePropertyConstraintParameters(v
 func (j *jsiiProxy_Role) validateSetIdParameters(val *string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
-	}
-
-	return nil
-}
-
-func (j *jsiiProxy_Role) validateSetPropsParameters(val *RoleProps) error {
-	if val == nil {
-		return fmt.Errorf("parameter val is required, but nil was provided")
-	}
-	if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
-		return err
 	}
 
 	return nil

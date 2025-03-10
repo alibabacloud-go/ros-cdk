@@ -16,6 +16,7 @@ type RosScalingGroup interface {
 	alicloudroscdkcore.RosResource
 	AllocationStrategy() interface{}
 	SetAllocationStrategy(val interface{})
+	AttrArn() alicloudroscdkcore.IResolvable
 	AttrScalingGroupId() alicloudroscdkcore.IResolvable
 	AttrScalingGroupName() alicloudroscdkcore.IResolvable
 	AzBalance() interface{}
@@ -179,6 +180,9 @@ type RosScalingGroup interface {
 	AddRosDependency(target *string)
 	// Sets the deletion policy of the resource based on the removal policy specified.
 	ApplyRemovalPolicy(policy alicloudroscdkcore.RemovalPolicy, options *alicloudroscdkcore.RemovalPolicyOptions)
+	FetchCondition() alicloudroscdkcore.RosCondition
+	FetchDesc() *string
+	FetchRosDependency() *[]*string
 	// Returns a token for an runtime attribute of this resource.
 	//
 	// Ideally, use generated attribute accessors (e.g. `resource.arn`), but this can be used for future compatibility
@@ -246,6 +250,16 @@ func (j *jsiiProxy_RosScalingGroup) AllocationStrategy() interface{} {
 	_jsii_.Get(
 		j,
 		"allocationStrategy",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_RosScalingGroup) AttrArn() alicloudroscdkcore.IResolvable {
+	var returns alicloudroscdkcore.IResolvable
+	_jsii_.Get(
+		j,
+		"attrArn",
 		&returns,
 	)
 	return returns
@@ -1348,6 +1362,45 @@ func (r *jsiiProxy_RosScalingGroup) ApplyRemovalPolicy(policy alicloudroscdkcore
 		"applyRemovalPolicy",
 		[]interface{}{policy, options},
 	)
+}
+
+func (r *jsiiProxy_RosScalingGroup) FetchCondition() alicloudroscdkcore.RosCondition {
+	var returns alicloudroscdkcore.RosCondition
+
+	_jsii_.Invoke(
+		r,
+		"fetchCondition",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (r *jsiiProxy_RosScalingGroup) FetchDesc() *string {
+	var returns *string
+
+	_jsii_.Invoke(
+		r,
+		"fetchDesc",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (r *jsiiProxy_RosScalingGroup) FetchRosDependency() *[]*string {
+	var returns *[]*string
+
+	_jsii_.Invoke(
+		r,
+		"fetchRosDependency",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
 }
 
 func (r *jsiiProxy_RosScalingGroup) GetAtt(attributeName *string) alicloudroscdkcore.Reference {

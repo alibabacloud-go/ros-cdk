@@ -28,6 +28,22 @@ func (i *jsiiProxy_Instance) validateGetAttParameters(name *string) error {
 	return nil
 }
 
+func (i *jsiiProxy_Instance) validateGrantFullAccessParameters(identity alicloudroscdkram.IPrincipal) error {
+	return nil
+}
+
+func (i *jsiiProxy_Instance) validateGrantListParameters(identity alicloudroscdkram.IPrincipal) error {
+	return nil
+}
+
+func (i *jsiiProxy_Instance) validateGrantReadParameters(identity alicloudroscdkram.IPrincipal) error {
+	return nil
+}
+
+func (i *jsiiProxy_Instance) validateGrantReadWriteParameters(identity alicloudroscdkram.IPrincipal) error {
+	return nil
+}
+
 func (i *jsiiProxy_Instance) validateOnSynthesizeParameters(session constructs.ISynthesisSession) error {
 	return nil
 }
@@ -49,10 +65,6 @@ func (j *jsiiProxy_Instance) validateSetEnableResourcePropertyConstraintParamete
 }
 
 func (j *jsiiProxy_Instance) validateSetIdParameters(val *string) error {
-	return nil
-}
-
-func (j *jsiiProxy_Instance) validateSetPropsParameters(val *InstanceProps) error {
 	return nil
 }
 

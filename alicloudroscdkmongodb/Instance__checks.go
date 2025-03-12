@@ -8,6 +8,7 @@ import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
 
 	"github.com/alibabacloud-go/ros-cdk/alicloudroscdkcore"
+	"github.com/alibabacloud-go/ros-cdk/alicloudroscdkram"
 	"github.com/aws/constructs-go/constructs/v3"
 )
 
@@ -111,6 +112,38 @@ func (i *jsiiProxy_Instance) validateGetAttParameters(name *string) error {
 	return nil
 }
 
+func (i *jsiiProxy_Instance) validateGrantFullAccessParameters(identity alicloudroscdkram.IPrincipal) error {
+	if identity == nil {
+		return fmt.Errorf("parameter identity is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (i *jsiiProxy_Instance) validateGrantListParameters(identity alicloudroscdkram.IPrincipal) error {
+	if identity == nil {
+		return fmt.Errorf("parameter identity is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (i *jsiiProxy_Instance) validateGrantReadParameters(identity alicloudroscdkram.IPrincipal) error {
+	if identity == nil {
+		return fmt.Errorf("parameter identity is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (i *jsiiProxy_Instance) validateGrantReadWriteParameters(identity alicloudroscdkram.IPrincipal) error {
+	if identity == nil {
+		return fmt.Errorf("parameter identity is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (i *jsiiProxy_Instance) validateOnSynthesizeParameters(session constructs.ISynthesisSession) error {
 	if session == nil {
 		return fmt.Errorf("parameter session is required, but nil was provided")
@@ -158,17 +191,6 @@ func (j *jsiiProxy_Instance) validateSetEnableResourcePropertyConstraintParamete
 func (j *jsiiProxy_Instance) validateSetIdParameters(val *string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
-	}
-
-	return nil
-}
-
-func (j *jsiiProxy_Instance) validateSetPropsParameters(val *InstanceProps) error {
-	if val == nil {
-		return fmt.Errorf("parameter val is required, but nil was provided")
-	}
-	if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
-		return err
 	}
 
 	return nil

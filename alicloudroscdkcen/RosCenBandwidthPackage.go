@@ -12,6 +12,7 @@ import (
 // This class is a base encapsulation around the ROS resource type `ALIYUN::CEN::CenBandwidthPackage`, which is used to purchase a bandwidth plan before you use Cloud Enterprise Network (CEN) to connect network instances that reside in different regions.
 type RosCenBandwidthPackage interface {
 	alicloudroscdkcore.RosResource
+	AttrArn() alicloudroscdkcore.IResolvable
 	AttrCenBandwidthPackageId() alicloudroscdkcore.IResolvable
 	AutoPay() interface{}
 	SetAutoPay(val interface{})
@@ -130,6 +131,9 @@ type RosCenBandwidthPackage interface {
 	AddRosDependency(target *string)
 	// Sets the deletion policy of the resource based on the removal policy specified.
 	ApplyRemovalPolicy(policy alicloudroscdkcore.RemovalPolicy, options *alicloudroscdkcore.RemovalPolicyOptions)
+	FetchCondition() alicloudroscdkcore.RosCondition
+	FetchDesc() *string
+	FetchRosDependency() *[]*string
 	// Returns a token for an runtime attribute of this resource.
 	//
 	// Ideally, use generated attribute accessors (e.g. `resource.arn`), but this can be used for future compatibility
@@ -190,6 +194,16 @@ type RosCenBandwidthPackage interface {
 // The jsii proxy struct for RosCenBandwidthPackage
 type jsiiProxy_RosCenBandwidthPackage struct {
 	internal.Type__alicloudroscdkcoreRosResource
+}
+
+func (j *jsiiProxy_RosCenBandwidthPackage) AttrArn() alicloudroscdkcore.IResolvable {
+	var returns alicloudroscdkcore.IResolvable
+	_jsii_.Get(
+		j,
+		"attrArn",
+		&returns,
+	)
+	return returns
 }
 
 func (j *jsiiProxy_RosCenBandwidthPackage) AttrCenBandwidthPackageId() alicloudroscdkcore.IResolvable {
@@ -806,6 +820,45 @@ func (r *jsiiProxy_RosCenBandwidthPackage) ApplyRemovalPolicy(policy alicloudros
 		"applyRemovalPolicy",
 		[]interface{}{policy, options},
 	)
+}
+
+func (r *jsiiProxy_RosCenBandwidthPackage) FetchCondition() alicloudroscdkcore.RosCondition {
+	var returns alicloudroscdkcore.RosCondition
+
+	_jsii_.Invoke(
+		r,
+		"fetchCondition",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (r *jsiiProxy_RosCenBandwidthPackage) FetchDesc() *string {
+	var returns *string
+
+	_jsii_.Invoke(
+		r,
+		"fetchDesc",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (r *jsiiProxy_RosCenBandwidthPackage) FetchRosDependency() *[]*string {
+	var returns *[]*string
+
+	_jsii_.Invoke(
+		r,
+		"fetchRosDependency",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
 }
 
 func (r *jsiiProxy_RosCenBandwidthPackage) GetAtt(attributeName *string) alicloudroscdkcore.Reference {

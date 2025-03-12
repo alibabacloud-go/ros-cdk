@@ -9,9 +9,10 @@ import (
 	"github.com/aws/constructs-go/constructs/v3"
 )
 
-// This class is a base encapsulation around the ROS resource type `ALIYUN::PVTZ::Zone`, which is used to create a built-in authoritative zone.
+// This class is a base encapsulation around the ROS resource type `ALIYUN::PVTZ::Zone`.
 type RosZone interface {
 	alicloudroscdkcore.RosResource
+	AttrArn() alicloudroscdkcore.IResolvable
 	AttrZoneId() alicloudroscdkcore.IResolvable
 	AttrZoneName() alicloudroscdkcore.IResolvable
 	AttrZoneTag() alicloudroscdkcore.IResolvable
@@ -121,6 +122,9 @@ type RosZone interface {
 	AddRosDependency(target *string)
 	// Sets the deletion policy of the resource based on the removal policy specified.
 	ApplyRemovalPolicy(policy alicloudroscdkcore.RemovalPolicy, options *alicloudroscdkcore.RemovalPolicyOptions)
+	FetchCondition() alicloudroscdkcore.RosCondition
+	FetchDesc() *string
+	FetchRosDependency() *[]*string
 	// Returns a token for an runtime attribute of this resource.
 	//
 	// Ideally, use generated attribute accessors (e.g. `resource.arn`), but this can be used for future compatibility
@@ -181,6 +185,16 @@ type RosZone interface {
 // The jsii proxy struct for RosZone
 type jsiiProxy_RosZone struct {
 	internal.Type__alicloudroscdkcoreRosResource
+}
+
+func (j *jsiiProxy_RosZone) AttrArn() alicloudroscdkcore.IResolvable {
+	var returns alicloudroscdkcore.IResolvable
+	_jsii_.Get(
+		j,
+		"attrArn",
+		&returns,
+	)
+	return returns
 }
 
 func (j *jsiiProxy_RosZone) AttrZoneId() alicloudroscdkcore.IResolvable {
@@ -701,6 +715,45 @@ func (r *jsiiProxy_RosZone) ApplyRemovalPolicy(policy alicloudroscdkcore.Removal
 		"applyRemovalPolicy",
 		[]interface{}{policy, options},
 	)
+}
+
+func (r *jsiiProxy_RosZone) FetchCondition() alicloudroscdkcore.RosCondition {
+	var returns alicloudroscdkcore.RosCondition
+
+	_jsii_.Invoke(
+		r,
+		"fetchCondition",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (r *jsiiProxy_RosZone) FetchDesc() *string {
+	var returns *string
+
+	_jsii_.Invoke(
+		r,
+		"fetchDesc",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (r *jsiiProxy_RosZone) FetchRosDependency() *[]*string {
+	var returns *[]*string
+
+	_jsii_.Invoke(
+		r,
+		"fetchRosDependency",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
 }
 
 func (r *jsiiProxy_RosZone) GetAtt(attributeName *string) alicloudroscdkcore.Reference {

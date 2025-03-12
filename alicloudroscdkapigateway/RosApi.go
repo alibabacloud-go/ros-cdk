@@ -19,6 +19,7 @@ type RosApi interface {
 	AppCodeAuthType() interface{}
 	SetAppCodeAuthType(val interface{})
 	AttrApiId() alicloudroscdkcore.IResolvable
+	AttrArn() alicloudroscdkcore.IResolvable
 	AuthType() interface{}
 	SetAuthType(val interface{})
 	ConstParameters() interface{}
@@ -154,6 +155,9 @@ type RosApi interface {
 	AddRosDependency(target *string)
 	// Sets the deletion policy of the resource based on the removal policy specified.
 	ApplyRemovalPolicy(policy alicloudroscdkcore.RemovalPolicy, options *alicloudroscdkcore.RemovalPolicyOptions)
+	FetchCondition() alicloudroscdkcore.RosCondition
+	FetchDesc() *string
+	FetchRosDependency() *[]*string
 	// Returns a token for an runtime attribute of this resource.
 	//
 	// Ideally, use generated attribute accessors (e.g. `resource.arn`), but this can be used for future compatibility
@@ -251,6 +255,16 @@ func (j *jsiiProxy_RosApi) AttrApiId() alicloudroscdkcore.IResolvable {
 	_jsii_.Get(
 		j,
 		"attrApiId",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_RosApi) AttrArn() alicloudroscdkcore.IResolvable {
+	var returns alicloudroscdkcore.IResolvable
+	_jsii_.Get(
+		j,
+		"attrArn",
 		&returns,
 	)
 	return returns
@@ -1082,6 +1096,45 @@ func (r *jsiiProxy_RosApi) ApplyRemovalPolicy(policy alicloudroscdkcore.RemovalP
 		"applyRemovalPolicy",
 		[]interface{}{policy, options},
 	)
+}
+
+func (r *jsiiProxy_RosApi) FetchCondition() alicloudroscdkcore.RosCondition {
+	var returns alicloudroscdkcore.RosCondition
+
+	_jsii_.Invoke(
+		r,
+		"fetchCondition",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (r *jsiiProxy_RosApi) FetchDesc() *string {
+	var returns *string
+
+	_jsii_.Invoke(
+		r,
+		"fetchDesc",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (r *jsiiProxy_RosApi) FetchRosDependency() *[]*string {
+	var returns *[]*string
+
+	_jsii_.Invoke(
+		r,
+		"fetchRosDependency",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
 }
 
 func (r *jsiiProxy_RosApi) GetAtt(attributeName *string) alicloudroscdkcore.Reference {

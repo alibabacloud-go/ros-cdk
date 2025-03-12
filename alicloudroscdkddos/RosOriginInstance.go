@@ -12,6 +12,7 @@ import (
 // This class is a base encapsulation around the ROS resource type `ALIYUN::DDoS::OriginInstance`, which is used to create an Anti-DDoS Origin instance.
 type RosOriginInstance interface {
 	alicloudroscdkcore.RosResource
+	AttrArn() alicloudroscdkcore.IResolvable
 	AttrInstanceId() alicloudroscdkcore.IResolvable
 	ChargeType() interface{}
 	SetChargeType(val interface{})
@@ -124,6 +125,9 @@ type RosOriginInstance interface {
 	AddRosDependency(target *string)
 	// Sets the deletion policy of the resource based on the removal policy specified.
 	ApplyRemovalPolicy(policy alicloudroscdkcore.RemovalPolicy, options *alicloudroscdkcore.RemovalPolicyOptions)
+	FetchCondition() alicloudroscdkcore.RosCondition
+	FetchDesc() *string
+	FetchRosDependency() *[]*string
 	// Returns a token for an runtime attribute of this resource.
 	//
 	// Ideally, use generated attribute accessors (e.g. `resource.arn`), but this can be used for future compatibility
@@ -184,6 +188,16 @@ type RosOriginInstance interface {
 // The jsii proxy struct for RosOriginInstance
 type jsiiProxy_RosOriginInstance struct {
 	internal.Type__alicloudroscdkcoreRosResource
+}
+
+func (j *jsiiProxy_RosOriginInstance) AttrArn() alicloudroscdkcore.IResolvable {
+	var returns alicloudroscdkcore.IResolvable
+	_jsii_.Get(
+		j,
+		"attrArn",
+		&returns,
+	)
+	return returns
 }
 
 func (j *jsiiProxy_RosOriginInstance) AttrInstanceId() alicloudroscdkcore.IResolvable {
@@ -737,6 +751,45 @@ func (r *jsiiProxy_RosOriginInstance) ApplyRemovalPolicy(policy alicloudroscdkco
 		"applyRemovalPolicy",
 		[]interface{}{policy, options},
 	)
+}
+
+func (r *jsiiProxy_RosOriginInstance) FetchCondition() alicloudroscdkcore.RosCondition {
+	var returns alicloudroscdkcore.RosCondition
+
+	_jsii_.Invoke(
+		r,
+		"fetchCondition",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (r *jsiiProxy_RosOriginInstance) FetchDesc() *string {
+	var returns *string
+
+	_jsii_.Invoke(
+		r,
+		"fetchDesc",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (r *jsiiProxy_RosOriginInstance) FetchRosDependency() *[]*string {
+	var returns *[]*string
+
+	_jsii_.Invoke(
+		r,
+		"fetchRosDependency",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
 }
 
 func (r *jsiiProxy_RosOriginInstance) GetAtt(attributeName *string) alicloudroscdkcore.Reference {

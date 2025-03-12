@@ -12,6 +12,7 @@ import (
 // This class is a base encapsulation around the ROS resource type `ALIYUN::ECS::SSHKeyPair`, which is used to create an SSH key pair or import an existing SSH key pair to access an Elastic Compute Service (ECS) instance.
 type RosSSHKeyPair interface {
 	alicloudroscdkcore.RosResource
+	AttrArn() alicloudroscdkcore.IResolvable
 	AttrKeyPairFingerPrint() alicloudroscdkcore.IResolvable
 	AttrKeyPairName() alicloudroscdkcore.IResolvable
 	AttrPrivateKeyBody() alicloudroscdkcore.IResolvable
@@ -114,6 +115,9 @@ type RosSSHKeyPair interface {
 	AddRosDependency(target *string)
 	// Sets the deletion policy of the resource based on the removal policy specified.
 	ApplyRemovalPolicy(policy alicloudroscdkcore.RemovalPolicy, options *alicloudroscdkcore.RemovalPolicyOptions)
+	FetchCondition() alicloudroscdkcore.RosCondition
+	FetchDesc() *string
+	FetchRosDependency() *[]*string
 	// Returns a token for an runtime attribute of this resource.
 	//
 	// Ideally, use generated attribute accessors (e.g. `resource.arn`), but this can be used for future compatibility
@@ -174,6 +178,16 @@ type RosSSHKeyPair interface {
 // The jsii proxy struct for RosSSHKeyPair
 type jsiiProxy_RosSSHKeyPair struct {
 	internal.Type__alicloudroscdkcoreRosResource
+}
+
+func (j *jsiiProxy_RosSSHKeyPair) AttrArn() alicloudroscdkcore.IResolvable {
+	var returns alicloudroscdkcore.IResolvable
+	_jsii_.Get(
+		j,
+		"attrArn",
+		&returns,
+	)
+	return returns
 }
 
 func (j *jsiiProxy_RosSSHKeyPair) AttrKeyPairFingerPrint() alicloudroscdkcore.IResolvable {
@@ -621,6 +635,45 @@ func (r *jsiiProxy_RosSSHKeyPair) ApplyRemovalPolicy(policy alicloudroscdkcore.R
 		"applyRemovalPolicy",
 		[]interface{}{policy, options},
 	)
+}
+
+func (r *jsiiProxy_RosSSHKeyPair) FetchCondition() alicloudroscdkcore.RosCondition {
+	var returns alicloudroscdkcore.RosCondition
+
+	_jsii_.Invoke(
+		r,
+		"fetchCondition",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (r *jsiiProxy_RosSSHKeyPair) FetchDesc() *string {
+	var returns *string
+
+	_jsii_.Invoke(
+		r,
+		"fetchDesc",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (r *jsiiProxy_RosSSHKeyPair) FetchRosDependency() *[]*string {
+	var returns *[]*string
+
+	_jsii_.Invoke(
+		r,
+		"fetchRosDependency",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
 }
 
 func (r *jsiiProxy_RosSSHKeyPair) GetAtt(attributeName *string) alicloudroscdkcore.Reference {

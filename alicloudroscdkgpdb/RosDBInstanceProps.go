@@ -8,16 +8,19 @@ type RosDBInstanceProps struct {
 	EngineVersion interface{} `field:"required" json:"engineVersion" yaml:"engineVersion"`
 	VSwitchId interface{} `field:"required" json:"vSwitchId" yaml:"vSwitchId"`
 	ZoneId interface{} `field:"required" json:"zoneId" yaml:"zoneId"`
+	AiNodeSpecInfos interface{} `field:"optional" json:"aiNodeSpecInfos" yaml:"aiNodeSpecInfos"`
 	CreateSampleData interface{} `field:"optional" json:"createSampleData" yaml:"createSampleData"`
 	DbInstanceCategory interface{} `field:"optional" json:"dbInstanceCategory" yaml:"dbInstanceCategory"`
 	DbInstanceClass interface{} `field:"optional" json:"dbInstanceClass" yaml:"dbInstanceClass"`
 	DbInstanceDescription interface{} `field:"optional" json:"dbInstanceDescription" yaml:"dbInstanceDescription"`
 	DbInstanceGroupCount interface{} `field:"optional" json:"dbInstanceGroupCount" yaml:"dbInstanceGroupCount"`
 	DbInstanceMode interface{} `field:"optional" json:"dbInstanceMode" yaml:"dbInstanceMode"`
+	DeployMode interface{} `field:"optional" json:"deployMode" yaml:"deployMode"`
 	EncryptionKey interface{} `field:"optional" json:"encryptionKey" yaml:"encryptionKey"`
 	EncryptionType interface{} `field:"optional" json:"encryptionType" yaml:"encryptionType"`
 	IdleTime interface{} `field:"optional" json:"idleTime" yaml:"idleTime"`
 	InstanceSpec interface{} `field:"optional" json:"instanceSpec" yaml:"instanceSpec"`
+	MasterCu interface{} `field:"optional" json:"masterCu" yaml:"masterCu"`
 	MasterNodeNum interface{} `field:"optional" json:"masterNodeNum" yaml:"masterNodeNum"`
 	PayType interface{} `field:"optional" json:"payType" yaml:"payType"`
 	Period interface{} `field:"optional" json:"period" yaml:"period"`
@@ -30,6 +33,8 @@ type RosDBInstanceProps struct {
 	SegStorageType interface{} `field:"optional" json:"segStorageType" yaml:"segStorageType"`
 	ServerlessMode interface{} `field:"optional" json:"serverlessMode" yaml:"serverlessMode"`
 	ServerlessResource interface{} `field:"optional" json:"serverlessResource" yaml:"serverlessResource"`
+	StandbyVSwitchId interface{} `field:"optional" json:"standbyVSwitchId" yaml:"standbyVSwitchId"`
+	StandbyZoneId interface{} `field:"optional" json:"standbyZoneId" yaml:"standbyZoneId"`
 	StorageSize interface{} `field:"optional" json:"storageSize" yaml:"storageSize"`
 	Tags *[]*RosDBInstance_TagsProperty `field:"optional" json:"tags" yaml:"tags"`
 	VectorConfigurationStatus interface{} `field:"optional" json:"vectorConfigurationStatus" yaml:"vectorConfigurationStatus"`

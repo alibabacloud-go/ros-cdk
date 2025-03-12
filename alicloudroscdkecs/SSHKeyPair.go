@@ -12,18 +12,30 @@ import (
 // This class encapsulates and extends the ROS resource type `ALIYUN::ECS::SSHKeyPair`, which is used to create an SSH key pair or import an existing SSH key pair to access an Elastic Compute Service (ECS) instance.
 type SSHKeyPair interface {
 	alicloudroscdkcore.Resource
+	ISSHKeyPair
+	// Attribute Arn: The Alibaba Cloud Resource Name (ARN).
+	AttrArn() interface{}
 	// Attribute KeyPairFingerPrint: The fingerprint of the key pair.
 	//
 	// The public key fingerprint format defined in RFC4716: MD5 message digest algorithm. Refer to http://tools.ietf.org/html/rfc4716.
-	AttrKeyPairFingerPrint() alicloudroscdkcore.IResolvable
+	AttrKeyPairFingerPrint() interface{}
 	// Attribute KeyPairName: SSH Key pair name.
-	AttrKeyPairName() alicloudroscdkcore.IResolvable
+	AttrKeyPairName() interface{}
 	// Attribute PrivateKeyBody: The private key of the key pair.
 	//
 	// Content of the RSA private key in the PKCS#8 format of the unencrypted PEM encoding. Refer to: https://www.openssl.org/docs/apps/pkcs8.html.User only can get the private key one time when and only when SSH key pair is created.
-	AttrPrivateKeyBody() alicloudroscdkcore.IResolvable
+	AttrPrivateKeyBody() interface{}
 	EnableResourcePropertyConstraint() *bool
 	SetEnableResourcePropertyConstraint(val *bool)
+	// The environment this resource belongs to.
+	//
+	// For resources that are created and managed by the CDK
+	// (generally, those created by creating new class instances like Role, Bucket, etc.),
+	// this is always the same as the environment of the stack they belong to;
+	// however, for imported resources
+	// (those obtained from static methods like fromRoleArn, fromBucketName, etc.),
+	// that might be different than the stack they were imported into.
+	Env() alicloudroscdkcore.IResourceEnvironment
 	Id() *string
 	SetId(val *string)
 	// The construct tree node associated with this construct.
@@ -38,7 +50,6 @@ type SSHKeyPair interface {
 	// Experimental.
 	PhysicalName() *string
 	Props() *SSHKeyPairProps
-	SetProps(val *SSHKeyPairProps)
 	Ref() *string
 	Resource() alicloudroscdkcore.RosResource
 	SetResource(val alicloudroscdkcore.RosResource)
@@ -51,6 +62,9 @@ type SSHKeyPair interface {
 	AddDependency(resource alicloudroscdkcore.Resource)
 	AddResourceDesc(desc *string)
 	ApplyRemovalPolicy(policy alicloudroscdkcore.RemovalPolicy)
+	FetchCondition() alicloudroscdkcore.RosCondition
+	FetchDependency() *[]*string
+	FetchResourceDesc() *string
 	GeneratePhysicalName() *string
 	GetAtt(name *string) alicloudroscdkcore.IResolvable
 	// Perform final modifications before synthesis.
@@ -103,10 +117,21 @@ type SSHKeyPair interface {
 // The jsii proxy struct for SSHKeyPair
 type jsiiProxy_SSHKeyPair struct {
 	internal.Type__alicloudroscdkcoreResource
+	jsiiProxy_ISSHKeyPair
 }
 
-func (j *jsiiProxy_SSHKeyPair) AttrKeyPairFingerPrint() alicloudroscdkcore.IResolvable {
-	var returns alicloudroscdkcore.IResolvable
+func (j *jsiiProxy_SSHKeyPair) AttrArn() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"attrArn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SSHKeyPair) AttrKeyPairFingerPrint() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"attrKeyPairFingerPrint",
@@ -115,8 +140,8 @@ func (j *jsiiProxy_SSHKeyPair) AttrKeyPairFingerPrint() alicloudroscdkcore.IReso
 	return returns
 }
 
-func (j *jsiiProxy_SSHKeyPair) AttrKeyPairName() alicloudroscdkcore.IResolvable {
-	var returns alicloudroscdkcore.IResolvable
+func (j *jsiiProxy_SSHKeyPair) AttrKeyPairName() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"attrKeyPairName",
@@ -125,8 +150,8 @@ func (j *jsiiProxy_SSHKeyPair) AttrKeyPairName() alicloudroscdkcore.IResolvable 
 	return returns
 }
 
-func (j *jsiiProxy_SSHKeyPair) AttrPrivateKeyBody() alicloudroscdkcore.IResolvable {
-	var returns alicloudroscdkcore.IResolvable
+func (j *jsiiProxy_SSHKeyPair) AttrPrivateKeyBody() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"attrPrivateKeyBody",
@@ -140,6 +165,16 @@ func (j *jsiiProxy_SSHKeyPair) EnableResourcePropertyConstraint() *bool {
 	_jsii_.Get(
 		j,
 		"enableResourcePropertyConstraint",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SSHKeyPair) Env() alicloudroscdkcore.IResourceEnvironment {
+	var returns alicloudroscdkcore.IResourceEnvironment
+	_jsii_.Get(
+		j,
+		"env",
 		&returns,
 	)
 	return returns
@@ -277,17 +312,6 @@ func (j *jsiiProxy_SSHKeyPair)SetId(val *string) {
 	)
 }
 
-func (j *jsiiProxy_SSHKeyPair)SetProps(val *SSHKeyPairProps) {
-	if err := j.validateSetPropsParameters(val); err != nil {
-		panic(err)
-	}
-	_jsii_.Set(
-		j,
-		"props",
-		val,
-	)
-}
-
 func (j *jsiiProxy_SSHKeyPair)SetResource(val alicloudroscdkcore.RosResource) {
 	_jsii_.Set(
 		j,
@@ -379,6 +403,45 @@ func (s *jsiiProxy_SSHKeyPair) ApplyRemovalPolicy(policy alicloudroscdkcore.Remo
 		"applyRemovalPolicy",
 		[]interface{}{policy},
 	)
+}
+
+func (s *jsiiProxy_SSHKeyPair) FetchCondition() alicloudroscdkcore.RosCondition {
+	var returns alicloudroscdkcore.RosCondition
+
+	_jsii_.Invoke(
+		s,
+		"fetchCondition",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (s *jsiiProxy_SSHKeyPair) FetchDependency() *[]*string {
+	var returns *[]*string
+
+	_jsii_.Invoke(
+		s,
+		"fetchDependency",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (s *jsiiProxy_SSHKeyPair) FetchResourceDesc() *string {
+	var returns *string
+
+	_jsii_.Invoke(
+		s,
+		"fetchResourceDesc",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
 }
 
 func (s *jsiiProxy_SSHKeyPair) GeneratePhysicalName() *string {

@@ -9,9 +9,7 @@ import (
 	"github.com/aws/constructs-go/constructs/v3"
 )
 
-// This class is a base encapsulation around the ROS resource type `ALIYUN::POLARDB::DBClusterEndpointAddress`, which is used to create a public endpoint for an Apsara PolarDB cluster.
-//
-// The public endpoint can be a primary endpoint, the default cluster endpoint, or a custom cluster endpoint.
+// This class is a base encapsulation around the ROS resource type `ALIYUN::POLARDB::DBClusterEndpointAddress`.
 type RosDBClusterEndpointAddress interface {
 	alicloudroscdkcore.RosResource
 	AttrAddress() alicloudroscdkcore.IResolvable
@@ -115,6 +113,9 @@ type RosDBClusterEndpointAddress interface {
 	AddRosDependency(target *string)
 	// Sets the deletion policy of the resource based on the removal policy specified.
 	ApplyRemovalPolicy(policy alicloudroscdkcore.RemovalPolicy, options *alicloudroscdkcore.RemovalPolicyOptions)
+	FetchCondition() alicloudroscdkcore.RosCondition
+	FetchDesc() *string
+	FetchRosDependency() *[]*string
 	// Returns a token for an runtime attribute of this resource.
 	//
 	// Ideally, use generated attribute accessors (e.g. `resource.arn`), but this can be used for future compatibility
@@ -612,6 +613,45 @@ func (r *jsiiProxy_RosDBClusterEndpointAddress) ApplyRemovalPolicy(policy aliclo
 		"applyRemovalPolicy",
 		[]interface{}{policy, options},
 	)
+}
+
+func (r *jsiiProxy_RosDBClusterEndpointAddress) FetchCondition() alicloudroscdkcore.RosCondition {
+	var returns alicloudroscdkcore.RosCondition
+
+	_jsii_.Invoke(
+		r,
+		"fetchCondition",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (r *jsiiProxy_RosDBClusterEndpointAddress) FetchDesc() *string {
+	var returns *string
+
+	_jsii_.Invoke(
+		r,
+		"fetchDesc",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (r *jsiiProxy_RosDBClusterEndpointAddress) FetchRosDependency() *[]*string {
+	var returns *[]*string
+
+	_jsii_.Invoke(
+		r,
+		"fetchRosDependency",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
 }
 
 func (r *jsiiProxy_RosDBClusterEndpointAddress) GetAtt(attributeName *string) alicloudroscdkcore.Reference {

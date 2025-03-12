@@ -9,13 +9,25 @@ import (
 	"github.com/aws/constructs-go/constructs/v3"
 )
 
-// This class encapsulates and extends the ROS resource type `ALIYUN::VPC::Ipv6Gateway`, which is used to create an IPv6 gateway.
+// This class encapsulates and extends the ROS resource type `ALIYUN::VPC::Ipv6Gateway`.
 type Ipv6Gateway interface {
 	alicloudroscdkcore.Resource
+	IIpv6Gateway
+	// Attribute Arn: The Alibaba Cloud Resource Name (ARN).
+	AttrArn() interface{}
 	// Attribute Ipv6GatewayId: ID IPv6 gateway.
-	AttrIpv6GatewayId() alicloudroscdkcore.IResolvable
+	AttrIpv6GatewayId() interface{}
 	EnableResourcePropertyConstraint() *bool
 	SetEnableResourcePropertyConstraint(val *bool)
+	// The environment this resource belongs to.
+	//
+	// For resources that are created and managed by the CDK
+	// (generally, those created by creating new class instances like Role, Bucket, etc.),
+	// this is always the same as the environment of the stack they belong to;
+	// however, for imported resources
+	// (those obtained from static methods like fromRoleArn, fromBucketName, etc.),
+	// that might be different than the stack they were imported into.
+	Env() alicloudroscdkcore.IResourceEnvironment
 	Id() *string
 	SetId(val *string)
 	// The construct tree node associated with this construct.
@@ -30,7 +42,6 @@ type Ipv6Gateway interface {
 	// Experimental.
 	PhysicalName() *string
 	Props() *Ipv6GatewayProps
-	SetProps(val *Ipv6GatewayProps)
 	Ref() *string
 	Resource() alicloudroscdkcore.RosResource
 	SetResource(val alicloudroscdkcore.RosResource)
@@ -43,6 +54,9 @@ type Ipv6Gateway interface {
 	AddDependency(resource alicloudroscdkcore.Resource)
 	AddResourceDesc(desc *string)
 	ApplyRemovalPolicy(policy alicloudroscdkcore.RemovalPolicy)
+	FetchCondition() alicloudroscdkcore.RosCondition
+	FetchDependency() *[]*string
+	FetchResourceDesc() *string
 	GeneratePhysicalName() *string
 	GetAtt(name *string) alicloudroscdkcore.IResolvable
 	// Perform final modifications before synthesis.
@@ -95,10 +109,21 @@ type Ipv6Gateway interface {
 // The jsii proxy struct for Ipv6Gateway
 type jsiiProxy_Ipv6Gateway struct {
 	internal.Type__alicloudroscdkcoreResource
+	jsiiProxy_IIpv6Gateway
 }
 
-func (j *jsiiProxy_Ipv6Gateway) AttrIpv6GatewayId() alicloudroscdkcore.IResolvable {
-	var returns alicloudroscdkcore.IResolvable
+func (j *jsiiProxy_Ipv6Gateway) AttrArn() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"attrArn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Ipv6Gateway) AttrIpv6GatewayId() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"attrIpv6GatewayId",
@@ -112,6 +137,16 @@ func (j *jsiiProxy_Ipv6Gateway) EnableResourcePropertyConstraint() *bool {
 	_jsii_.Get(
 		j,
 		"enableResourcePropertyConstraint",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Ipv6Gateway) Env() alicloudroscdkcore.IResourceEnvironment {
+	var returns alicloudroscdkcore.IResourceEnvironment
+	_jsii_.Get(
+		j,
+		"env",
 		&returns,
 	)
 	return returns
@@ -249,17 +284,6 @@ func (j *jsiiProxy_Ipv6Gateway)SetId(val *string) {
 	)
 }
 
-func (j *jsiiProxy_Ipv6Gateway)SetProps(val *Ipv6GatewayProps) {
-	if err := j.validateSetPropsParameters(val); err != nil {
-		panic(err)
-	}
-	_jsii_.Set(
-		j,
-		"props",
-		val,
-	)
-}
-
 func (j *jsiiProxy_Ipv6Gateway)SetResource(val alicloudroscdkcore.RosResource) {
 	_jsii_.Set(
 		j,
@@ -351,6 +375,45 @@ func (i *jsiiProxy_Ipv6Gateway) ApplyRemovalPolicy(policy alicloudroscdkcore.Rem
 		"applyRemovalPolicy",
 		[]interface{}{policy},
 	)
+}
+
+func (i *jsiiProxy_Ipv6Gateway) FetchCondition() alicloudroscdkcore.RosCondition {
+	var returns alicloudroscdkcore.RosCondition
+
+	_jsii_.Invoke(
+		i,
+		"fetchCondition",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (i *jsiiProxy_Ipv6Gateway) FetchDependency() *[]*string {
+	var returns *[]*string
+
+	_jsii_.Invoke(
+		i,
+		"fetchDependency",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (i *jsiiProxy_Ipv6Gateway) FetchResourceDesc() *string {
+	var returns *string
+
+	_jsii_.Invoke(
+		i,
+		"fetchResourceDesc",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
 }
 
 func (i *jsiiProxy_Ipv6Gateway) GeneratePhysicalName() *string {

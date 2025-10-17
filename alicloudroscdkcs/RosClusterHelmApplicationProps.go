@@ -10,7 +10,9 @@ type RosClusterHelmApplicationProps struct {
 	Name interface{} `field:"required" json:"name" yaml:"name"`
 	ChartValues interface{} `field:"optional" json:"chartValues" yaml:"chartValues"`
 	Credential interface{} `field:"optional" json:"credential" yaml:"credential"`
+	IgnoreExisting interface{} `field:"optional" json:"ignoreExisting" yaml:"ignoreExisting"`
 	Namespace interface{} `field:"optional" json:"namespace" yaml:"namespace"`
+	NamespaceDeletion interface{} `field:"optional" json:"namespaceDeletion" yaml:"namespaceDeletion"`
 	RolePolicy interface{} `field:"optional" json:"rolePolicy" yaml:"rolePolicy"`
 	ValidationMode interface{} `field:"optional" json:"validationMode" yaml:"validationMode"`
 	WaitUntil interface{} `field:"optional" json:"waitUntil" yaml:"waitUntil"`

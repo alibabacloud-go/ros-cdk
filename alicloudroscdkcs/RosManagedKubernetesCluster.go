@@ -129,6 +129,8 @@ type RosManagedKubernetesCluster interface {
 	SetTaint(val interface{})
 	TimeoutMins() interface{}
 	SetTimeoutMins(val interface{})
+	TimeZone() interface{}
+	SetTimeZone(val interface{})
 	// Return properties modified after initiation.
 	//
 	// Resources that expose mutable properties should override this function to
@@ -138,6 +140,8 @@ type RosManagedKubernetesCluster interface {
 	SetUserData(val interface{})
 	VpcId() interface{}
 	SetVpcId(val interface{})
+	VSwitchIds() interface{}
+	SetVSwitchIds(val interface{})
 	ZoneIds() interface{}
 	SetZoneIds(val interface{})
 	AddCondition(con alicloudroscdkcore.RosCondition)
@@ -829,6 +833,16 @@ func (j *jsiiProxy_RosManagedKubernetesCluster) TimeoutMins() interface{} {
 	return returns
 }
 
+func (j *jsiiProxy_RosManagedKubernetesCluster) TimeZone() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"timeZone",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_RosManagedKubernetesCluster) UpdatedProperites() *map[string]interface{} {
 	var returns *map[string]interface{}
 	_jsii_.Get(
@@ -854,6 +868,16 @@ func (j *jsiiProxy_RosManagedKubernetesCluster) VpcId() interface{} {
 	_jsii_.Get(
 		j,
 		"vpcId",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_RosManagedKubernetesCluster) VSwitchIds() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"vSwitchIds",
 		&returns,
 	)
 	return returns
@@ -1315,6 +1339,17 @@ func (j *jsiiProxy_RosManagedKubernetesCluster)SetTimeoutMins(val interface{}) {
 	)
 }
 
+func (j *jsiiProxy_RosManagedKubernetesCluster)SetTimeZone(val interface{}) {
+	if err := j.validateSetTimeZoneParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"timeZone",
+		val,
+	)
+}
+
 func (j *jsiiProxy_RosManagedKubernetesCluster)SetUserData(val interface{}) {
 	if err := j.validateSetUserDataParameters(val); err != nil {
 		panic(err)
@@ -1333,6 +1368,17 @@ func (j *jsiiProxy_RosManagedKubernetesCluster)SetVpcId(val interface{}) {
 	_jsii_.Set(
 		j,
 		"vpcId",
+		val,
+	)
+}
+
+func (j *jsiiProxy_RosManagedKubernetesCluster)SetVSwitchIds(val interface{}) {
+	if err := j.validateSetVSwitchIdsParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"vSwitchIds",
 		val,
 	)
 }

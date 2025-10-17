@@ -9,7 +9,7 @@ import (
 	"github.com/aws/constructs-go/constructs/v3"
 )
 
-// This class is a base encapsulation around the ROS resource type `ALIYUN::CS::ManagedEdgeKubernetesCluster`, which is used to create a Container Service for Kubernetes (ACK) edge cluster.
+// This class is a base encapsulation around the ROS resource type `ALIYUN::CS::ManagedEdgeKubernetesCluster`, which is used to create a Container Service for Kubernetes (ACK) Edge cluster.
 type RosManagedEdgeKubernetesCluster interface {
 	alicloudroscdkcore.RosResource
 	Addons() interface{}
@@ -39,12 +39,16 @@ type RosManagedEdgeKubernetesCluster interface {
 	SetDeletionProtection(val interface{})
 	EnableResourcePropertyConstraint() *bool
 	SetEnableResourcePropertyConstraint(val *bool)
+	EncryptionProviderKey() interface{}
+	SetEncryptionProviderKey(val interface{})
 	EndpointPublicAccess() interface{}
 	SetEndpointPublicAccess(val interface{})
 	IsEnterpriseSecurityGroup() interface{}
 	SetIsEnterpriseSecurityGroup(val interface{})
 	KeyPair() interface{}
 	SetKeyPair(val interface{})
+	KubernetesVersion() interface{}
+	SetKubernetesVersion(val interface{})
 	// The logical ID for this stack element.
 	//
 	// The logical ID of the element
@@ -65,6 +69,8 @@ type RosManagedEdgeKubernetesCluster interface {
 	Node() alicloudroscdkcore.ConstructNode
 	NodeCidrMask() interface{}
 	SetNodeCidrMask(val interface{})
+	NodePools() interface{}
+	SetNodePools(val interface{})
 	Profile() interface{}
 	SetProfile(val interface{})
 	ProxyMode() interface{}
@@ -100,6 +106,8 @@ type RosManagedEdgeKubernetesCluster interface {
 	UpdatedProperites() *map[string]interface{}
 	VpcId() interface{}
 	SetVpcId(val interface{})
+	VSwitchIds() interface{}
+	SetVSwitchIds(val interface{})
 	ZoneIds() interface{}
 	SetZoneIds(val interface{})
 	AddCondition(con alicloudroscdkcore.RosCondition)
@@ -401,6 +409,16 @@ func (j *jsiiProxy_RosManagedEdgeKubernetesCluster) EnableResourcePropertyConstr
 	return returns
 }
 
+func (j *jsiiProxy_RosManagedEdgeKubernetesCluster) EncryptionProviderKey() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"encryptionProviderKey",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_RosManagedEdgeKubernetesCluster) EndpointPublicAccess() interface{} {
 	var returns interface{}
 	_jsii_.Get(
@@ -426,6 +444,16 @@ func (j *jsiiProxy_RosManagedEdgeKubernetesCluster) KeyPair() interface{} {
 	_jsii_.Get(
 		j,
 		"keyPair",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_RosManagedEdgeKubernetesCluster) KubernetesVersion() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"kubernetesVersion",
 		&returns,
 	)
 	return returns
@@ -486,6 +514,16 @@ func (j *jsiiProxy_RosManagedEdgeKubernetesCluster) NodeCidrMask() interface{} {
 	_jsii_.Get(
 		j,
 		"nodeCidrMask",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_RosManagedEdgeKubernetesCluster) NodePools() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"nodePools",
 		&returns,
 	)
 	return returns
@@ -631,6 +669,16 @@ func (j *jsiiProxy_RosManagedEdgeKubernetesCluster) VpcId() interface{} {
 	return returns
 }
 
+func (j *jsiiProxy_RosManagedEdgeKubernetesCluster) VSwitchIds() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"vSwitchIds",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_RosManagedEdgeKubernetesCluster) ZoneIds() interface{} {
 	var returns interface{}
 	_jsii_.Get(
@@ -735,6 +783,17 @@ func (j *jsiiProxy_RosManagedEdgeKubernetesCluster)SetEnableResourcePropertyCons
 	)
 }
 
+func (j *jsiiProxy_RosManagedEdgeKubernetesCluster)SetEncryptionProviderKey(val interface{}) {
+	if err := j.validateSetEncryptionProviderKeyParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"encryptionProviderKey",
+		val,
+	)
+}
+
 func (j *jsiiProxy_RosManagedEdgeKubernetesCluster)SetEndpointPublicAccess(val interface{}) {
 	if err := j.validateSetEndpointPublicAccessParameters(val); err != nil {
 		panic(err)
@@ -764,6 +823,17 @@ func (j *jsiiProxy_RosManagedEdgeKubernetesCluster)SetKeyPair(val interface{}) {
 	_jsii_.Set(
 		j,
 		"keyPair",
+		val,
+	)
+}
+
+func (j *jsiiProxy_RosManagedEdgeKubernetesCluster)SetKubernetesVersion(val interface{}) {
+	if err := j.validateSetKubernetesVersionParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"kubernetesVersion",
 		val,
 	)
 }
@@ -808,6 +878,17 @@ func (j *jsiiProxy_RosManagedEdgeKubernetesCluster)SetNodeCidrMask(val interface
 	_jsii_.Set(
 		j,
 		"nodeCidrMask",
+		val,
+	)
+}
+
+func (j *jsiiProxy_RosManagedEdgeKubernetesCluster)SetNodePools(val interface{}) {
+	if err := j.validateSetNodePoolsParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"nodePools",
 		val,
 	)
 }
@@ -896,6 +977,17 @@ func (j *jsiiProxy_RosManagedEdgeKubernetesCluster)SetVpcId(val interface{}) {
 	_jsii_.Set(
 		j,
 		"vpcId",
+		val,
+	)
+}
+
+func (j *jsiiProxy_RosManagedEdgeKubernetesCluster)SetVSwitchIds(val interface{}) {
+	if err := j.validateSetVSwitchIdsParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"vSwitchIds",
 		val,
 	)
 }

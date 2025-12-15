@@ -11,6 +11,8 @@ type ManagedKubernetesClusterProps struct {
 	Name interface{} `field:"required" json:"name" yaml:"name"`
 	// Property vpcId: VPC ID.
 	VpcId interface{} `field:"required" json:"vpcId" yaml:"vpcId"`
+	// Property vSwitchIds: The virtual switch ID of the worker node.
+	VSwitchIds interface{} `field:"required" json:"vSwitchIds" yaml:"vSwitchIds"`
 	// Property addons: A combination of addon plugins for Kubernetes clusters.
 	//
 	// Network plug-in: including Flannel and Terway network plug-ins
@@ -74,6 +76,10 @@ type ManagedKubernetesClusterProps struct {
 	// The system does not create or mount a new data disk if no data disk has been
 	// mounted to the ECS instances.
 	FormatDisk interface{} `field:"optional" json:"formatDisk" yaml:"formatDisk"`
+	// Property ipStack: The IP stack of the cluster.
+	//
+	// Value: ipv4 (Single stack) or ipv6 (Dual Stack). Default value: ipv4
+	IpStack interface{} `field:"optional" json:"ipStack" yaml:"ipStack"`
 	// Property isEnterpriseSecurityGroup: Specifies whether to create an advanced security group.
 	//
 	// This parameter takes effect only if security_group_id is left empty.
@@ -151,6 +157,8 @@ type ManagedKubernetesClusterProps struct {
 	ProxyMode interface{} `field:"optional" json:"proxyMode" yaml:"proxyMode"`
 	// Property resourceGroupId: The ID of resource group.
 	ResourceGroupId interface{} `field:"optional" json:"resourceGroupId" yaml:"resourceGroupId"`
+	// Property rrsaConfig: The configuration of RRSA.
+	RrsaConfig interface{} `field:"optional" json:"rrsaConfig" yaml:"rrsaConfig"`
 	// Property runtime: The container runtime of the cluster.
 	//
 	// The default runtime is Docker.
@@ -191,6 +199,8 @@ type ManagedKubernetesClusterProps struct {
 	//
 	// The default value is 60.
 	TimeoutMins interface{} `field:"optional" json:"timeoutMins" yaml:"timeoutMins"`
+	// Property timeZone: The time zone of the cluster.
+	TimeZone interface{} `field:"optional" json:"timeZone" yaml:"timeZone"`
 	// Property userData: The user-defined data.
 	//
 	// [1, 16KB] characters.User data should not be base64 encoded. If you want to pass base64 encoded string to the property, use function Fn::Base64Decode to decode the base64 string first.

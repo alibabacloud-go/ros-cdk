@@ -9,7 +9,7 @@ import (
 	"github.com/aws/constructs-go/constructs/v3"
 )
 
-// This class is a base encapsulation around the ROS resource type `ALIYUN::CS::ManagedKubernetesCluster`, which is used to create a Container Service for Kubernetes (ACK) managed cluster.
+// This class is a base encapsulation around the ROS resource type `ALIYUN::CS::ManagedKubernetesCluster`.
 type RosManagedKubernetesCluster interface {
 	alicloudroscdkcore.RosResource
 	Addons() interface{}
@@ -53,6 +53,8 @@ type RosManagedKubernetesCluster interface {
 	SetEndpointPublicAccess(val interface{})
 	FormatDisk() interface{}
 	SetFormatDisk(val interface{})
+	IpStack() interface{}
+	SetIpStack(val interface{})
 	IsEnterpriseSecurityGroup() interface{}
 	SetIsEnterpriseSecurityGroup(val interface{})
 	KeepInstanceName() interface{}
@@ -107,6 +109,8 @@ type RosManagedKubernetesCluster interface {
 	RosProperties() *map[string]interface{}
 	// ROS resource type.
 	RosResourceType() *string
+	RrsaConfig() interface{}
+	SetRrsaConfig(val interface{})
 	Runtime() interface{}
 	SetRuntime(val interface{})
 	SecurityGroupId() interface{}
@@ -129,6 +133,8 @@ type RosManagedKubernetesCluster interface {
 	SetTaint(val interface{})
 	TimeoutMins() interface{}
 	SetTimeoutMins(val interface{})
+	TimeZone() interface{}
+	SetTimeZone(val interface{})
 	// Return properties modified after initiation.
 	//
 	// Resources that expose mutable properties should override this function to
@@ -138,6 +144,8 @@ type RosManagedKubernetesCluster interface {
 	SetUserData(val interface{})
 	VpcId() interface{}
 	SetVpcId(val interface{})
+	VSwitchIds() interface{}
+	SetVSwitchIds(val interface{})
 	ZoneIds() interface{}
 	SetZoneIds(val interface{})
 	AddCondition(con alicloudroscdkcore.RosCondition)
@@ -509,6 +517,16 @@ func (j *jsiiProxy_RosManagedKubernetesCluster) FormatDisk() interface{} {
 	return returns
 }
 
+func (j *jsiiProxy_RosManagedKubernetesCluster) IpStack() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"ipStack",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_RosManagedKubernetesCluster) IsEnterpriseSecurityGroup() interface{} {
 	var returns interface{}
 	_jsii_.Get(
@@ -729,6 +747,16 @@ func (j *jsiiProxy_RosManagedKubernetesCluster) RosResourceType() *string {
 	return returns
 }
 
+func (j *jsiiProxy_RosManagedKubernetesCluster) RrsaConfig() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"rrsaConfig",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_RosManagedKubernetesCluster) Runtime() interface{} {
 	var returns interface{}
 	_jsii_.Get(
@@ -829,6 +857,16 @@ func (j *jsiiProxy_RosManagedKubernetesCluster) TimeoutMins() interface{} {
 	return returns
 }
 
+func (j *jsiiProxy_RosManagedKubernetesCluster) TimeZone() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"timeZone",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_RosManagedKubernetesCluster) UpdatedProperites() *map[string]interface{} {
 	var returns *map[string]interface{}
 	_jsii_.Get(
@@ -854,6 +892,16 @@ func (j *jsiiProxy_RosManagedKubernetesCluster) VpcId() interface{} {
 	_jsii_.Get(
 		j,
 		"vpcId",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_RosManagedKubernetesCluster) VSwitchIds() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"vSwitchIds",
 		&returns,
 	)
 	return returns
@@ -1040,6 +1088,17 @@ func (j *jsiiProxy_RosManagedKubernetesCluster)SetFormatDisk(val interface{}) {
 	)
 }
 
+func (j *jsiiProxy_RosManagedKubernetesCluster)SetIpStack(val interface{}) {
+	if err := j.validateSetIpStackParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"ipStack",
+		val,
+	)
+}
+
 func (j *jsiiProxy_RosManagedKubernetesCluster)SetIsEnterpriseSecurityGroup(val interface{}) {
 	if err := j.validateSetIsEnterpriseSecurityGroupParameters(val); err != nil {
 		panic(err)
@@ -1216,6 +1275,17 @@ func (j *jsiiProxy_RosManagedKubernetesCluster)SetResourceGroupId(val interface{
 	)
 }
 
+func (j *jsiiProxy_RosManagedKubernetesCluster)SetRrsaConfig(val interface{}) {
+	if err := j.validateSetRrsaConfigParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"rrsaConfig",
+		val,
+	)
+}
+
 func (j *jsiiProxy_RosManagedKubernetesCluster)SetRuntime(val interface{}) {
 	if err := j.validateSetRuntimeParameters(val); err != nil {
 		panic(err)
@@ -1315,6 +1385,17 @@ func (j *jsiiProxy_RosManagedKubernetesCluster)SetTimeoutMins(val interface{}) {
 	)
 }
 
+func (j *jsiiProxy_RosManagedKubernetesCluster)SetTimeZone(val interface{}) {
+	if err := j.validateSetTimeZoneParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"timeZone",
+		val,
+	)
+}
+
 func (j *jsiiProxy_RosManagedKubernetesCluster)SetUserData(val interface{}) {
 	if err := j.validateSetUserDataParameters(val); err != nil {
 		panic(err)
@@ -1333,6 +1414,17 @@ func (j *jsiiProxy_RosManagedKubernetesCluster)SetVpcId(val interface{}) {
 	_jsii_.Set(
 		j,
 		"vpcId",
+		val,
+	)
+}
+
+func (j *jsiiProxy_RosManagedKubernetesCluster)SetVSwitchIds(val interface{}) {
+	if err := j.validateSetVSwitchIdsParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"vSwitchIds",
 		val,
 	)
 }

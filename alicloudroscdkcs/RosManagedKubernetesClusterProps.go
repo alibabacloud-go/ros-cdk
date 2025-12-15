@@ -7,6 +7,7 @@ package alicloudroscdkcs
 type RosManagedKubernetesClusterProps struct {
 	Name interface{} `field:"required" json:"name" yaml:"name"`
 	VpcId interface{} `field:"required" json:"vpcId" yaml:"vpcId"`
+	VSwitchIds interface{} `field:"required" json:"vSwitchIds" yaml:"vSwitchIds"`
 	Addons interface{} `field:"optional" json:"addons" yaml:"addons"`
 	CloudMonitorFlags interface{} `field:"optional" json:"cloudMonitorFlags" yaml:"cloudMonitorFlags"`
 	ClusterSpec interface{} `field:"optional" json:"clusterSpec" yaml:"clusterSpec"`
@@ -19,6 +20,7 @@ type RosManagedKubernetesClusterProps struct {
 	EncryptionProviderKey interface{} `field:"optional" json:"encryptionProviderKey" yaml:"encryptionProviderKey"`
 	EndpointPublicAccess interface{} `field:"optional" json:"endpointPublicAccess" yaml:"endpointPublicAccess"`
 	FormatDisk interface{} `field:"optional" json:"formatDisk" yaml:"formatDisk"`
+	IpStack interface{} `field:"optional" json:"ipStack" yaml:"ipStack"`
 	IsEnterpriseSecurityGroup interface{} `field:"optional" json:"isEnterpriseSecurityGroup" yaml:"isEnterpriseSecurityGroup"`
 	KeepInstanceName interface{} `field:"optional" json:"keepInstanceName" yaml:"keepInstanceName"`
 	KeyPair interface{} `field:"optional" json:"keyPair" yaml:"keyPair"`
@@ -34,6 +36,7 @@ type RosManagedKubernetesClusterProps struct {
 	PodVswitchIds interface{} `field:"optional" json:"podVswitchIds" yaml:"podVswitchIds"`
 	ProxyMode interface{} `field:"optional" json:"proxyMode" yaml:"proxyMode"`
 	ResourceGroupId interface{} `field:"optional" json:"resourceGroupId" yaml:"resourceGroupId"`
+	RrsaConfig interface{} `field:"optional" json:"rrsaConfig" yaml:"rrsaConfig"`
 	Runtime interface{} `field:"optional" json:"runtime" yaml:"runtime"`
 	SecurityGroupId interface{} `field:"optional" json:"securityGroupId" yaml:"securityGroupId"`
 	SecurityHardeningOs interface{} `field:"optional" json:"securityHardeningOs" yaml:"securityHardeningOs"`
@@ -43,6 +46,7 @@ type RosManagedKubernetesClusterProps struct {
 	Tags *[]*RosManagedKubernetesCluster_TagsProperty `field:"optional" json:"tags" yaml:"tags"`
 	Taint interface{} `field:"optional" json:"taint" yaml:"taint"`
 	TimeoutMins interface{} `field:"optional" json:"timeoutMins" yaml:"timeoutMins"`
+	TimeZone interface{} `field:"optional" json:"timeZone" yaml:"timeZone"`
 	UserData interface{} `field:"optional" json:"userData" yaml:"userData"`
 	ZoneIds interface{} `field:"optional" json:"zoneIds" yaml:"zoneIds"`
 }

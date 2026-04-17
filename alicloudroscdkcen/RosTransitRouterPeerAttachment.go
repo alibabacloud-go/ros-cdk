@@ -9,27 +9,16 @@ import (
 	"github.com/aws/constructs-go/constructs/v3"
 )
 
-// This class is a base encapsulation around the ROS resource type `ALIYUN::CEN::TransitRouterPeerAttachment`, which is used to create a cross-region connection for an Enterprise Edition transit router.
+// This class is a base encapsulation around the ROS resource type `ALIYUN::CEN::TransitRouterPeerAttachment`The , which type creates an inter-region connection for an Enterprise Edition transit router.
 type RosTransitRouterPeerAttachment interface {
 	alicloudroscdkcore.RosResource
-	AttrAutoPublishRouteEnabled() alicloudroscdkcore.IResolvable
-	AttrBandwidth() alicloudroscdkcore.IResolvable
-	AttrCenBandwidthPackageId() alicloudroscdkcore.IResolvable
-	AttrCenId() alicloudroscdkcore.IResolvable
-	AttrClientToken() alicloudroscdkcore.IResolvable
-	AttrGeographicSpanId() alicloudroscdkcore.IResolvable
-	AttrPeerTransitRouterId() alicloudroscdkcore.IResolvable
-	AttrPeerTransitRouterOwnerId() alicloudroscdkcore.IResolvable
-	AttrPeerTransitRouterRegionId() alicloudroscdkcore.IResolvable
-	AttrResourceType() alicloudroscdkcore.IResolvable
-	AttrTransitRouterAttachmentDescription() alicloudroscdkcore.IResolvable
 	AttrTransitRouterAttachmentId() alicloudroscdkcore.IResolvable
-	AttrTransitRouterAttachmentName() alicloudroscdkcore.IResolvable
-	AttrTransitRouterId() alicloudroscdkcore.IResolvable
 	AutoPublishRouteEnabled() interface{}
 	SetAutoPublishRouteEnabled(val interface{})
 	Bandwidth() interface{}
 	SetBandwidth(val interface{})
+	BandwidthType() interface{}
+	SetBandwidthType(val interface{})
 	CenBandwidthPackageId() interface{}
 	SetCenBandwidthPackageId(val interface{})
 	CenId() interface{}
@@ -38,6 +27,10 @@ type RosTransitRouterPeerAttachment interface {
 	// from the +metadata+ entry typed +aliyun:ros:logicalId+, and with the bottom-most
 	// node +internal+ entries filtered.
 	CreationStack() *[]*string
+	DefaultLinkType() interface{}
+	SetDefaultLinkType(val interface{})
+	DeletionForce() interface{}
+	SetDeletionForce(val interface{})
 	EnableResourcePropertyConstraint() *bool
 	SetEnableResourcePropertyConstraint(val *bool)
 	// The logical ID for this stack element.
@@ -66,10 +59,16 @@ type RosTransitRouterPeerAttachment interface {
 	RosProperties() *map[string]interface{}
 	// ROS resource type.
 	RosResourceType() *string
+	RouteTableAssociationEnabled() interface{}
+	SetRouteTableAssociationEnabled(val interface{})
+	RouteTablePropagationEnabled() interface{}
+	SetRouteTablePropagationEnabled(val interface{})
 	// The stack in which this element is defined.
 	//
 	// RosElements must be defined within a stack scope (directly or indirectly).
 	Stack() alicloudroscdkcore.Stack
+	Tags() *[]*RosTransitRouterPeerAttachment_TagsProperty
+	SetTags(val *[]*RosTransitRouterPeerAttachment_TagsProperty)
 	TransitRouterAttachmentDescription() interface{}
 	SetTransitRouterAttachmentDescription(val interface{})
 	TransitRouterAttachmentName() interface{}
@@ -200,141 +199,11 @@ type jsiiProxy_RosTransitRouterPeerAttachment struct {
 	internal.Type__alicloudroscdkcoreRosResource
 }
 
-func (j *jsiiProxy_RosTransitRouterPeerAttachment) AttrAutoPublishRouteEnabled() alicloudroscdkcore.IResolvable {
-	var returns alicloudroscdkcore.IResolvable
-	_jsii_.Get(
-		j,
-		"attrAutoPublishRouteEnabled",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_RosTransitRouterPeerAttachment) AttrBandwidth() alicloudroscdkcore.IResolvable {
-	var returns alicloudroscdkcore.IResolvable
-	_jsii_.Get(
-		j,
-		"attrBandwidth",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_RosTransitRouterPeerAttachment) AttrCenBandwidthPackageId() alicloudroscdkcore.IResolvable {
-	var returns alicloudroscdkcore.IResolvable
-	_jsii_.Get(
-		j,
-		"attrCenBandwidthPackageId",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_RosTransitRouterPeerAttachment) AttrCenId() alicloudroscdkcore.IResolvable {
-	var returns alicloudroscdkcore.IResolvable
-	_jsii_.Get(
-		j,
-		"attrCenId",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_RosTransitRouterPeerAttachment) AttrClientToken() alicloudroscdkcore.IResolvable {
-	var returns alicloudroscdkcore.IResolvable
-	_jsii_.Get(
-		j,
-		"attrClientToken",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_RosTransitRouterPeerAttachment) AttrGeographicSpanId() alicloudroscdkcore.IResolvable {
-	var returns alicloudroscdkcore.IResolvable
-	_jsii_.Get(
-		j,
-		"attrGeographicSpanId",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_RosTransitRouterPeerAttachment) AttrPeerTransitRouterId() alicloudroscdkcore.IResolvable {
-	var returns alicloudroscdkcore.IResolvable
-	_jsii_.Get(
-		j,
-		"attrPeerTransitRouterId",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_RosTransitRouterPeerAttachment) AttrPeerTransitRouterOwnerId() alicloudroscdkcore.IResolvable {
-	var returns alicloudroscdkcore.IResolvable
-	_jsii_.Get(
-		j,
-		"attrPeerTransitRouterOwnerId",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_RosTransitRouterPeerAttachment) AttrPeerTransitRouterRegionId() alicloudroscdkcore.IResolvable {
-	var returns alicloudroscdkcore.IResolvable
-	_jsii_.Get(
-		j,
-		"attrPeerTransitRouterRegionId",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_RosTransitRouterPeerAttachment) AttrResourceType() alicloudroscdkcore.IResolvable {
-	var returns alicloudroscdkcore.IResolvable
-	_jsii_.Get(
-		j,
-		"attrResourceType",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_RosTransitRouterPeerAttachment) AttrTransitRouterAttachmentDescription() alicloudroscdkcore.IResolvable {
-	var returns alicloudroscdkcore.IResolvable
-	_jsii_.Get(
-		j,
-		"attrTransitRouterAttachmentDescription",
-		&returns,
-	)
-	return returns
-}
-
 func (j *jsiiProxy_RosTransitRouterPeerAttachment) AttrTransitRouterAttachmentId() alicloudroscdkcore.IResolvable {
 	var returns alicloudroscdkcore.IResolvable
 	_jsii_.Get(
 		j,
 		"attrTransitRouterAttachmentId",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_RosTransitRouterPeerAttachment) AttrTransitRouterAttachmentName() alicloudroscdkcore.IResolvable {
-	var returns alicloudroscdkcore.IResolvable
-	_jsii_.Get(
-		j,
-		"attrTransitRouterAttachmentName",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_RosTransitRouterPeerAttachment) AttrTransitRouterId() alicloudroscdkcore.IResolvable {
-	var returns alicloudroscdkcore.IResolvable
-	_jsii_.Get(
-		j,
-		"attrTransitRouterId",
 		&returns,
 	)
 	return returns
@@ -355,6 +224,16 @@ func (j *jsiiProxy_RosTransitRouterPeerAttachment) Bandwidth() interface{} {
 	_jsii_.Get(
 		j,
 		"bandwidth",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_RosTransitRouterPeerAttachment) BandwidthType() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"bandwidthType",
 		&returns,
 	)
 	return returns
@@ -385,6 +264,26 @@ func (j *jsiiProxy_RosTransitRouterPeerAttachment) CreationStack() *[]*string {
 	_jsii_.Get(
 		j,
 		"creationStack",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_RosTransitRouterPeerAttachment) DefaultLinkType() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"defaultLinkType",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_RosTransitRouterPeerAttachment) DeletionForce() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"deletionForce",
 		&returns,
 	)
 	return returns
@@ -480,11 +379,41 @@ func (j *jsiiProxy_RosTransitRouterPeerAttachment) RosResourceType() *string {
 	return returns
 }
 
+func (j *jsiiProxy_RosTransitRouterPeerAttachment) RouteTableAssociationEnabled() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"routeTableAssociationEnabled",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_RosTransitRouterPeerAttachment) RouteTablePropagationEnabled() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"routeTablePropagationEnabled",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_RosTransitRouterPeerAttachment) Stack() alicloudroscdkcore.Stack {
 	var returns alicloudroscdkcore.Stack
 	_jsii_.Get(
 		j,
 		"stack",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_RosTransitRouterPeerAttachment) Tags() *[]*RosTransitRouterPeerAttachment_TagsProperty {
+	var returns *[]*RosTransitRouterPeerAttachment_TagsProperty
+	_jsii_.Get(
+		j,
+		"tags",
 		&returns,
 	)
 	return returns
@@ -580,6 +509,17 @@ func (j *jsiiProxy_RosTransitRouterPeerAttachment)SetBandwidth(val interface{}) 
 	)
 }
 
+func (j *jsiiProxy_RosTransitRouterPeerAttachment)SetBandwidthType(val interface{}) {
+	if err := j.validateSetBandwidthTypeParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"bandwidthType",
+		val,
+	)
+}
+
 func (j *jsiiProxy_RosTransitRouterPeerAttachment)SetCenBandwidthPackageId(val interface{}) {
 	if err := j.validateSetCenBandwidthPackageIdParameters(val); err != nil {
 		panic(err)
@@ -598,6 +538,28 @@ func (j *jsiiProxy_RosTransitRouterPeerAttachment)SetCenId(val interface{}) {
 	_jsii_.Set(
 		j,
 		"cenId",
+		val,
+	)
+}
+
+func (j *jsiiProxy_RosTransitRouterPeerAttachment)SetDefaultLinkType(val interface{}) {
+	if err := j.validateSetDefaultLinkTypeParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"defaultLinkType",
+		val,
+	)
+}
+
+func (j *jsiiProxy_RosTransitRouterPeerAttachment)SetDeletionForce(val interface{}) {
+	if err := j.validateSetDeletionForceParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"deletionForce",
 		val,
 	)
 }
@@ -631,6 +593,39 @@ func (j *jsiiProxy_RosTransitRouterPeerAttachment)SetPeerTransitRouterRegionId(v
 	_jsii_.Set(
 		j,
 		"peerTransitRouterRegionId",
+		val,
+	)
+}
+
+func (j *jsiiProxy_RosTransitRouterPeerAttachment)SetRouteTableAssociationEnabled(val interface{}) {
+	if err := j.validateSetRouteTableAssociationEnabledParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"routeTableAssociationEnabled",
+		val,
+	)
+}
+
+func (j *jsiiProxy_RosTransitRouterPeerAttachment)SetRouteTablePropagationEnabled(val interface{}) {
+	if err := j.validateSetRouteTablePropagationEnabledParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"routeTablePropagationEnabled",
+		val,
+	)
+}
+
+func (j *jsiiProxy_RosTransitRouterPeerAttachment)SetTags(val *[]*RosTransitRouterPeerAttachment_TagsProperty) {
+	if err := j.validateSetTagsParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"tags",
 		val,
 	)
 }

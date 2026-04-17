@@ -9,7 +9,7 @@ import (
 	"github.com/aws/constructs-go/constructs/v3"
 )
 
-// This class is a base encapsulation around the ROS resource type `ALIYUN::CS::ClusterHelmApplication`, which is used to deploy an application by using Helm.
+// This class is a base encapsulation around the ROS resource type `ALIYUN::CS::ClusterHelmApplication`The , which type is used to deploy an application using Helm.
 type RosClusterHelmApplication interface {
 	alicloudroscdkcore.RosResource
 	AttrClusterId() alicloudroscdkcore.IResolvable
@@ -28,6 +28,8 @@ type RosClusterHelmApplication interface {
 	SetCredential(val interface{})
 	EnableResourcePropertyConstraint() *bool
 	SetEnableResourcePropertyConstraint(val *bool)
+	IgnoreExisting() interface{}
+	SetIgnoreExisting(val interface{})
 	// The logical ID for this stack element.
 	//
 	// The logical ID of the element
@@ -42,6 +44,8 @@ type RosClusterHelmApplication interface {
 	SetName(val interface{})
 	Namespace() interface{}
 	SetNamespace(val interface{})
+	NamespaceDeletion() interface{}
+	SetNamespaceDeletion(val interface{})
 	// The construct tree node associated with this construct.
 	Node() alicloudroscdkcore.ConstructNode
 	// Return a string that will be resolved to a RosTemplate `{ Ref }` for this element.
@@ -268,6 +272,16 @@ func (j *jsiiProxy_RosClusterHelmApplication) EnableResourcePropertyConstraint()
 	return returns
 }
 
+func (j *jsiiProxy_RosClusterHelmApplication) IgnoreExisting() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"ignoreExisting",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_RosClusterHelmApplication) LogicalId() *string {
 	var returns *string
 	_jsii_.Get(
@@ -293,6 +307,16 @@ func (j *jsiiProxy_RosClusterHelmApplication) Namespace() interface{} {
 	_jsii_.Get(
 		j,
 		"namespace",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_RosClusterHelmApplication) NamespaceDeletion() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"namespaceDeletion",
 		&returns,
 	)
 	return returns
@@ -481,6 +505,17 @@ func (j *jsiiProxy_RosClusterHelmApplication)SetEnableResourcePropertyConstraint
 	)
 }
 
+func (j *jsiiProxy_RosClusterHelmApplication)SetIgnoreExisting(val interface{}) {
+	if err := j.validateSetIgnoreExistingParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"ignoreExisting",
+		val,
+	)
+}
+
 func (j *jsiiProxy_RosClusterHelmApplication)SetName(val interface{}) {
 	if err := j.validateSetNameParameters(val); err != nil {
 		panic(err)
@@ -499,6 +534,17 @@ func (j *jsiiProxy_RosClusterHelmApplication)SetNamespace(val interface{}) {
 	_jsii_.Set(
 		j,
 		"namespace",
+		val,
+	)
+}
+
+func (j *jsiiProxy_RosClusterHelmApplication)SetNamespaceDeletion(val interface{}) {
+	if err := j.validateSetNamespaceDeletionParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"namespaceDeletion",
 		val,
 	)
 }

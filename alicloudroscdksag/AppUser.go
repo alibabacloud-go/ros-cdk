@@ -9,13 +9,13 @@ import (
 	"github.com/aws/constructs-go/constructs/v3"
 )
 
-// This class encapsulates and extends the ROS resource type `ALIYUN::SAG::AppUser`.
+// This class encapsulates and extends the ROS resource type `ALIYUN::SAG::AppUser`, which is used to create a client account for a Smart Access Gateway (SAG) app instance.
 type AppUser interface {
 	alicloudroscdkcore.Resource
 	IAppUser
 	// Attribute SmartAGId: The ID of the SAG APP instance.
 	AttrSmartAgId() interface{}
-	// Attribute UserName: <heat.engine.properties.Schema object at 0x7f2959675f90>.
+	// Attribute UserName: The name of the user.
 	AttrUserName() interface{}
 	EnableResourcePropertyConstraint() *bool
 	SetEnableResourcePropertyConstraint(val *bool)

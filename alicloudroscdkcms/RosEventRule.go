@@ -53,6 +53,8 @@ type RosEventRule interface {
 	RosResourceType() *string
 	RuleName() interface{}
 	SetRuleName(val interface{})
+	SilenceTime() interface{}
+	SetSilenceTime(val interface{})
 	// The stack in which this element is defined.
 	//
 	// RosElements must be defined within a stack scope (directly or indirectly).
@@ -323,6 +325,16 @@ func (j *jsiiProxy_RosEventRule) RuleName() interface{} {
 	return returns
 }
 
+func (j *jsiiProxy_RosEventRule) SilenceTime() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"silenceTime",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_RosEventRule) Stack() alicloudroscdkcore.Stack {
 	var returns alicloudroscdkcore.Stack
 	_jsii_.Get(
@@ -443,6 +455,17 @@ func (j *jsiiProxy_RosEventRule)SetRuleName(val interface{}) {
 	_jsii_.Set(
 		j,
 		"ruleName",
+		val,
+	)
+}
+
+func (j *jsiiProxy_RosEventRule)SetSilenceTime(val interface{}) {
+	if err := j.validateSetSilenceTimeParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"silenceTime",
 		val,
 	)
 }

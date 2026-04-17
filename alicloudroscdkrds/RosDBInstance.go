@@ -9,7 +9,7 @@ import (
 	"github.com/aws/constructs-go/constructs/v3"
 )
 
-// This class is a base encapsulation around the ROS resource type `ALIYUN::RDS::DBInstance`.
+// This class is a base encapsulation around the ROS resource type `ALIYUN::RDS::DBInstance`The , which type is used to create an ApsaraDB RDS database instance.
 type RosDBInstance interface {
 	alicloudroscdkcore.RosResource
 	AllocatePublicConnection() interface{}
@@ -29,6 +29,8 @@ type RosDBInstance interface {
 	AttrPublicPort() alicloudroscdkcore.IResolvable
 	AutoRenew() interface{}
 	SetAutoRenew(val interface{})
+	AutoUpgradeMinorVersion() interface{}
+	SetAutoUpgradeMinorVersion(val interface{})
 	BackUpCategory() interface{}
 	SetBackUpCategory(val interface{})
 	BackupPolicyMode() interface{}
@@ -175,6 +177,8 @@ type RosDBInstance interface {
 	SetStorageThreshold(val interface{})
 	StorageUpperBound() interface{}
 	SetStorageUpperBound(val interface{})
+	SubscriptionDeletionForce() interface{}
+	SetSubscriptionDeletionForce(val interface{})
 	Tags() *map[string]interface{}
 	SetTags(val *map[string]interface{})
 	TargetDedicatedHostIdForLog() interface{}
@@ -428,6 +432,16 @@ func (j *jsiiProxy_RosDBInstance) AutoRenew() interface{} {
 	_jsii_.Get(
 		j,
 		"autoRenew",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_RosDBInstance) AutoUpgradeMinorVersion() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"autoUpgradeMinorVersion",
 		&returns,
 	)
 	return returns
@@ -1093,6 +1107,16 @@ func (j *jsiiProxy_RosDBInstance) StorageUpperBound() interface{} {
 	return returns
 }
 
+func (j *jsiiProxy_RosDBInstance) SubscriptionDeletionForce() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"subscriptionDeletionForce",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_RosDBInstance) Tags() *map[string]interface{} {
 	var returns *map[string]interface{}
 	_jsii_.Get(
@@ -1252,6 +1276,17 @@ func (j *jsiiProxy_RosDBInstance)SetAutoRenew(val interface{}) {
 	_jsii_.Set(
 		j,
 		"autoRenew",
+		val,
+	)
+}
+
+func (j *jsiiProxy_RosDBInstance)SetAutoUpgradeMinorVersion(val interface{}) {
+	if err := j.validateSetAutoUpgradeMinorVersionParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"autoUpgradeMinorVersion",
 		val,
 	)
 }
@@ -1890,6 +1925,17 @@ func (j *jsiiProxy_RosDBInstance)SetStorageUpperBound(val interface{}) {
 	_jsii_.Set(
 		j,
 		"storageUpperBound",
+		val,
+	)
+}
+
+func (j *jsiiProxy_RosDBInstance)SetSubscriptionDeletionForce(val interface{}) {
+	if err := j.validateSetSubscriptionDeletionForceParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"subscriptionDeletionForce",
 		val,
 	)
 }

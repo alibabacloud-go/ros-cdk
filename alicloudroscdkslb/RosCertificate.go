@@ -9,13 +9,17 @@ import (
 	"github.com/aws/constructs-go/constructs/v3"
 )
 
-// This class is a base encapsulation around the ROS resource type `ALIYUN::SLB::Certificate`.
+// This class is a base encapsulation around the ROS resource type `ALIYUN::SLB::Certificate`, which is used to upload a certificate to a Server Load Balancer (SLB) instance.
+//
+// Server certificates and certificate authority (CA) certificates are supported.
 type RosCertificate interface {
 	alicloudroscdkcore.RosResource
 	AliCloudCertificateId() interface{}
 	SetAliCloudCertificateId(val interface{})
 	AliCloudCertificateName() interface{}
 	SetAliCloudCertificateName(val interface{})
+	AliCloudCertificateRegionId() interface{}
+	SetAliCloudCertificateRegionId(val interface{})
 	AttrArn() alicloudroscdkcore.IResolvable
 	AttrCertificateId() alicloudroscdkcore.IResolvable
 	AttrFingerprint() alicloudroscdkcore.IResolvable
@@ -202,6 +206,16 @@ func (j *jsiiProxy_RosCertificate) AliCloudCertificateName() interface{} {
 	_jsii_.Get(
 		j,
 		"aliCloudCertificateName",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_RosCertificate) AliCloudCertificateRegionId() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"aliCloudCertificateRegionId",
 		&returns,
 	)
 	return returns
@@ -443,6 +457,17 @@ func (j *jsiiProxy_RosCertificate)SetAliCloudCertificateName(val interface{}) {
 	_jsii_.Set(
 		j,
 		"aliCloudCertificateName",
+		val,
+	)
+}
+
+func (j *jsiiProxy_RosCertificate)SetAliCloudCertificateRegionId(val interface{}) {
+	if err := j.validateSetAliCloudCertificateRegionIdParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"aliCloudCertificateRegionId",
 		val,
 	)
 }

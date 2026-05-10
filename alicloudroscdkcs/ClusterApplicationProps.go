@@ -9,11 +9,19 @@ type ClusterApplicationProps struct {
 	ClusterId interface{} `field:"required" json:"clusterId" yaml:"clusterId"`
 	// Property yamlContent: The yaml content of application.
 	YamlContent interface{} `field:"required" json:"yamlContent" yaml:"yamlContent"`
+	// Property creationMode: Creation modes include: - Normal: create new resources, will report error if already exists.
+	//
+	// - Apply: similar to kubectl apply, create if not exists, update if exists. During the deletion phase, ROS will delete newly created application, but updated existing application will not be deleted.
+	CreationMode interface{} `field:"optional" json:"creationMode" yaml:"creationMode"`
 	// Property defaultNamespace: The default namespace for the application, default value is default.
 	//
 	// If a namespace is defined in yaml metadata, its priority is higher than DefaultNamespace.
-	// If the DefaultNamespace does not exist, ROS will automatically create it and delete it during the deletion phase.
+	// If the DefaultNamespace does not exist, ROS will create it automatically and keep it by default during the delete phase.
 	DefaultNamespace interface{} `field:"optional" json:"defaultNamespace" yaml:"defaultNamespace"`
+	// Property defaultNamespaceDeletion: Whether to delete the namespace specified by DefaultNamespace.
+	//
+	// If DefaultNamespace is in ('default', 'kube-node-lease', 'kube-public', 'kube-system', 'arms-prom'), no matter whether DefaultNamespaceDeletion is true or not, it will not be deleted.
+	DefaultNamespaceDeletion interface{} `field:"optional" json:"defaultNamespaceDeletion" yaml:"defaultNamespaceDeletion"`
 	// Property rolePolicy: Before deploying the application, check the policies associated with the roles of the current user.
 	//
 	// Valid values:

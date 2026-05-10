@@ -18,6 +18,8 @@ type RosAccount interface {
 	SetAccountName(val interface{})
 	AccountPassword() interface{}
 	SetAccountPassword(val interface{})
+	AccountType() interface{}
+	SetAccountType(val interface{})
 	AttrAccountName() alicloudroscdkcore.IResolvable
 	AttrDbInstanceId() alicloudroscdkcore.IResolvable
 	// Returns: the stack trace of the point where this Resource was created from, sourced
@@ -203,6 +205,16 @@ func (j *jsiiProxy_RosAccount) AccountPassword() interface{} {
 	_jsii_.Get(
 		j,
 		"accountPassword",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_RosAccount) AccountType() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"accountType",
 		&returns,
 	)
 	return returns
@@ -395,6 +407,17 @@ func (j *jsiiProxy_RosAccount)SetAccountPassword(val interface{}) {
 	_jsii_.Set(
 		j,
 		"accountPassword",
+		val,
+	)
+}
+
+func (j *jsiiProxy_RosAccount)SetAccountType(val interface{}) {
+	if err := j.validateSetAccountTypeParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"accountType",
 		val,
 	)
 }

@@ -19,7 +19,6 @@ type AutoEnableServiceProps struct {
 	// BrainIndustrial: Brain Industrial
 	// CloudStorageGateway: Cloud Storage Gateway
 	// CMS: Cloud Monitor Service
-	// CR: Container Registry
 	// CS: Container Service
 	// DataHub: Data Hub
 	// DataWorks: DataWorks
@@ -33,7 +32,6 @@ type AutoEnableServiceProps struct {
 	// MNS: Message Service (MNS)
 	// HBR: Hybrid Backup Recovery
 	// IMM: Intelligent Media Management
-	// IOT: IoT Platform
 	// KMS: Key Management Service
 	// NLP: Natural Language Processing
 	// OSS: Object Storage Service

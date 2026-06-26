@@ -9,7 +9,7 @@ import (
 	"github.com/aws/constructs-go/constructs/v3"
 )
 
-// This class is a base encapsulation around the ROS resource type `ALIYUN::ECS::InstanceGroup`, which is used to create Elastic Compute Service (ECS) instances that have the same configurations.
+// This class is a base encapsulation around the ROS resource type `ALIYUN::ECS::InstanceGroup`The , which resource creates a group of ECS instances that share identical configurations.
 type RosInstanceGroup interface {
 	alicloudroscdkcore.RosResource
 	Affinity() interface{}
@@ -169,6 +169,8 @@ type RosInstanceGroup interface {
 	SetStorageSetId(val interface{})
 	StorageSetPartitionNumber() interface{}
 	SetStorageSetPartitionNumber(val interface{})
+	SubscriptionDeletionForce() interface{}
+	SetSubscriptionDeletionForce(val interface{})
 	SystemDiskAutoSnapshotPolicyId() interface{}
 	SetSystemDiskAutoSnapshotPolicyId(val interface{})
 	SystemDiskBurstingEnabled() interface{}
@@ -1097,6 +1099,16 @@ func (j *jsiiProxy_RosInstanceGroup) StorageSetPartitionNumber() interface{} {
 	return returns
 }
 
+func (j *jsiiProxy_RosInstanceGroup) SubscriptionDeletionForce() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"subscriptionDeletionForce",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_RosInstanceGroup) SystemDiskAutoSnapshotPolicyId() interface{} {
 	var returns interface{}
 	_jsii_.Get(
@@ -2000,6 +2012,17 @@ func (j *jsiiProxy_RosInstanceGroup)SetStorageSetPartitionNumber(val interface{}
 	_jsii_.Set(
 		j,
 		"storageSetPartitionNumber",
+		val,
+	)
+}
+
+func (j *jsiiProxy_RosInstanceGroup)SetSubscriptionDeletionForce(val interface{}) {
+	if err := j.validateSetSubscriptionDeletionForceParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"subscriptionDeletionForce",
 		val,
 	)
 }

@@ -9,7 +9,7 @@ import (
 	"github.com/aws/constructs-go/constructs/v3"
 )
 
-// This class is a base encapsulation around the ROS resource type `ALIYUN::GPDB::DBInstance`, which is used to create an AnalyticDB for PostgreSQL instance in reserved storage mode.
+// This class is a base encapsulation around the ROS resource type `ALIYUN::GPDB::DBInstance`Use the , which resource to create an AnalyticDB for PostgreSQL instance in reserved storage mode.
 type RosDBInstance interface {
 	alicloudroscdkcore.RosResource
 	AiNodeSpecInfos() interface{}
@@ -19,6 +19,10 @@ type RosDBInstance interface {
 	AttrDbInstanceId() alicloudroscdkcore.IResolvable
 	AttrOrderId() alicloudroscdkcore.IResolvable
 	AttrPort() alicloudroscdkcore.IResolvable
+	BackupId() interface{}
+	SetBackupId(val interface{})
+	CacheStorageSize() interface{}
+	SetCacheStorageSize(val interface{})
 	CreateSampleData() interface{}
 	SetCreateSampleData(val interface{})
 	// Returns: the stack trace of the point where this Resource was created from, sourced
@@ -39,6 +43,8 @@ type RosDBInstance interface {
 	SetDeployMode(val interface{})
 	EnableResourcePropertyConstraint() *bool
 	SetEnableResourcePropertyConstraint(val *bool)
+	EnableSsl() interface{}
+	SetEnableSsl(val interface{})
 	EncryptionKey() interface{}
 	SetEncryptionKey(val interface{})
 	EncryptionType() interface{}
@@ -59,6 +65,8 @@ type RosDBInstance interface {
 	// Returns: the logical ID as a stringified token. This value will only get
 	// resolved during synthesis.
 	LogicalId() *string
+	MasterAiSpec() interface{}
+	SetMasterAiSpec(val interface{})
 	MasterCu() interface{}
 	SetMasterCu(val interface{})
 	MasterNodeNum() interface{}
@@ -80,6 +88,8 @@ type RosDBInstance interface {
 	// If, by any chance, the intrinsic reference of a resource is not a string, you could
 	// coerce it to an IResolvable through `Lazy.any({ produce: resource.ref })`.
 	Ref() *string
+	ResourceGroupId() interface{}
+	SetResourceGroupId(val interface{})
 	// Options for this resource, such as condition, update policy etc.
 	RosOptions() alicloudroscdkcore.IRosResourceOptions
 	RosProperties() *map[string]interface{}
@@ -97,6 +107,8 @@ type RosDBInstance interface {
 	SetServerlessMode(val interface{})
 	ServerlessResource() interface{}
 	SetServerlessResource(val interface{})
+	SrcDbInstanceName() interface{}
+	SetSrcDbInstanceName(val interface{})
 	// The stack in which this element is defined.
 	//
 	// RosElements must be defined within a stack scope (directly or indirectly).
@@ -301,6 +313,26 @@ func (j *jsiiProxy_RosDBInstance) AttrPort() alicloudroscdkcore.IResolvable {
 	return returns
 }
 
+func (j *jsiiProxy_RosDBInstance) BackupId() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"backupId",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_RosDBInstance) CacheStorageSize() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"cacheStorageSize",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_RosDBInstance) CreateSampleData() interface{} {
 	var returns interface{}
 	_jsii_.Get(
@@ -391,6 +423,16 @@ func (j *jsiiProxy_RosDBInstance) EnableResourcePropertyConstraint() *bool {
 	return returns
 }
 
+func (j *jsiiProxy_RosDBInstance) EnableSsl() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"enableSsl",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_RosDBInstance) EncryptionKey() interface{} {
 	var returns interface{}
 	_jsii_.Get(
@@ -446,6 +488,16 @@ func (j *jsiiProxy_RosDBInstance) LogicalId() *string {
 	_jsii_.Get(
 		j,
 		"logicalId",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_RosDBInstance) MasterAiSpec() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"masterAiSpec",
 		&returns,
 	)
 	return returns
@@ -541,6 +593,16 @@ func (j *jsiiProxy_RosDBInstance) Ref() *string {
 	return returns
 }
 
+func (j *jsiiProxy_RosDBInstance) ResourceGroupId() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"resourceGroupId",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_RosDBInstance) RosOptions() alicloudroscdkcore.IRosResourceOptions {
 	var returns alicloudroscdkcore.IRosResourceOptions
 	_jsii_.Get(
@@ -626,6 +688,16 @@ func (j *jsiiProxy_RosDBInstance) ServerlessResource() interface{} {
 	_jsii_.Get(
 		j,
 		"serverlessResource",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_RosDBInstance) SrcDbInstanceName() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"srcDbInstanceName",
 		&returns,
 	)
 	return returns
@@ -770,6 +842,28 @@ func (j *jsiiProxy_RosDBInstance)SetAiNodeSpecInfos(val interface{}) {
 	)
 }
 
+func (j *jsiiProxy_RosDBInstance)SetBackupId(val interface{}) {
+	if err := j.validateSetBackupIdParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"backupId",
+		val,
+	)
+}
+
+func (j *jsiiProxy_RosDBInstance)SetCacheStorageSize(val interface{}) {
+	if err := j.validateSetCacheStorageSizeParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"cacheStorageSize",
+		val,
+	)
+}
+
 func (j *jsiiProxy_RosDBInstance)SetCreateSampleData(val interface{}) {
 	if err := j.validateSetCreateSampleDataParameters(val); err != nil {
 		panic(err)
@@ -858,6 +952,17 @@ func (j *jsiiProxy_RosDBInstance)SetEnableResourcePropertyConstraint(val *bool) 
 	)
 }
 
+func (j *jsiiProxy_RosDBInstance)SetEnableSsl(val interface{}) {
+	if err := j.validateSetEnableSslParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"enableSsl",
+		val,
+	)
+}
+
 func (j *jsiiProxy_RosDBInstance)SetEncryptionKey(val interface{}) {
 	if err := j.validateSetEncryptionKeyParameters(val); err != nil {
 		panic(err)
@@ -909,6 +1014,17 @@ func (j *jsiiProxy_RosDBInstance)SetInstanceSpec(val interface{}) {
 	_jsii_.Set(
 		j,
 		"instanceSpec",
+		val,
+	)
+}
+
+func (j *jsiiProxy_RosDBInstance)SetMasterAiSpec(val interface{}) {
+	if err := j.validateSetMasterAiSpecParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"masterAiSpec",
 		val,
 	)
 }
@@ -990,6 +1106,17 @@ func (j *jsiiProxy_RosDBInstance)SetProdType(val interface{}) {
 	)
 }
 
+func (j *jsiiProxy_RosDBInstance)SetResourceGroupId(val interface{}) {
+	if err := j.validateSetResourceGroupIdParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"resourceGroupId",
+		val,
+	)
+}
+
 func (j *jsiiProxy_RosDBInstance)SetSecurityIpList(val interface{}) {
 	if err := j.validateSetSecurityIpListParameters(val); err != nil {
 		panic(err)
@@ -1052,6 +1179,17 @@ func (j *jsiiProxy_RosDBInstance)SetServerlessResource(val interface{}) {
 	_jsii_.Set(
 		j,
 		"serverlessResource",
+		val,
+	)
+}
+
+func (j *jsiiProxy_RosDBInstance)SetSrcDbInstanceName(val interface{}) {
+	if err := j.validateSetSrcDbInstanceNameParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"srcDbInstanceName",
 		val,
 	)
 }

@@ -84,7 +84,11 @@ func validateRosNatGateway_IsRosResourceParameters(construct alicloudroscdkcore.
 	return nil
 }
 
-func (j *jsiiProxy_RosNatGateway) validateSetAutoPayParameters(val interface{}) error {
+func (j *jsiiProxy_RosNatGateway) validateSetAccessModeParameters(val interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_RosNatGateway) validateSetAvailabilityModeParameters(val interface{}) error {
 	return nil
 }
 
@@ -97,10 +101,6 @@ func (j *jsiiProxy_RosNatGateway) validateSetDeletionProtectionParameters(val in
 }
 
 func (j *jsiiProxy_RosNatGateway) validateSetDescriptionParameters(val interface{}) error {
-	return nil
-}
-
-func (j *jsiiProxy_RosNatGateway) validateSetDurationParameters(val interface{}) error {
 	return nil
 }
 
@@ -124,7 +124,15 @@ func (j *jsiiProxy_RosNatGateway) validateSetInternetChargeTypeParameters(val in
 	return nil
 }
 
+func (j *jsiiProxy_RosNatGateway) validateSetIpv4PrefixParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_RosNatGateway) validateSetNatGatewayNameParameters(val interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_RosNatGateway) validateSetNatIpParameters(val interface{}) error {
 	return nil
 }
 
@@ -136,7 +144,7 @@ func (j *jsiiProxy_RosNatGateway) validateSetNetworkTypeParameters(val interface
 	return nil
 }
 
-func (j *jsiiProxy_RosNatGateway) validateSetPricingCycleParameters(val interface{}) error {
+func (j *jsiiProxy_RosNatGateway) validateSetPrivateLinkEnabledParameters(val interface{}) error {
 	return nil
 }
 

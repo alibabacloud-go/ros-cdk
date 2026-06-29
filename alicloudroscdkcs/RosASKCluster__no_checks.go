@@ -104,7 +104,15 @@ func (j *jsiiProxy_RosASKCluster) validateSetEnableResourcePropertyConstraintPar
 	return nil
 }
 
+func (j *jsiiProxy_RosASKCluster) validateSetEncryptionProviderKeyParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_RosASKCluster) validateSetEndpointPublicAccessParameters(val interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_RosASKCluster) validateSetIpStackParameters(val interface{}) error {
 	return nil
 }
 

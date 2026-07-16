@@ -9,13 +9,15 @@ import (
 	"github.com/aws/constructs-go/constructs/v3"
 )
 
-// This class is a base encapsulation around the ROS resource type `ALIYUN::FC::FunctionInvoker`, which is used to invoke a function.
+// This class is a base encapsulation around the ROS resource type `ALIYUN::FC::FunctionInvoker`.
 type RosFunctionInvoker interface {
 	alicloudroscdkcore.RosResource
 	Async() interface{}
 	SetAsync(val interface{})
 	AttrResult() alicloudroscdkcore.IResolvable
 	AttrResultType() alicloudroscdkcore.IResolvable
+	CheckAsyncInvocation() interface{}
+	SetCheckAsyncInvocation(val interface{})
 	CheckError() interface{}
 	SetCheckError(val interface{})
 	// Returns: the stack trace of the point where this Resource was created from, sourced
@@ -211,6 +213,16 @@ func (j *jsiiProxy_RosFunctionInvoker) AttrResultType() alicloudroscdkcore.IReso
 	_jsii_.Get(
 		j,
 		"attrResultType",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_RosFunctionInvoker) CheckAsyncInvocation() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"checkAsyncInvocation",
 		&returns,
 	)
 	return returns
@@ -421,6 +433,17 @@ func (j *jsiiProxy_RosFunctionInvoker)SetAsync(val interface{}) {
 	_jsii_.Set(
 		j,
 		"async",
+		val,
+	)
+}
+
+func (j *jsiiProxy_RosFunctionInvoker)SetCheckAsyncInvocation(val interface{}) {
+	if err := j.validateSetCheckAsyncInvocationParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"checkAsyncInvocation",
 		val,
 	)
 }

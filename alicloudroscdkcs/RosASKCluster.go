@@ -9,7 +9,7 @@ import (
 	"github.com/aws/constructs-go/constructs/v3"
 )
 
-// This class is a base encapsulation around the ROS resource type `ALIYUN::CS::ASKCluster`, which is used to create a Container Service for Kubernetes (ACK) Serverless cluster.
+// This class is a base encapsulation around the ROS resource type `ALIYUN::CS::ASKCluster`The , which resource type creates an ACK Serverless cluster.
 type RosASKCluster interface {
 	alicloudroscdkcore.RosResource
 	Addons() interface{}
@@ -37,8 +37,12 @@ type RosASKCluster interface {
 	SetDeletionProtection(val interface{})
 	EnableResourcePropertyConstraint() *bool
 	SetEnableResourcePropertyConstraint(val *bool)
+	EncryptionProviderKey() interface{}
+	SetEncryptionProviderKey(val interface{})
 	EndpointPublicAccess() interface{}
 	SetEndpointPublicAccess(val interface{})
+	IpStack() interface{}
+	SetIpStack(val interface{})
 	KubernetesVersion() interface{}
 	SetKubernetesVersion(val interface{})
 	// The logical ID for this stack element.
@@ -387,11 +391,31 @@ func (j *jsiiProxy_RosASKCluster) EnableResourcePropertyConstraint() *bool {
 	return returns
 }
 
+func (j *jsiiProxy_RosASKCluster) EncryptionProviderKey() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"encryptionProviderKey",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_RosASKCluster) EndpointPublicAccess() interface{} {
 	var returns interface{}
 	_jsii_.Get(
 		j,
 		"endpointPublicAccess",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_RosASKCluster) IpStack() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"ipStack",
 		&returns,
 	)
 	return returns
@@ -700,6 +724,17 @@ func (j *jsiiProxy_RosASKCluster)SetEnableResourcePropertyConstraint(val *bool) 
 	)
 }
 
+func (j *jsiiProxy_RosASKCluster)SetEncryptionProviderKey(val interface{}) {
+	if err := j.validateSetEncryptionProviderKeyParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"encryptionProviderKey",
+		val,
+	)
+}
+
 func (j *jsiiProxy_RosASKCluster)SetEndpointPublicAccess(val interface{}) {
 	if err := j.validateSetEndpointPublicAccessParameters(val); err != nil {
 		panic(err)
@@ -707,6 +742,17 @@ func (j *jsiiProxy_RosASKCluster)SetEndpointPublicAccess(val interface{}) {
 	_jsii_.Set(
 		j,
 		"endpointPublicAccess",
+		val,
+	)
+}
+
+func (j *jsiiProxy_RosASKCluster)SetIpStack(val interface{}) {
+	if err := j.validateSetIpStackParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"ipStack",
 		val,
 	)
 }

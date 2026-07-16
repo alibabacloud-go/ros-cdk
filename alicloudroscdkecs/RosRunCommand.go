@@ -9,7 +9,7 @@ import (
 	"github.com/aws/constructs-go/constructs/v3"
 )
 
-// This class is a base encapsulation around the ROS resource type `ALIYUN::ECS::RunCommand`, which is used to run a shell, PowerShell, or batch command on Elastic Compute Service (ECS) instances.
+// This class is a base encapsulation around the ROS resource type `ALIYUN::ECS::RunCommand`The , which resource type executes a Shell, PowerShell, or Batch script on one or more ECS instances.
 type RosRunCommand interface {
 	alicloudroscdkcore.RosResource
 	AttrCommandId() alicloudroscdkcore.IResolvable
@@ -40,6 +40,8 @@ type RosRunCommand interface {
 	SetInstanceIds(val interface{})
 	KeepCommand() interface{}
 	SetKeepCommand(val interface{})
+	Launcher() interface{}
+	SetLauncher(val interface{})
 	// The logical ID for this stack element.
 	//
 	// The logical ID of the element
@@ -359,6 +361,16 @@ func (j *jsiiProxy_RosRunCommand) KeepCommand() interface{} {
 	_jsii_.Get(
 		j,
 		"keepCommand",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_RosRunCommand) Launcher() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"launcher",
 		&returns,
 	)
 	return returns
@@ -698,6 +710,17 @@ func (j *jsiiProxy_RosRunCommand)SetKeepCommand(val interface{}) {
 	_jsii_.Set(
 		j,
 		"keepCommand",
+		val,
+	)
+}
+
+func (j *jsiiProxy_RosRunCommand)SetLauncher(val interface{}) {
+	if err := j.validateSetLauncherParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"launcher",
 		val,
 	)
 }

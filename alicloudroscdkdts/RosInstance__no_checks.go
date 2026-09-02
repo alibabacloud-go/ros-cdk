@@ -120,11 +120,23 @@ func (j *jsiiProxy_RosInstance) validateSetFeeTypeParameters(val interface{}) er
 	return nil
 }
 
+func (j *jsiiProxy_RosInstance) validateSetInsightModuleParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_RosInstance) validateSetInstanceClassParameters(val interface{}) error {
 	return nil
 }
 
 func (j *jsiiProxy_RosInstance) validateSetJobIdParameters(val interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_RosInstance) validateSetMaxDuParameters(val interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_RosInstance) validateSetMinDuParameters(val interface{}) error {
 	return nil
 }
 

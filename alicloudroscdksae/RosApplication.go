@@ -50,14 +50,20 @@ type RosApplication interface {
 	SetEdasContainerVersion(val interface{})
 	EnableEbpf() interface{}
 	SetEnableEbpf(val interface{})
+	EnableNewArms() interface{}
+	SetEnableNewArms(val interface{})
 	EnableResourcePropertyConstraint() *bool
 	SetEnableResourcePropertyConstraint(val *bool)
+	EnableSidecarResourceIsolated() interface{}
+	SetEnableSidecarResourceIsolated(val interface{})
 	Envs() interface{}
 	SetEnvs(val interface{})
 	ImagePullSecrets() interface{}
 	SetImagePullSecrets(val interface{})
 	ImageUrl() interface{}
 	SetImageUrl(val interface{})
+	InitContainersConfig() interface{}
+	SetInitContainersConfig(val interface{})
 	JarStartArgs() interface{}
 	SetJarStartArgs(val interface{})
 	JarStartOptions() interface{}
@@ -94,6 +100,8 @@ type RosApplication interface {
 	SetNasConfigs(val interface{})
 	NasId() interface{}
 	SetNasId(val interface{})
+	NewSaeVersion() interface{}
+	SetNewSaeVersion(val interface{})
 	// The construct tree node associated with this construct.
 	Node() alicloudroscdkcore.ConstructNode
 	OssAkId() interface{}
@@ -148,6 +156,8 @@ type RosApplication interface {
 	SetSecurityGroupId(val interface{})
 	ServiceTags() interface{}
 	SetServiceTags(val interface{})
+	SidecarContainersConfig() interface{}
+	SetSidecarContainersConfig(val interface{})
 	SlsConfigs() interface{}
 	SetSlsConfigs(val interface{})
 	// The stack in which this element is defined.
@@ -484,11 +494,31 @@ func (j *jsiiProxy_RosApplication) EnableEbpf() interface{} {
 	return returns
 }
 
+func (j *jsiiProxy_RosApplication) EnableNewArms() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"enableNewArms",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_RosApplication) EnableResourcePropertyConstraint() *bool {
 	var returns *bool
 	_jsii_.Get(
 		j,
 		"enableResourcePropertyConstraint",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_RosApplication) EnableSidecarResourceIsolated() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"enableSidecarResourceIsolated",
 		&returns,
 	)
 	return returns
@@ -519,6 +549,16 @@ func (j *jsiiProxy_RosApplication) ImageUrl() interface{} {
 	_jsii_.Get(
 		j,
 		"imageUrl",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_RosApplication) InitContainersConfig() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"initContainersConfig",
 		&returns,
 	)
 	return returns
@@ -659,6 +699,16 @@ func (j *jsiiProxy_RosApplication) NasId() interface{} {
 	_jsii_.Get(
 		j,
 		"nasId",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_RosApplication) NewSaeVersion() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"newSaeVersion",
 		&returns,
 	)
 	return returns
@@ -919,6 +969,16 @@ func (j *jsiiProxy_RosApplication) ServiceTags() interface{} {
 	_jsii_.Get(
 		j,
 		"serviceTags",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_RosApplication) SidecarContainersConfig() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"sidecarContainersConfig",
 		&returns,
 	)
 	return returns
@@ -1238,6 +1298,17 @@ func (j *jsiiProxy_RosApplication)SetEnableEbpf(val interface{}) {
 	)
 }
 
+func (j *jsiiProxy_RosApplication)SetEnableNewArms(val interface{}) {
+	if err := j.validateSetEnableNewArmsParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"enableNewArms",
+		val,
+	)
+}
+
 func (j *jsiiProxy_RosApplication)SetEnableResourcePropertyConstraint(val *bool) {
 	if err := j.validateSetEnableResourcePropertyConstraintParameters(val); err != nil {
 		panic(err)
@@ -1245,6 +1316,17 @@ func (j *jsiiProxy_RosApplication)SetEnableResourcePropertyConstraint(val *bool)
 	_jsii_.Set(
 		j,
 		"enableResourcePropertyConstraint",
+		val,
+	)
+}
+
+func (j *jsiiProxy_RosApplication)SetEnableSidecarResourceIsolated(val interface{}) {
+	if err := j.validateSetEnableSidecarResourceIsolatedParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"enableSidecarResourceIsolated",
 		val,
 	)
 }
@@ -1278,6 +1360,17 @@ func (j *jsiiProxy_RosApplication)SetImageUrl(val interface{}) {
 	_jsii_.Set(
 		j,
 		"imageUrl",
+		val,
+	)
+}
+
+func (j *jsiiProxy_RosApplication)SetInitContainersConfig(val interface{}) {
+	if err := j.validateSetInitContainersConfigParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"initContainersConfig",
 		val,
 	)
 }
@@ -1421,6 +1514,17 @@ func (j *jsiiProxy_RosApplication)SetNasId(val interface{}) {
 	_jsii_.Set(
 		j,
 		"nasId",
+		val,
+	)
+}
+
+func (j *jsiiProxy_RosApplication)SetNewSaeVersion(val interface{}) {
+	if err := j.validateSetNewSaeVersionParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"newSaeVersion",
 		val,
 	)
 }
@@ -1652,6 +1756,17 @@ func (j *jsiiProxy_RosApplication)SetServiceTags(val interface{}) {
 	_jsii_.Set(
 		j,
 		"serviceTags",
+		val,
+	)
+}
+
+func (j *jsiiProxy_RosApplication)SetSidecarContainersConfig(val interface{}) {
+	if err := j.validateSetSidecarContainersConfigParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"sidecarContainersConfig",
 		val,
 	)
 }

@@ -9,7 +9,7 @@ import (
 	"github.com/aws/constructs-go/constructs/v3"
 )
 
-// This class is a base encapsulation around the ROS resource type `ALIYUN::ACS::Cluster`, which is used to create a Container Compute Service (ACS) cluster.
+// This class is a base encapsulation around the ROS resource type `ALIYUN::ACS::Cluster`.
 type RosCluster interface {
 	alicloudroscdkcore.RosResource
 	Addons() interface{}
@@ -27,10 +27,14 @@ type RosCluster interface {
 	AttrWorkerRamRoleName() alicloudroscdkcore.IResolvable
 	ClusterSpec() interface{}
 	SetClusterSpec(val interface{})
+	ComputeClass() interface{}
+	SetComputeClass(val interface{})
 	// Returns: the stack trace of the point where this Resource was created from, sourced
 	// from the +metadata+ entry typed +aliyun:ros:logicalId+, and with the bottom-most
 	// node +internal+ entries filtered.
 	CreationStack() *[]*string
+	DeleteOptions() interface{}
+	SetDeleteOptions(val interface{})
 	DeletionProtection() interface{}
 	SetDeletionProtection(val interface{})
 	EnableResourcePropertyConstraint() *bool
@@ -39,6 +43,8 @@ type RosCluster interface {
 	SetEndpointPublicAccess(val interface{})
 	IpStack() interface{}
 	SetIpStack(val interface{})
+	IsEnterpriseSecurityGroup() interface{}
+	SetIsEnterpriseSecurityGroup(val interface{})
 	KubernetesVersion() interface{}
 	SetKubernetesVersion(val interface{})
 	LoadBalancerSpec() interface{}
@@ -61,6 +67,8 @@ type RosCluster interface {
 	SetName(val interface{})
 	// The construct tree node associated with this construct.
 	Node() alicloudroscdkcore.ConstructNode
+	PodPostpaidSpec() interface{}
+	SetPodPostpaidSpec(val interface{})
 	PodVSwitchIds() interface{}
 	SetPodVSwitchIds(val interface{})
 	// Return a string that will be resolved to a RosTemplate `{ Ref }` for this element.
@@ -351,11 +359,31 @@ func (j *jsiiProxy_RosCluster) ClusterSpec() interface{} {
 	return returns
 }
 
+func (j *jsiiProxy_RosCluster) ComputeClass() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"computeClass",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_RosCluster) CreationStack() *[]*string {
 	var returns *[]*string
 	_jsii_.Get(
 		j,
 		"creationStack",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_RosCluster) DeleteOptions() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"deleteOptions",
 		&returns,
 	)
 	return returns
@@ -396,6 +424,16 @@ func (j *jsiiProxy_RosCluster) IpStack() interface{} {
 	_jsii_.Get(
 		j,
 		"ipStack",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_RosCluster) IsEnterpriseSecurityGroup() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"isEnterpriseSecurityGroup",
 		&returns,
 	)
 	return returns
@@ -466,6 +504,16 @@ func (j *jsiiProxy_RosCluster) Node() alicloudroscdkcore.ConstructNode {
 	_jsii_.Get(
 		j,
 		"node",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_RosCluster) PodPostpaidSpec() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"podPostpaidSpec",
 		&returns,
 	)
 	return returns
@@ -691,6 +739,28 @@ func (j *jsiiProxy_RosCluster)SetClusterSpec(val interface{}) {
 	)
 }
 
+func (j *jsiiProxy_RosCluster)SetComputeClass(val interface{}) {
+	if err := j.validateSetComputeClassParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"computeClass",
+		val,
+	)
+}
+
+func (j *jsiiProxy_RosCluster)SetDeleteOptions(val interface{}) {
+	if err := j.validateSetDeleteOptionsParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"deleteOptions",
+		val,
+	)
+}
+
 func (j *jsiiProxy_RosCluster)SetDeletionProtection(val interface{}) {
 	if err := j.validateSetDeletionProtectionParameters(val); err != nil {
 		panic(err)
@@ -731,6 +801,17 @@ func (j *jsiiProxy_RosCluster)SetIpStack(val interface{}) {
 	_jsii_.Set(
 		j,
 		"ipStack",
+		val,
+	)
+}
+
+func (j *jsiiProxy_RosCluster)SetIsEnterpriseSecurityGroup(val interface{}) {
+	if err := j.validateSetIsEnterpriseSecurityGroupParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"isEnterpriseSecurityGroup",
 		val,
 	)
 }
@@ -786,6 +867,17 @@ func (j *jsiiProxy_RosCluster)SetName(val interface{}) {
 	_jsii_.Set(
 		j,
 		"name",
+		val,
+	)
+}
+
+func (j *jsiiProxy_RosCluster)SetPodPostpaidSpec(val interface{}) {
+	if err := j.validateSetPodPostpaidSpecParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"podPostpaidSpec",
 		val,
 	)
 }

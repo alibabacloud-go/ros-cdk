@@ -7,13 +7,21 @@ package alicloudroscdkdts
 type MigrationJob2Props struct {
 	// Property dataInitialization: Specifies whether to perform full data migration or full data synchronization.
 	//
-	// Default value: **true**. Valid values: **true** and **false**.
+	// Valid values:
+	// *   true (default)
+	// *   false
+	// > If JobType is set to CHECK, set this parameter to false.
 	DataInitialization interface{} `field:"required" json:"dataInitialization" yaml:"dataInitialization"`
 	// Property dataSynchronization: Specifies whether to perform incremental data migration or incremental data synchronization.
 	//
-	// Default value: **false**. Valid values: **true** and **false**.
+	// Valid values:
+	// *   false (default)
+	// *   true
+	// > If JobType is set to CHECK, set this parameter to false.
 	DataSynchronization interface{} `field:"required" json:"dataSynchronization" yaml:"dataSynchronization"`
 	// Property dbList: The objects that you want to migrate or synchronize.
+	//
+	// The value is a JSON string.
 	DbList interface{} `field:"required" json:"dbList" yaml:"dbList"`
 	// Property destinationEndpoint: Destination instance configuration.
 	DestinationEndpoint interface{} `field:"required" json:"destinationEndpoint" yaml:"destinationEndpoint"`
@@ -23,7 +31,11 @@ type MigrationJob2Props struct {
 	SourceEndpoint interface{} `field:"required" json:"sourceEndpoint" yaml:"sourceEndpoint"`
 	// Property structureInitialization: Specifies whether to perform schema migration or schema synchronization.
 	//
-	// Default value: true. Valid values: **true** and **false**.
+	// Valid
+	// values:
+	// *   true (default)
+	// *   false
+	// > If JobType is set to CHECK, set this parameter to false.
 	StructureInitialization interface{} `field:"required" json:"structureInitialization" yaml:"structureInitialization"`
 	// Property checkpoint: The start offset of incremental data migration or synchronization.
 	//
@@ -39,13 +51,21 @@ type MigrationJob2Props struct {
 	DelayNotice interface{} `field:"optional" json:"delayNotice" yaml:"delayNotice"`
 	// Property delayPhone: The mobile numbers that receive latency-related alerts.
 	//
-	// Separate multiple mobile numbers with commas (,).
-	// **Note**: This parameter is available only for users of the China site (aliyun.com). Only mobile numbers in the Chinese mainland are supported. You can specify up to 10 mobile numbers. Users of the international site (alibabacloud.com) cannot receive alerts by using mobile numbers, but can configure alert rules for DTS tasks in the CloudMonitor console.
+	// Separate multiple mobile numbers with commas (,). You can specify up to 10 mobile numbers.
+	// **Note**: You can also configure alert rules for DTS tasks in the CloudMonitor console.This parameter is available only for users of the China site (aliyun.com). Only mobile numbers in the Chinese mainland are supported. Users of the international site (alibabacloud.com) cannot receive alerts by using mobile numbers.
 	DelayPhone interface{} `field:"optional" json:"delayPhone" yaml:"delayPhone"`
 	// Property delayRuleTime: The threshold for latency alerts.
 	//
-	// Unit: seconds. You can set the threshold based on your business requirements. To prevent jitters caused by network and database overloads, we recommend that you set the threshold to more than 10 seconds.
+	// Unit: seconds. The value must be an integer.
+	// You can set the threshold based on your business requirements. To prevent
+	// unstable latency caused by network and database overloads, we recommend that you
+	// set the threshold to more than 10 seconds.
+	// > If DelayNotice is set to true, this parameter is required.
 	DelayRuleTime interface{} `field:"optional" json:"delayRuleTime" yaml:"delayRuleTime"`
+	// Property destPrimaryVswId: The primary VSW ID at the destination end of the VPC NAT.
+	DestPrimaryVswId interface{} `field:"optional" json:"destPrimaryVswId" yaml:"destPrimaryVswId"`
+	// Property destSecondaryVswId: The secondary VSW ID at the destination end of the VPC NAT.
+	DestSecondaryVswId interface{} `field:"optional" json:"destSecondaryVswId" yaml:"destSecondaryVswId"`
 	// Property disasterRecoveryJob: Specifies whether the instance is a disaster recovery instance.
 	//
 	// Valid values: **true** and **false**.
@@ -64,15 +84,32 @@ type MigrationJob2Props struct {
 	ErrorNotice interface{} `field:"optional" json:"errorNotice" yaml:"errorNotice"`
 	// Property errorPhone: The mobile numbers that receive status-related alerts.
 	//
-	// Separate multiple mobile numbers with commas (,).
-	// **Note**: This parameter is available only for users of the China site (aliyun.com). Only mobile numbers in the Chinese mainland are supported. You can specify up to 10 mobile numbers. Users of the international site (alibabacloud.com) cannot receive alerts by using mobile numbers, but can configure alert rules for DTS tasks in the CloudMonitor console.
+	// Separate multiple mobile numbers with commas (,). You can specify up to 10 mobile numbers.
+	// **Note**: You can also configure alert rules for DTS tasks in the CloudMonitor console.This parameter is available only for users of the China site (aliyun.com). Only mobile numbers in the Chinese mainland are supported. Users of the international site (alibabacloud.com) cannot receive alerts by using mobile numbers.
 	ErrorPhone interface{} `field:"optional" json:"errorPhone" yaml:"errorPhone"`
 	// Property fileOssUrl: The URL of the Object Storage Service (OSS) bucket that stores the files related to the DTS task.
 	FileOssUrl interface{} `field:"optional" json:"fileOssUrl" yaml:"fileOssUrl"`
+	// Property maxDu: The DU upper limit of the Serverless instance, with values being: 2, 4, 8, 16.
+	//
+	// Currently, this feature is not supported, please do not pass in parameters.
+	MaxDu interface{} `field:"optional" json:"maxDu" yaml:"maxDu"`
+	// Property minDu: The lower limit of DU for Serverless instances, with values being: 1, 2, 4, 8, 16.
+	//
+	// This feature is currently not supported, please do not pass in parameters.
+	MinDu interface{} `field:"optional" json:"minDu" yaml:"minDu"`
 	// Property reserve: The reserved parameter of DTS.
 	//
-	// You can specify this parameter to add more configurations of the source or destination instance to the DTS task. For example, you can specify the data storage format of the destination Kafka database and the ID of the CEN instance.
+	// The value is a JSON string. You can specify this
+	// parameter to add more configurations of the source or destination instance to the
+	// DTS task. For example, you can specify the data storage format of the destination
+	// Kafka database and the CEN instance ID.
 	Reserve interface{} `field:"optional" json:"reserve" yaml:"reserve"`
+	// Property resourceGroupId: The ID of the resource group.
+	ResourceGroupId interface{} `field:"optional" json:"resourceGroupId" yaml:"resourceGroupId"`
+	// Property srcPrimaryVswId: The primary VSW ID at the source end of the VPC NAT.
+	SrcPrimaryVswId interface{} `field:"optional" json:"srcPrimaryVswId" yaml:"srcPrimaryVswId"`
+	// Property srcSecondaryVswId: The secondary VSW ID at the source end of the VPC NAT.
+	SrcSecondaryVswId interface{} `field:"optional" json:"srcSecondaryVswId" yaml:"srcSecondaryVswId"`
 	// Property status: The status of the resource.
 	//
 	// Valid values:

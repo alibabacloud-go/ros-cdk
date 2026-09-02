@@ -11,40 +11,108 @@ type InstanceProps struct {
 	//
 	// MongoDB is [5,3000], increased every 10 GB, Unit in GB.
 	DbInstanceStorage interface{} `field:"required" json:"dbInstanceStorage" yaml:"dbInstanceStorage"`
-	// Property accountPassword: Root account password, can contain the letters, numbers or underscores the composition, length of 6~32 bit.
-	AccountPassword interface{} `field:"optional" json:"accountPassword" yaml:"accountPassword"`
-	// Property autoRenew: Indicates whether automatic renewal is enabled for the instance.
+	// Property accountPassword: The password of the root account.
 	//
-	// Valid values:true: Automatic renewal is enabled.false: Automatic renewal is not enabled. You must renew the instance manually.Default value: false.
+	// The password must meet the following
+	// requirements:
+	// - It must contain at least three of the following character types: uppercase
+	// letters, lowercase letters, digits, and special characters.
+	// - Special characters include !@#$%^&\*()_+-=
+	// - It must be 8 to 32 characters in length.
+	AccountPassword interface{} `field:"optional" json:"accountPassword" yaml:"accountPassword"`
+	// Property auditPolicyOptions: Audit policy options.
+	AuditPolicyOptions interface{} `field:"optional" json:"auditPolicyOptions" yaml:"auditPolicyOptions"`
+	// Property autoRenew: Specifies whether to enable auto-renewal for the instance.
+	//
+	// Valid values:
+	// - true: Auto-renewal is enabled.
+	// - false: Auto-renewal is disabled. You must manually renew the instance. This is
+	// the default value.
+	// > This parameter is optional and takes effect only when you set the ChargeType
+	// parameter to PrePaid.
 	AutoRenew interface{} `field:"optional" json:"autoRenew" yaml:"autoRenew"`
-	// Property backupId: Specific backup set Id.
+	// Property backupId: The backup point ID.
+	//
+	// To query the backup point ID, call the [DescribeBackups]()
+	// operation.
+	// > You must specify this parameter and the SrcDBInstanceId parameter only when you
+	// clone an instance based on a backup point.
 	BackupId interface{} `field:"optional" json:"backupId" yaml:"backupId"`
+	// Property backupPolicyOptions: Backup policy options.
+	BackupPolicyOptions interface{} `field:"optional" json:"backupPolicyOptions" yaml:"backupPolicyOptions"`
 	// Property businessInfo: The business information.
 	//
 	// It is an additional parameter.
 	BusinessInfo interface{} `field:"optional" json:"businessInfo" yaml:"businessInfo"`
 	// Property chargeType: The billing method of the instance.values:PostPaid: Pay-As-You-Go.PrePaid: Subscription.Default value: PostPaid.
 	ChargeType interface{} `field:"optional" json:"chargeType" yaml:"chargeType"`
-	// Property couponNo: The coupon code.
+	// Property clusterId: The dedicated cluster ID.
+	ClusterId interface{} `field:"optional" json:"clusterId" yaml:"clusterId"`
+	// Property couponNo: Specifies whether to use a coupon.
 	//
-	// Default value:youhuiquan_promotion_option_id_for_blank.
+	// Valid values:
+	// - default or null (default): Uses a coupon.
+	// - youhuiquan_promotion_option_id_for_blank: Does not use a coupon.
 	CouponNo interface{} `field:"optional" json:"couponNo" yaml:"couponNo"`
-	// Property databaseNames: The name of the database.
+	// Property databaseNames: The database name.
+	//
+	// > When you clone an instance, you can specify this parameter to clone specific
+	// databases. If you do not specify this parameter, all databases of the instance
+	// are cloned.
 	DatabaseNames interface{} `field:"optional" json:"databaseNames" yaml:"databaseNames"`
-	// Property dbInstanceDescription: Description of created database instance.
+	// Property dbInstanceDescription: The name of the instance.
+	//
+	// The name must meet the following requirements:
+	// - It must start with a Chinese character or a letter.
+	// - It can contain digits, Chinese characters, letters, underscores (_), periods
+	// (.), and hyphens (-).
+	// - It must be 2 to 256 characters in length.
 	DbInstanceDescription interface{} `field:"optional" json:"dbInstanceDescription" yaml:"dbInstanceDescription"`
-	// Property engineVersion: Database instance version.
+	// Property dbInstanceReleaseProtection: Enables instance release protection.
+	//
+	// Values:
+	// - true: Enabled.
+	// - false: Not enabled.
+	DbInstanceReleaseProtection interface{} `field:"optional" json:"dbInstanceReleaseProtection" yaml:"dbInstanceReleaseProtection"`
+	// Property encrypted: Whether to enable cloud disk encryption.
+	Encrypted interface{} `field:"optional" json:"encrypted" yaml:"encrypted"`
+	// Property encryptionKey: Custom key ID.
+	EncryptionKey interface{} `field:"optional" json:"encryptionKey" yaml:"encryptionKey"`
+	// Property engineVersion: The database version.
+	//
+	// Valid values:
+	// - 8.0
+	// - 7.0
+	// - 6.0
+	// - 5.0
+	// - 4.4
+	// - 4.2
+	// - 4.0
+	// > * When you clone an instance by calling this operation, the value of this
+	// parameter must be the same as that of the source instance.
 	EngineVersion interface{} `field:"optional" json:"engineVersion" yaml:"engineVersion"`
 	// Property hiddenZoneId: Configure the zone where the hidden node resides to implement multi-availability zone deployment.
 	//
 	// When the value of the EngineVersion is 4.4 and later, this parameter is available and required.
 	// The value of this parameter cannot be the same as that of ZoneId and SecondaryZoneId.
 	HiddenZoneId interface{} `field:"optional" json:"hiddenZoneId" yaml:"hiddenZoneId"`
-	// Property period: The subscription period of the instance.Default Unit: Month.Valid values: [1~9], 12, 24, 36. Default to 1.
+	// Property period: The subscription duration of the instance.
+	//
+	// Unit: month.
+	// Valid values: 1 to 9 (integer), 12, 24, 36, and 60.
+	// > This parameter is required and takes effect only when you set the ChargeType
+	// parameter to PrePaid.
 	Period interface{} `field:"optional" json:"period" yaml:"period"`
 	// Property privateConnections: Connection configs of private connection.
 	PrivateConnections interface{} `field:"optional" json:"privateConnections" yaml:"privateConnections"`
-	// Property readonlyReplicas: Number of read-only nodes, in the range of 1-5.
+	// Property provisionedIops: Provisioned IOPS.
+	//
+	// The value range is 0 to 50000.
+	ProvisionedIops interface{} `field:"optional" json:"provisionedIops" yaml:"provisionedIops"`
+	// Property readonlyReplicas: The number of read-only nodes in the replica set instance.
+	//
+	// Valid values are
+	// integers from 0 to 5. The default value is 0.
 	ReadonlyReplicas interface{} `field:"optional" json:"readonlyReplicas" yaml:"readonlyReplicas"`
 	// Property replicationFactor: The number of nodes in the replica set.
 	//
@@ -56,6 +124,13 @@ type InstanceProps struct {
 	//
 	// The format is yyyy-MM-ddTHH:mm:ssZ.This parameter can only be specified when this operation is called to clone instances.You must also specify theSrcDBInstanceIdparameter and theBackupIdparameter.You can clone instances to any restore time in the past seven days.
 	RestoreTime interface{} `field:"optional" json:"restoreTime" yaml:"restoreTime"`
+	// Property restoreType: The method to restore an instance from a backup.
+	//
+	// - 0: Restores the instance to a specified backup set.
+	// - 1: Restores the instance to a specified point in time.
+	// - 2: Restores a released instance to a specified backup set.
+	// - 3: Restores the instance to a specified geo-redundant backup set.
+	RestoreType interface{} `field:"optional" json:"restoreType" yaml:"restoreType"`
 	// Property secondaryZoneId: Configure the zone where the secondary node resides to implement multi-availability zone deployment.
 	//
 	// When the value of the EngineVersion is 4.4 and later, this parameter is available and required.The value of this parameter cannot be the same as that of ZoneId and HiddenZoneId.
@@ -66,9 +141,20 @@ type InstanceProps struct {
 	// You can call the ECS DescribeSecurityGroup to describe the ID of the security group in the target region.
 	SecurityGroupId interface{} `field:"optional" json:"securityGroupId" yaml:"securityGroupId"`
 	// Property securityIpArray: Security ips to add or remove.
+	//
+	// Update to this property will cover the current security ips.
 	SecurityIpArray interface{} `field:"optional" json:"securityIpArray" yaml:"securityIpArray"`
-	// Property srcDbInstanceId: Create an instance of the backup set based on an instance.
+	// Property srcDbInstanceId: The source instance ID.
+	//
+	// > This parameter is required only when you clone an instance by calling this
+	// operation. You must also specify the RestoreTime parameter.
 	SrcDbInstanceId interface{} `field:"optional" json:"srcDbInstanceId" yaml:"srcDbInstanceId"`
+	// Property srcRegion: The source instance region.
+	//
+	// >- When the backup recovery type is 2 or 3, this parameter is required.
+	SrcRegion interface{} `field:"optional" json:"srcRegion" yaml:"srcRegion"`
+	// Property sslOptions: SSL options.
+	SslOptions interface{} `field:"optional" json:"sslOptions" yaml:"sslOptions"`
 	// Property storageEngine: Database storage engine.Support WiredTiger, RocksDB, TerarkDB.
 	StorageEngine interface{} `field:"optional" json:"storageEngine" yaml:"storageEngine"`
 	// Property storageType: The storage type of the instance.

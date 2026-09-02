@@ -148,7 +148,15 @@ func (j *jsiiProxy_RosApplication) validateSetEnableEbpfParameters(val interface
 	return nil
 }
 
+func (j *jsiiProxy_RosApplication) validateSetEnableNewArmsParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_RosApplication) validateSetEnableResourcePropertyConstraintParameters(val *bool) error {
+	return nil
+}
+
+func (j *jsiiProxy_RosApplication) validateSetEnableSidecarResourceIsolatedParameters(val interface{}) error {
 	return nil
 }
 
@@ -161,6 +169,10 @@ func (j *jsiiProxy_RosApplication) validateSetImagePullSecretsParameters(val int
 }
 
 func (j *jsiiProxy_RosApplication) validateSetImageUrlParameters(val interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_RosApplication) validateSetInitContainersConfigParameters(val interface{}) error {
 	return nil
 }
 
@@ -213,6 +225,10 @@ func (j *jsiiProxy_RosApplication) validateSetNasConfigsParameters(val interface
 }
 
 func (j *jsiiProxy_RosApplication) validateSetNasIdParameters(val interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_RosApplication) validateSetNewSaeVersionParameters(val interface{}) error {
 	return nil
 }
 
@@ -297,6 +313,10 @@ func (j *jsiiProxy_RosApplication) validateSetSecurityGroupIdParameters(val inte
 }
 
 func (j *jsiiProxy_RosApplication) validateSetServiceTagsParameters(val interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_RosApplication) validateSetSidecarContainersConfigParameters(val interface{}) error {
 	return nil
 }
 

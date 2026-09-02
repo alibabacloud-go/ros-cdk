@@ -9,12 +9,12 @@ import (
 	"github.com/aws/constructs-go/constructs/v3"
 )
 
-// This class is a base encapsulation around the ROS resource type `ALIYUN::DataWorks::Project`, which is used to create a DataWorks workspace.
+// This class is a base encapsulation around the ROS resource type `ALIYUN::DataWorks::Project`.
 type RosProject interface {
 	alicloudroscdkcore.RosResource
 	AttrEnvTypes() alicloudroscdkcore.IResolvable
+	AttrId() alicloudroscdkcore.IResolvable
 	AttrIsDefault() alicloudroscdkcore.IResolvable
-	AttrProjectId() alicloudroscdkcore.IResolvable
 	AttrProjectIdentifier() alicloudroscdkcore.IResolvable
 	AttrProtectedMode() alicloudroscdkcore.IResolvable
 	AttrResidentArea() alicloudroscdkcore.IResolvable
@@ -203,21 +203,21 @@ func (j *jsiiProxy_RosProject) AttrEnvTypes() alicloudroscdkcore.IResolvable {
 	return returns
 }
 
-func (j *jsiiProxy_RosProject) AttrIsDefault() alicloudroscdkcore.IResolvable {
+func (j *jsiiProxy_RosProject) AttrId() alicloudroscdkcore.IResolvable {
 	var returns alicloudroscdkcore.IResolvable
 	_jsii_.Get(
 		j,
-		"attrIsDefault",
+		"attrId",
 		&returns,
 	)
 	return returns
 }
 
-func (j *jsiiProxy_RosProject) AttrProjectId() alicloudroscdkcore.IResolvable {
+func (j *jsiiProxy_RosProject) AttrIsDefault() alicloudroscdkcore.IResolvable {
 	var returns alicloudroscdkcore.IResolvable
 	_jsii_.Get(
 		j,
-		"attrProjectId",
+		"attrIsDefault",
 		&returns,
 	)
 	return returns

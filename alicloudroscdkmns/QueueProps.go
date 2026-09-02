@@ -12,6 +12,8 @@ type QueueProps struct {
 	// All messages sent to the queue can be consumed until the DelaySeconds expires.
 	// An integer between 0 and 604800 (7 days). The default value is 0
 	DelaySeconds interface{} `field:"optional" json:"delaySeconds" yaml:"delaySeconds"`
+	// Property dlqPolicy: Dead-letter queue policy.
+	DlqPolicy interface{} `field:"optional" json:"dlqPolicy" yaml:"dlqPolicy"`
 	// Property loggingEnabled: Whether to enable log management.
 	//
 	// "true" indicates that log management is enabled, whereas "false" indicates that log management is disabled.
@@ -21,16 +23,22 @@ type QueueProps struct {
 	//
 	// An integer between 1024 (1K) and 65536 (64K). The default value is 65536 (64K).
 	MaximumMessageSize interface{} `field:"optional" json:"maximumMessageSize" yaml:"maximumMessageSize"`
-	// Property messageRetentionPeriod: Maximum lifetime of the message in the queue, measured in seconds.
+	// Property messageRetentionPeriod: The maximum time to live (TTL) for a message in the queue.
 	//
-	// After the time specified by this parameter expires, the message will be deleted no matter whether it has been consumed or not.
-	// An integer between 60 (1 minute) and 1296000 (15 days). The default value is 345600 (4 days)
+	// After the specified
+	// period, the message is deleted, regardless of whether it has been retrieved.
+	// Valid values: 60 to 604800. Unit: seconds.
+	// Default value: 345600.
 	MessageRetentionPeriod interface{} `field:"optional" json:"messageRetentionPeriod" yaml:"messageRetentionPeriod"`
 	// Property pollingWaitSeconds: It is the maximum time that a ReceiveMessage request could be waiting for any incoming messages, while there are no message in the queue.
 	//
 	// Measured in seconds.
 	// An integer between 0 and 30 seconds. The default value is 0 (seconds)
 	PollingWaitSeconds interface{} `field:"optional" json:"pollingWaitSeconds" yaml:"pollingWaitSeconds"`
+	// Property tags: Tags to attach to Queue.
+	//
+	// Max support 20 tags to add during create Queue. Each tag with two properties Key and Value, and Key is required.
+	Tags *[]*RosQueue_TagsProperty `field:"optional" json:"tags" yaml:"tags"`
 	// Property visibilityTimeout: Duration in which a message stays in Inactive status after it is consumed from the queue.
 	//
 	// Measured in seconds.

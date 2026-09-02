@@ -9,7 +9,7 @@ import (
 	"github.com/aws/constructs-go/constructs/v3"
 )
 
-// This class is a base encapsulation around the ROS resource type `ALIYUN::DTS::Instance`, which is a new resource type that is used to create a Data Transmission Service (DTS) instance.
+// This class is a base encapsulation around the ROS resource type `ALIYUN::DTS::Instance`.
 type RosInstance interface {
 	alicloudroscdkcore.RosResource
 	AttrInstanceId() alicloudroscdkcore.IResolvable
@@ -36,6 +36,8 @@ type RosInstance interface {
 	SetEnableResourcePropertyConstraint(val *bool)
 	FeeType() interface{}
 	SetFeeType(val interface{})
+	InsightModule() interface{}
+	SetInsightModule(val interface{})
 	InstanceClass() interface{}
 	SetInstanceClass(val interface{})
 	JobId() interface{}
@@ -50,6 +52,10 @@ type RosInstance interface {
 	// Returns: the logical ID as a stringified token. This value will only get
 	// resolved during synthesis.
 	LogicalId() *string
+	MaxDu() interface{}
+	SetMaxDu(val interface{})
+	MinDu() interface{}
+	SetMinDu(val interface{})
 	// The construct tree node associated with this construct.
 	Node() alicloudroscdkcore.ConstructNode
 	PayType() interface{}
@@ -326,6 +332,16 @@ func (j *jsiiProxy_RosInstance) FeeType() interface{} {
 	return returns
 }
 
+func (j *jsiiProxy_RosInstance) InsightModule() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"insightModule",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_RosInstance) InstanceClass() interface{} {
 	var returns interface{}
 	_jsii_.Get(
@@ -351,6 +367,26 @@ func (j *jsiiProxy_RosInstance) LogicalId() *string {
 	_jsii_.Get(
 		j,
 		"logicalId",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_RosInstance) MaxDu() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"maxDu",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_RosInstance) MinDu() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"minDu",
 		&returns,
 	)
 	return returns
@@ -633,6 +669,17 @@ func (j *jsiiProxy_RosInstance)SetFeeType(val interface{}) {
 	)
 }
 
+func (j *jsiiProxy_RosInstance)SetInsightModule(val interface{}) {
+	if err := j.validateSetInsightModuleParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"insightModule",
+		val,
+	)
+}
+
 func (j *jsiiProxy_RosInstance)SetInstanceClass(val interface{}) {
 	if err := j.validateSetInstanceClassParameters(val); err != nil {
 		panic(err)
@@ -651,6 +698,28 @@ func (j *jsiiProxy_RosInstance)SetJobId(val interface{}) {
 	_jsii_.Set(
 		j,
 		"jobId",
+		val,
+	)
+}
+
+func (j *jsiiProxy_RosInstance)SetMaxDu(val interface{}) {
+	if err := j.validateSetMaxDuParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"maxDu",
+		val,
+	)
+}
+
+func (j *jsiiProxy_RosInstance)SetMinDu(val interface{}) {
+	if err := j.validateSetMinDuParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"minDu",
 		val,
 	)
 }

@@ -422,6 +422,63 @@ func init() {
 		"@alicloud/ros-cdk-cen.ChildInstanceRouteEntryToAttachmentProps",
 		reflect.TypeOf((*ChildInstanceRouteEntryToAttachmentProps)(nil)).Elem(),
 	)
+	_jsii_.RegisterClass(
+		"@alicloud/ros-cdk-cen.Flowlog",
+		reflect.TypeOf((*Flowlog)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberMethod{JsiiMethod: "addCondition", GoMethod: "AddCondition"},
+			_jsii_.MemberMethod{JsiiMethod: "addCount", GoMethod: "AddCount"},
+			_jsii_.MemberMethod{JsiiMethod: "addDependency", GoMethod: "AddDependency"},
+			_jsii_.MemberMethod{JsiiMethod: "addResourceDesc", GoMethod: "AddResourceDesc"},
+			_jsii_.MemberMethod{JsiiMethod: "applyRemovalPolicy", GoMethod: "ApplyRemovalPolicy"},
+			_jsii_.MemberProperty{JsiiProperty: "attrCenId", GoGetter: "AttrCenId"},
+			_jsii_.MemberProperty{JsiiProperty: "attrCreateTime", GoGetter: "AttrCreateTime"},
+			_jsii_.MemberProperty{JsiiProperty: "attrDescription", GoGetter: "AttrDescription"},
+			_jsii_.MemberProperty{JsiiProperty: "attrFlowLogId", GoGetter: "AttrFlowLogId"},
+			_jsii_.MemberProperty{JsiiProperty: "attrFlowLogName", GoGetter: "AttrFlowLogName"},
+			_jsii_.MemberProperty{JsiiProperty: "attrFlowLogVersion", GoGetter: "AttrFlowLogVersion"},
+			_jsii_.MemberProperty{JsiiProperty: "attrInterval", GoGetter: "AttrInterval"},
+			_jsii_.MemberProperty{JsiiProperty: "attrLogFormatString", GoGetter: "AttrLogFormatString"},
+			_jsii_.MemberProperty{JsiiProperty: "attrLogStoreName", GoGetter: "AttrLogStoreName"},
+			_jsii_.MemberProperty{JsiiProperty: "attrProjectName", GoGetter: "AttrProjectName"},
+			_jsii_.MemberProperty{JsiiProperty: "attrTags", GoGetter: "AttrTags"},
+			_jsii_.MemberProperty{JsiiProperty: "attrTransitRouterAttachmentId", GoGetter: "AttrTransitRouterAttachmentId"},
+			_jsii_.MemberProperty{JsiiProperty: "attrTransitRouterId", GoGetter: "AttrTransitRouterId"},
+			_jsii_.MemberProperty{JsiiProperty: "enableResourcePropertyConstraint", GoGetter: "EnableResourcePropertyConstraint"},
+			_jsii_.MemberProperty{JsiiProperty: "env", GoGetter: "Env"},
+			_jsii_.MemberMethod{JsiiMethod: "fetchCondition", GoMethod: "FetchCondition"},
+			_jsii_.MemberMethod{JsiiMethod: "fetchDependency", GoMethod: "FetchDependency"},
+			_jsii_.MemberMethod{JsiiMethod: "fetchResourceDesc", GoMethod: "FetchResourceDesc"},
+			_jsii_.MemberMethod{JsiiMethod: "generatePhysicalName", GoMethod: "GeneratePhysicalName"},
+			_jsii_.MemberMethod{JsiiMethod: "getAtt", GoMethod: "GetAtt"},
+			_jsii_.MemberProperty{JsiiProperty: "id", GoGetter: "Id"},
+			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
+			_jsii_.MemberMethod{JsiiMethod: "onPrepare", GoMethod: "OnPrepare"},
+			_jsii_.MemberMethod{JsiiMethod: "onSynthesize", GoMethod: "OnSynthesize"},
+			_jsii_.MemberMethod{JsiiMethod: "onValidate", GoMethod: "OnValidate"},
+			_jsii_.MemberProperty{JsiiProperty: "physicalName", GoGetter: "PhysicalName"},
+			_jsii_.MemberMethod{JsiiMethod: "prepare", GoMethod: "Prepare"},
+			_jsii_.MemberProperty{JsiiProperty: "props", GoGetter: "Props"},
+			_jsii_.MemberProperty{JsiiProperty: "ref", GoGetter: "Ref"},
+			_jsii_.MemberProperty{JsiiProperty: "resource", GoGetter: "Resource"},
+			_jsii_.MemberProperty{JsiiProperty: "scope", GoGetter: "Scope"},
+			_jsii_.MemberMethod{JsiiMethod: "setMetadata", GoMethod: "SetMetadata"},
+			_jsii_.MemberProperty{JsiiProperty: "stack", GoGetter: "Stack"},
+			_jsii_.MemberMethod{JsiiMethod: "synthesize", GoMethod: "Synthesize"},
+			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
+			_jsii_.MemberMethod{JsiiMethod: "validate", GoMethod: "Validate"},
+		},
+		func() interface{} {
+			j := jsiiProxy_Flowlog{}
+			_jsii_.InitJsiiProxy(&j.Type__alicloudroscdkcoreResource)
+			_jsii_.InitJsiiProxy(&j.jsiiProxy_IFlowlog)
+			return &j
+		},
+	)
+	_jsii_.RegisterStruct(
+		"@alicloud/ros-cdk-cen.FlowlogProps",
+		reflect.TypeOf((*FlowlogProps)(nil)).Elem(),
+	)
 	_jsii_.RegisterInterface(
 		"@alicloud/ros-cdk-cen.ICenBandwidthLimit",
 		reflect.TypeOf((*ICenBandwidthLimit)(nil)).Elem(),
@@ -576,6 +633,78 @@ func init() {
 		},
 	)
 	_jsii_.RegisterInterface(
+		"@alicloud/ros-cdk-cen.IFlowlog",
+		reflect.TypeOf((*IFlowlog)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberProperty{JsiiProperty: "attrCenId", GoGetter: "AttrCenId"},
+			_jsii_.MemberProperty{JsiiProperty: "attrCreateTime", GoGetter: "AttrCreateTime"},
+			_jsii_.MemberProperty{JsiiProperty: "attrDescription", GoGetter: "AttrDescription"},
+			_jsii_.MemberProperty{JsiiProperty: "attrFlowLogId", GoGetter: "AttrFlowLogId"},
+			_jsii_.MemberProperty{JsiiProperty: "attrFlowLogName", GoGetter: "AttrFlowLogName"},
+			_jsii_.MemberProperty{JsiiProperty: "attrFlowLogVersion", GoGetter: "AttrFlowLogVersion"},
+			_jsii_.MemberProperty{JsiiProperty: "attrInterval", GoGetter: "AttrInterval"},
+			_jsii_.MemberProperty{JsiiProperty: "attrLogFormatString", GoGetter: "AttrLogFormatString"},
+			_jsii_.MemberProperty{JsiiProperty: "attrLogStoreName", GoGetter: "AttrLogStoreName"},
+			_jsii_.MemberProperty{JsiiProperty: "attrProjectName", GoGetter: "AttrProjectName"},
+			_jsii_.MemberProperty{JsiiProperty: "attrTags", GoGetter: "AttrTags"},
+			_jsii_.MemberProperty{JsiiProperty: "attrTransitRouterAttachmentId", GoGetter: "AttrTransitRouterAttachmentId"},
+			_jsii_.MemberProperty{JsiiProperty: "attrTransitRouterId", GoGetter: "AttrTransitRouterId"},
+			_jsii_.MemberProperty{JsiiProperty: "env", GoGetter: "Env"},
+			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
+			_jsii_.MemberProperty{JsiiProperty: "props", GoGetter: "Props"},
+			_jsii_.MemberProperty{JsiiProperty: "stack", GoGetter: "Stack"},
+		},
+		func() interface{} {
+			j := jsiiProxy_IFlowlog{}
+			_jsii_.InitJsiiProxy(&j.Type__alicloudroscdkcoreIResource)
+			return &j
+		},
+	)
+	_jsii_.RegisterInterface(
+		"@alicloud/ros-cdk-cen.IInterRegionTrafficQosPolicy",
+		reflect.TypeOf((*IInterRegionTrafficQosPolicy)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberProperty{JsiiProperty: "attrBandwidthGuaranteeMode", GoGetter: "AttrBandwidthGuaranteeMode"},
+			_jsii_.MemberProperty{JsiiProperty: "attrInterRegionTrafficQosPolicyDescription", GoGetter: "AttrInterRegionTrafficQosPolicyDescription"},
+			_jsii_.MemberProperty{JsiiProperty: "attrInterRegionTrafficQosPolicyId", GoGetter: "AttrInterRegionTrafficQosPolicyId"},
+			_jsii_.MemberProperty{JsiiProperty: "attrInterRegionTrafficQosPolicyName", GoGetter: "AttrInterRegionTrafficQosPolicyName"},
+			_jsii_.MemberProperty{JsiiProperty: "attrTransitRouterAttachmentId", GoGetter: "AttrTransitRouterAttachmentId"},
+			_jsii_.MemberProperty{JsiiProperty: "attrTransitRouterId", GoGetter: "AttrTransitRouterId"},
+			_jsii_.MemberProperty{JsiiProperty: "env", GoGetter: "Env"},
+			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
+			_jsii_.MemberProperty{JsiiProperty: "props", GoGetter: "Props"},
+			_jsii_.MemberProperty{JsiiProperty: "stack", GoGetter: "Stack"},
+		},
+		func() interface{} {
+			j := jsiiProxy_IInterRegionTrafficQosPolicy{}
+			_jsii_.InitJsiiProxy(&j.Type__alicloudroscdkcoreIResource)
+			return &j
+		},
+	)
+	_jsii_.RegisterInterface(
+		"@alicloud/ros-cdk-cen.IInterRegionTrafficQosQueue",
+		reflect.TypeOf((*IInterRegionTrafficQosQueue)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberProperty{JsiiProperty: "attrBandwidth", GoGetter: "AttrBandwidth"},
+			_jsii_.MemberProperty{JsiiProperty: "attrDscps", GoGetter: "AttrDscps"},
+			_jsii_.MemberProperty{JsiiProperty: "attrEffectiveBandwidth", GoGetter: "AttrEffectiveBandwidth"},
+			_jsii_.MemberProperty{JsiiProperty: "attrInterRegionTrafficQosQueueDescription", GoGetter: "AttrInterRegionTrafficQosQueueDescription"},
+			_jsii_.MemberProperty{JsiiProperty: "attrInterRegionTrafficQosQueueId", GoGetter: "AttrInterRegionTrafficQosQueueId"},
+			_jsii_.MemberProperty{JsiiProperty: "attrInterRegionTrafficQosQueueName", GoGetter: "AttrInterRegionTrafficQosQueueName"},
+			_jsii_.MemberProperty{JsiiProperty: "attrRemainBandwidthPercent", GoGetter: "AttrRemainBandwidthPercent"},
+			_jsii_.MemberProperty{JsiiProperty: "attrTrafficQosPolicyId", GoGetter: "AttrTrafficQosPolicyId"},
+			_jsii_.MemberProperty{JsiiProperty: "env", GoGetter: "Env"},
+			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
+			_jsii_.MemberProperty{JsiiProperty: "props", GoGetter: "Props"},
+			_jsii_.MemberProperty{JsiiProperty: "stack", GoGetter: "Stack"},
+		},
+		func() interface{} {
+			j := jsiiProxy_IInterRegionTrafficQosQueue{}
+			_jsii_.InitJsiiProxy(&j.Type__alicloudroscdkcoreIResource)
+			return &j
+		},
+	)
+	_jsii_.RegisterInterface(
 		"@alicloud/ros-cdk-cen.IRouteEntry",
 		reflect.TypeOf((*IRouteEntry)(nil)).Elem(),
 		[]_jsii_.Member{
@@ -613,23 +742,65 @@ func init() {
 		},
 	)
 	_jsii_.RegisterInterface(
+		"@alicloud/ros-cdk-cen.ITransitRouterCidr",
+		reflect.TypeOf((*ITransitRouterCidr)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberProperty{JsiiProperty: "attrCidr", GoGetter: "AttrCidr"},
+			_jsii_.MemberProperty{JsiiProperty: "attrDescription", GoGetter: "AttrDescription"},
+			_jsii_.MemberProperty{JsiiProperty: "attrFamily", GoGetter: "AttrFamily"},
+			_jsii_.MemberProperty{JsiiProperty: "attrPublishCidrRoute", GoGetter: "AttrPublishCidrRoute"},
+			_jsii_.MemberProperty{JsiiProperty: "attrTransitRouterCidrId", GoGetter: "AttrTransitRouterCidrId"},
+			_jsii_.MemberProperty{JsiiProperty: "attrTransitRouterCidrName", GoGetter: "AttrTransitRouterCidrName"},
+			_jsii_.MemberProperty{JsiiProperty: "attrTransitRouterId", GoGetter: "AttrTransitRouterId"},
+			_jsii_.MemberProperty{JsiiProperty: "env", GoGetter: "Env"},
+			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
+			_jsii_.MemberProperty{JsiiProperty: "props", GoGetter: "Props"},
+			_jsii_.MemberProperty{JsiiProperty: "stack", GoGetter: "Stack"},
+		},
+		func() interface{} {
+			j := jsiiProxy_ITransitRouterCidr{}
+			_jsii_.InitJsiiProxy(&j.Type__alicloudroscdkcoreIResource)
+			return &j
+		},
+	)
+	_jsii_.RegisterInterface(
+		"@alicloud/ros-cdk-cen.ITransitRouterGrantAttachment",
+		reflect.TypeOf((*ITransitRouterGrantAttachment)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberProperty{JsiiProperty: "env", GoGetter: "Env"},
+			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
+			_jsii_.MemberProperty{JsiiProperty: "props", GoGetter: "Props"},
+			_jsii_.MemberProperty{JsiiProperty: "stack", GoGetter: "Stack"},
+		},
+		func() interface{} {
+			j := jsiiProxy_ITransitRouterGrantAttachment{}
+			_jsii_.InitJsiiProxy(&j.Type__alicloudroscdkcoreIResource)
+			return &j
+		},
+	)
+	_jsii_.RegisterInterface(
+		"@alicloud/ros-cdk-cen.ITransitRouterMulticastDomainAssociation",
+		reflect.TypeOf((*ITransitRouterMulticastDomainAssociation)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberProperty{JsiiProperty: "attrTransitRouterAttachmentId", GoGetter: "AttrTransitRouterAttachmentId"},
+			_jsii_.MemberProperty{JsiiProperty: "attrTransitRouterMulticastDomainId", GoGetter: "AttrTransitRouterMulticastDomainId"},
+			_jsii_.MemberProperty{JsiiProperty: "attrVSwitchId", GoGetter: "AttrVSwitchId"},
+			_jsii_.MemberProperty{JsiiProperty: "env", GoGetter: "Env"},
+			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
+			_jsii_.MemberProperty{JsiiProperty: "props", GoGetter: "Props"},
+			_jsii_.MemberProperty{JsiiProperty: "stack", GoGetter: "Stack"},
+		},
+		func() interface{} {
+			j := jsiiProxy_ITransitRouterMulticastDomainAssociation{}
+			_jsii_.InitJsiiProxy(&j.Type__alicloudroscdkcoreIResource)
+			return &j
+		},
+	)
+	_jsii_.RegisterInterface(
 		"@alicloud/ros-cdk-cen.ITransitRouterPeerAttachment",
 		reflect.TypeOf((*ITransitRouterPeerAttachment)(nil)).Elem(),
 		[]_jsii_.Member{
-			_jsii_.MemberProperty{JsiiProperty: "attrAutoPublishRouteEnabled", GoGetter: "AttrAutoPublishRouteEnabled"},
-			_jsii_.MemberProperty{JsiiProperty: "attrBandwidth", GoGetter: "AttrBandwidth"},
-			_jsii_.MemberProperty{JsiiProperty: "attrCenBandwidthPackageId", GoGetter: "AttrCenBandwidthPackageId"},
-			_jsii_.MemberProperty{JsiiProperty: "attrCenId", GoGetter: "AttrCenId"},
-			_jsii_.MemberProperty{JsiiProperty: "attrClientToken", GoGetter: "AttrClientToken"},
-			_jsii_.MemberProperty{JsiiProperty: "attrGeographicSpanId", GoGetter: "AttrGeographicSpanId"},
-			_jsii_.MemberProperty{JsiiProperty: "attrPeerTransitRouterId", GoGetter: "AttrPeerTransitRouterId"},
-			_jsii_.MemberProperty{JsiiProperty: "attrPeerTransitRouterOwnerId", GoGetter: "AttrPeerTransitRouterOwnerId"},
-			_jsii_.MemberProperty{JsiiProperty: "attrPeerTransitRouterRegionId", GoGetter: "AttrPeerTransitRouterRegionId"},
-			_jsii_.MemberProperty{JsiiProperty: "attrResourceType", GoGetter: "AttrResourceType"},
-			_jsii_.MemberProperty{JsiiProperty: "attrTransitRouterAttachmentDescription", GoGetter: "AttrTransitRouterAttachmentDescription"},
 			_jsii_.MemberProperty{JsiiProperty: "attrTransitRouterAttachmentId", GoGetter: "AttrTransitRouterAttachmentId"},
-			_jsii_.MemberProperty{JsiiProperty: "attrTransitRouterAttachmentName", GoGetter: "AttrTransitRouterAttachmentName"},
-			_jsii_.MemberProperty{JsiiProperty: "attrTransitRouterId", GoGetter: "AttrTransitRouterId"},
 			_jsii_.MemberProperty{JsiiProperty: "env", GoGetter: "Env"},
 			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
 			_jsii_.MemberProperty{JsiiProperty: "props", GoGetter: "Props"},
@@ -705,6 +876,22 @@ func init() {
 		},
 	)
 	_jsii_.RegisterInterface(
+		"@alicloud/ros-cdk-cen.ITransitRouterRouteTableAssociationReplacement",
+		reflect.TypeOf((*ITransitRouterRouteTableAssociationReplacement)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberProperty{JsiiProperty: "attrOriginalTransitRouterRouteTableId", GoGetter: "AttrOriginalTransitRouterRouteTableId"},
+			_jsii_.MemberProperty{JsiiProperty: "env", GoGetter: "Env"},
+			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
+			_jsii_.MemberProperty{JsiiProperty: "props", GoGetter: "Props"},
+			_jsii_.MemberProperty{JsiiProperty: "stack", GoGetter: "Stack"},
+		},
+		func() interface{} {
+			j := jsiiProxy_ITransitRouterRouteTableAssociationReplacement{}
+			_jsii_.InitJsiiProxy(&j.Type__alicloudroscdkcoreIResource)
+			return &j
+		},
+	)
+	_jsii_.RegisterInterface(
 		"@alicloud/ros-cdk-cen.ITransitRouterRouteTablePropagation",
 		reflect.TypeOf((*ITransitRouterRouteTablePropagation)(nil)).Elem(),
 		[]_jsii_.Member{
@@ -753,7 +940,6 @@ func init() {
 		reflect.TypeOf((*ITransitRouterVpcAttachment)(nil)).Elem(),
 		[]_jsii_.Member{
 			_jsii_.MemberProperty{JsiiProperty: "attrCenId", GoGetter: "AttrCenId"},
-			_jsii_.MemberProperty{JsiiProperty: "attrClientToken", GoGetter: "AttrClientToken"},
 			_jsii_.MemberProperty{JsiiProperty: "attrResourceType", GoGetter: "AttrResourceType"},
 			_jsii_.MemberProperty{JsiiProperty: "attrTransitRouterAttachmentDescription", GoGetter: "AttrTransitRouterAttachmentDescription"},
 			_jsii_.MemberProperty{JsiiProperty: "attrTransitRouterAttachmentId", GoGetter: "AttrTransitRouterAttachmentId"},
@@ -787,6 +973,108 @@ func init() {
 			_jsii_.InitJsiiProxy(&j.Type__alicloudroscdkcoreIResource)
 			return &j
 		},
+	)
+	_jsii_.RegisterClass(
+		"@alicloud/ros-cdk-cen.InterRegionTrafficQosPolicy",
+		reflect.TypeOf((*InterRegionTrafficQosPolicy)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberMethod{JsiiMethod: "addCondition", GoMethod: "AddCondition"},
+			_jsii_.MemberMethod{JsiiMethod: "addCount", GoMethod: "AddCount"},
+			_jsii_.MemberMethod{JsiiMethod: "addDependency", GoMethod: "AddDependency"},
+			_jsii_.MemberMethod{JsiiMethod: "addResourceDesc", GoMethod: "AddResourceDesc"},
+			_jsii_.MemberMethod{JsiiMethod: "applyRemovalPolicy", GoMethod: "ApplyRemovalPolicy"},
+			_jsii_.MemberProperty{JsiiProperty: "attrBandwidthGuaranteeMode", GoGetter: "AttrBandwidthGuaranteeMode"},
+			_jsii_.MemberProperty{JsiiProperty: "attrInterRegionTrafficQosPolicyDescription", GoGetter: "AttrInterRegionTrafficQosPolicyDescription"},
+			_jsii_.MemberProperty{JsiiProperty: "attrInterRegionTrafficQosPolicyId", GoGetter: "AttrInterRegionTrafficQosPolicyId"},
+			_jsii_.MemberProperty{JsiiProperty: "attrInterRegionTrafficQosPolicyName", GoGetter: "AttrInterRegionTrafficQosPolicyName"},
+			_jsii_.MemberProperty{JsiiProperty: "attrTransitRouterAttachmentId", GoGetter: "AttrTransitRouterAttachmentId"},
+			_jsii_.MemberProperty{JsiiProperty: "attrTransitRouterId", GoGetter: "AttrTransitRouterId"},
+			_jsii_.MemberProperty{JsiiProperty: "enableResourcePropertyConstraint", GoGetter: "EnableResourcePropertyConstraint"},
+			_jsii_.MemberProperty{JsiiProperty: "env", GoGetter: "Env"},
+			_jsii_.MemberMethod{JsiiMethod: "fetchCondition", GoMethod: "FetchCondition"},
+			_jsii_.MemberMethod{JsiiMethod: "fetchDependency", GoMethod: "FetchDependency"},
+			_jsii_.MemberMethod{JsiiMethod: "fetchResourceDesc", GoMethod: "FetchResourceDesc"},
+			_jsii_.MemberMethod{JsiiMethod: "generatePhysicalName", GoMethod: "GeneratePhysicalName"},
+			_jsii_.MemberMethod{JsiiMethod: "getAtt", GoMethod: "GetAtt"},
+			_jsii_.MemberProperty{JsiiProperty: "id", GoGetter: "Id"},
+			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
+			_jsii_.MemberMethod{JsiiMethod: "onPrepare", GoMethod: "OnPrepare"},
+			_jsii_.MemberMethod{JsiiMethod: "onSynthesize", GoMethod: "OnSynthesize"},
+			_jsii_.MemberMethod{JsiiMethod: "onValidate", GoMethod: "OnValidate"},
+			_jsii_.MemberProperty{JsiiProperty: "physicalName", GoGetter: "PhysicalName"},
+			_jsii_.MemberMethod{JsiiMethod: "prepare", GoMethod: "Prepare"},
+			_jsii_.MemberProperty{JsiiProperty: "props", GoGetter: "Props"},
+			_jsii_.MemberProperty{JsiiProperty: "ref", GoGetter: "Ref"},
+			_jsii_.MemberProperty{JsiiProperty: "resource", GoGetter: "Resource"},
+			_jsii_.MemberProperty{JsiiProperty: "scope", GoGetter: "Scope"},
+			_jsii_.MemberMethod{JsiiMethod: "setMetadata", GoMethod: "SetMetadata"},
+			_jsii_.MemberProperty{JsiiProperty: "stack", GoGetter: "Stack"},
+			_jsii_.MemberMethod{JsiiMethod: "synthesize", GoMethod: "Synthesize"},
+			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
+			_jsii_.MemberMethod{JsiiMethod: "validate", GoMethod: "Validate"},
+		},
+		func() interface{} {
+			j := jsiiProxy_InterRegionTrafficQosPolicy{}
+			_jsii_.InitJsiiProxy(&j.Type__alicloudroscdkcoreResource)
+			_jsii_.InitJsiiProxy(&j.jsiiProxy_IInterRegionTrafficQosPolicy)
+			return &j
+		},
+	)
+	_jsii_.RegisterStruct(
+		"@alicloud/ros-cdk-cen.InterRegionTrafficQosPolicyProps",
+		reflect.TypeOf((*InterRegionTrafficQosPolicyProps)(nil)).Elem(),
+	)
+	_jsii_.RegisterClass(
+		"@alicloud/ros-cdk-cen.InterRegionTrafficQosQueue",
+		reflect.TypeOf((*InterRegionTrafficQosQueue)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberMethod{JsiiMethod: "addCondition", GoMethod: "AddCondition"},
+			_jsii_.MemberMethod{JsiiMethod: "addCount", GoMethod: "AddCount"},
+			_jsii_.MemberMethod{JsiiMethod: "addDependency", GoMethod: "AddDependency"},
+			_jsii_.MemberMethod{JsiiMethod: "addResourceDesc", GoMethod: "AddResourceDesc"},
+			_jsii_.MemberMethod{JsiiMethod: "applyRemovalPolicy", GoMethod: "ApplyRemovalPolicy"},
+			_jsii_.MemberProperty{JsiiProperty: "attrBandwidth", GoGetter: "AttrBandwidth"},
+			_jsii_.MemberProperty{JsiiProperty: "attrDscps", GoGetter: "AttrDscps"},
+			_jsii_.MemberProperty{JsiiProperty: "attrEffectiveBandwidth", GoGetter: "AttrEffectiveBandwidth"},
+			_jsii_.MemberProperty{JsiiProperty: "attrInterRegionTrafficQosQueueDescription", GoGetter: "AttrInterRegionTrafficQosQueueDescription"},
+			_jsii_.MemberProperty{JsiiProperty: "attrInterRegionTrafficQosQueueId", GoGetter: "AttrInterRegionTrafficQosQueueId"},
+			_jsii_.MemberProperty{JsiiProperty: "attrInterRegionTrafficQosQueueName", GoGetter: "AttrInterRegionTrafficQosQueueName"},
+			_jsii_.MemberProperty{JsiiProperty: "attrRemainBandwidthPercent", GoGetter: "AttrRemainBandwidthPercent"},
+			_jsii_.MemberProperty{JsiiProperty: "attrTrafficQosPolicyId", GoGetter: "AttrTrafficQosPolicyId"},
+			_jsii_.MemberProperty{JsiiProperty: "enableResourcePropertyConstraint", GoGetter: "EnableResourcePropertyConstraint"},
+			_jsii_.MemberProperty{JsiiProperty: "env", GoGetter: "Env"},
+			_jsii_.MemberMethod{JsiiMethod: "fetchCondition", GoMethod: "FetchCondition"},
+			_jsii_.MemberMethod{JsiiMethod: "fetchDependency", GoMethod: "FetchDependency"},
+			_jsii_.MemberMethod{JsiiMethod: "fetchResourceDesc", GoMethod: "FetchResourceDesc"},
+			_jsii_.MemberMethod{JsiiMethod: "generatePhysicalName", GoMethod: "GeneratePhysicalName"},
+			_jsii_.MemberMethod{JsiiMethod: "getAtt", GoMethod: "GetAtt"},
+			_jsii_.MemberProperty{JsiiProperty: "id", GoGetter: "Id"},
+			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
+			_jsii_.MemberMethod{JsiiMethod: "onPrepare", GoMethod: "OnPrepare"},
+			_jsii_.MemberMethod{JsiiMethod: "onSynthesize", GoMethod: "OnSynthesize"},
+			_jsii_.MemberMethod{JsiiMethod: "onValidate", GoMethod: "OnValidate"},
+			_jsii_.MemberProperty{JsiiProperty: "physicalName", GoGetter: "PhysicalName"},
+			_jsii_.MemberMethod{JsiiMethod: "prepare", GoMethod: "Prepare"},
+			_jsii_.MemberProperty{JsiiProperty: "props", GoGetter: "Props"},
+			_jsii_.MemberProperty{JsiiProperty: "ref", GoGetter: "Ref"},
+			_jsii_.MemberProperty{JsiiProperty: "resource", GoGetter: "Resource"},
+			_jsii_.MemberProperty{JsiiProperty: "scope", GoGetter: "Scope"},
+			_jsii_.MemberMethod{JsiiMethod: "setMetadata", GoMethod: "SetMetadata"},
+			_jsii_.MemberProperty{JsiiProperty: "stack", GoGetter: "Stack"},
+			_jsii_.MemberMethod{JsiiMethod: "synthesize", GoMethod: "Synthesize"},
+			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
+			_jsii_.MemberMethod{JsiiMethod: "validate", GoMethod: "Validate"},
+		},
+		func() interface{} {
+			j := jsiiProxy_InterRegionTrafficQosQueue{}
+			_jsii_.InitJsiiProxy(&j.Type__alicloudroscdkcoreResource)
+			_jsii_.InitJsiiProxy(&j.jsiiProxy_IInterRegionTrafficQosQueue)
+			return &j
+		},
+	)
+	_jsii_.RegisterStruct(
+		"@alicloud/ros-cdk-cen.InterRegionTrafficQosQueueProps",
+		reflect.TypeOf((*InterRegionTrafficQosQueueProps)(nil)).Elem(),
 	)
 	_jsii_.RegisterClass(
 		"@alicloud/ros-cdk-cen.RosCenBandwidthLimit",
@@ -1341,6 +1629,208 @@ func init() {
 		reflect.TypeOf((*RosChildInstanceRouteEntryToAttachmentProps)(nil)).Elem(),
 	)
 	_jsii_.RegisterClass(
+		"@alicloud/ros-cdk-cen.RosFlowlog",
+		reflect.TypeOf((*RosFlowlog)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberMethod{JsiiMethod: "addCondition", GoMethod: "AddCondition"},
+			_jsii_.MemberMethod{JsiiMethod: "addCount", GoMethod: "AddCount"},
+			_jsii_.MemberMethod{JsiiMethod: "addDeletionOverride", GoMethod: "AddDeletionOverride"},
+			_jsii_.MemberMethod{JsiiMethod: "addDependsOn", GoMethod: "AddDependsOn"},
+			_jsii_.MemberMethod{JsiiMethod: "addDesc", GoMethod: "AddDesc"},
+			_jsii_.MemberMethod{JsiiMethod: "addMetaData", GoMethod: "AddMetaData"},
+			_jsii_.MemberMethod{JsiiMethod: "addOverride", GoMethod: "AddOverride"},
+			_jsii_.MemberMethod{JsiiMethod: "addPropertyDeletionOverride", GoMethod: "AddPropertyDeletionOverride"},
+			_jsii_.MemberMethod{JsiiMethod: "addPropertyOverride", GoMethod: "AddPropertyOverride"},
+			_jsii_.MemberMethod{JsiiMethod: "addRosDependency", GoMethod: "AddRosDependency"},
+			_jsii_.MemberMethod{JsiiMethod: "applyRemovalPolicy", GoMethod: "ApplyRemovalPolicy"},
+			_jsii_.MemberProperty{JsiiProperty: "attrCenId", GoGetter: "AttrCenId"},
+			_jsii_.MemberProperty{JsiiProperty: "attrCreateTime", GoGetter: "AttrCreateTime"},
+			_jsii_.MemberProperty{JsiiProperty: "attrDescription", GoGetter: "AttrDescription"},
+			_jsii_.MemberProperty{JsiiProperty: "attrFlowLogId", GoGetter: "AttrFlowLogId"},
+			_jsii_.MemberProperty{JsiiProperty: "attrFlowLogName", GoGetter: "AttrFlowLogName"},
+			_jsii_.MemberProperty{JsiiProperty: "attrFlowLogVersion", GoGetter: "AttrFlowLogVersion"},
+			_jsii_.MemberProperty{JsiiProperty: "attrInterval", GoGetter: "AttrInterval"},
+			_jsii_.MemberProperty{JsiiProperty: "attrLogFormatString", GoGetter: "AttrLogFormatString"},
+			_jsii_.MemberProperty{JsiiProperty: "attrLogStoreName", GoGetter: "AttrLogStoreName"},
+			_jsii_.MemberProperty{JsiiProperty: "attrProjectName", GoGetter: "AttrProjectName"},
+			_jsii_.MemberProperty{JsiiProperty: "attrTags", GoGetter: "AttrTags"},
+			_jsii_.MemberProperty{JsiiProperty: "attrTransitRouterAttachmentId", GoGetter: "AttrTransitRouterAttachmentId"},
+			_jsii_.MemberProperty{JsiiProperty: "attrTransitRouterId", GoGetter: "AttrTransitRouterId"},
+			_jsii_.MemberProperty{JsiiProperty: "cenId", GoGetter: "CenId"},
+			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
+			_jsii_.MemberProperty{JsiiProperty: "description", GoGetter: "Description"},
+			_jsii_.MemberProperty{JsiiProperty: "enableResourcePropertyConstraint", GoGetter: "EnableResourcePropertyConstraint"},
+			_jsii_.MemberMethod{JsiiMethod: "fetchCondition", GoMethod: "FetchCondition"},
+			_jsii_.MemberMethod{JsiiMethod: "fetchDesc", GoMethod: "FetchDesc"},
+			_jsii_.MemberMethod{JsiiMethod: "fetchRosDependency", GoMethod: "FetchRosDependency"},
+			_jsii_.MemberProperty{JsiiProperty: "flowLogName", GoGetter: "FlowLogName"},
+			_jsii_.MemberMethod{JsiiMethod: "getAtt", GoMethod: "GetAtt"},
+			_jsii_.MemberProperty{JsiiProperty: "interval", GoGetter: "Interval"},
+			_jsii_.MemberProperty{JsiiProperty: "logFormatString", GoGetter: "LogFormatString"},
+			_jsii_.MemberProperty{JsiiProperty: "logicalId", GoGetter: "LogicalId"},
+			_jsii_.MemberProperty{JsiiProperty: "logStoreName", GoGetter: "LogStoreName"},
+			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
+			_jsii_.MemberMethod{JsiiMethod: "onPrepare", GoMethod: "OnPrepare"},
+			_jsii_.MemberMethod{JsiiMethod: "onSynthesize", GoMethod: "OnSynthesize"},
+			_jsii_.MemberMethod{JsiiMethod: "onValidate", GoMethod: "OnValidate"},
+			_jsii_.MemberMethod{JsiiMethod: "overrideLogicalId", GoMethod: "OverrideLogicalId"},
+			_jsii_.MemberMethod{JsiiMethod: "prepare", GoMethod: "Prepare"},
+			_jsii_.MemberProperty{JsiiProperty: "projectName", GoGetter: "ProjectName"},
+			_jsii_.MemberProperty{JsiiProperty: "ref", GoGetter: "Ref"},
+			_jsii_.MemberMethod{JsiiMethod: "renderProperties", GoMethod: "RenderProperties"},
+			_jsii_.MemberProperty{JsiiProperty: "rosOptions", GoGetter: "RosOptions"},
+			_jsii_.MemberProperty{JsiiProperty: "rosProperties", GoGetter: "RosProperties"},
+			_jsii_.MemberProperty{JsiiProperty: "rosResourceType", GoGetter: "RosResourceType"},
+			_jsii_.MemberProperty{JsiiProperty: "stack", GoGetter: "Stack"},
+			_jsii_.MemberMethod{JsiiMethod: "synthesize", GoMethod: "Synthesize"},
+			_jsii_.MemberProperty{JsiiProperty: "tags", GoGetter: "Tags"},
+			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
+			_jsii_.MemberProperty{JsiiProperty: "transitRouterAttachmentId", GoGetter: "TransitRouterAttachmentId"},
+			_jsii_.MemberProperty{JsiiProperty: "transitRouterId", GoGetter: "TransitRouterId"},
+			_jsii_.MemberProperty{JsiiProperty: "updatedProperites", GoGetter: "UpdatedProperites"},
+			_jsii_.MemberMethod{JsiiMethod: "validate", GoMethod: "Validate"},
+			_jsii_.MemberMethod{JsiiMethod: "validateProperties", GoMethod: "ValidateProperties"},
+		},
+		func() interface{} {
+			j := jsiiProxy_RosFlowlog{}
+			_jsii_.InitJsiiProxy(&j.Type__alicloudroscdkcoreRosResource)
+			return &j
+		},
+	)
+	_jsii_.RegisterStruct(
+		"@alicloud/ros-cdk-cen.RosFlowlog.TagsProperty",
+		reflect.TypeOf((*RosFlowlog_TagsProperty)(nil)).Elem(),
+	)
+	_jsii_.RegisterStruct(
+		"@alicloud/ros-cdk-cen.RosFlowlogProps",
+		reflect.TypeOf((*RosFlowlogProps)(nil)).Elem(),
+	)
+	_jsii_.RegisterClass(
+		"@alicloud/ros-cdk-cen.RosInterRegionTrafficQosPolicy",
+		reflect.TypeOf((*RosInterRegionTrafficQosPolicy)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberMethod{JsiiMethod: "addCondition", GoMethod: "AddCondition"},
+			_jsii_.MemberMethod{JsiiMethod: "addCount", GoMethod: "AddCount"},
+			_jsii_.MemberMethod{JsiiMethod: "addDeletionOverride", GoMethod: "AddDeletionOverride"},
+			_jsii_.MemberMethod{JsiiMethod: "addDependsOn", GoMethod: "AddDependsOn"},
+			_jsii_.MemberMethod{JsiiMethod: "addDesc", GoMethod: "AddDesc"},
+			_jsii_.MemberMethod{JsiiMethod: "addMetaData", GoMethod: "AddMetaData"},
+			_jsii_.MemberMethod{JsiiMethod: "addOverride", GoMethod: "AddOverride"},
+			_jsii_.MemberMethod{JsiiMethod: "addPropertyDeletionOverride", GoMethod: "AddPropertyDeletionOverride"},
+			_jsii_.MemberMethod{JsiiMethod: "addPropertyOverride", GoMethod: "AddPropertyOverride"},
+			_jsii_.MemberMethod{JsiiMethod: "addRosDependency", GoMethod: "AddRosDependency"},
+			_jsii_.MemberMethod{JsiiMethod: "applyRemovalPolicy", GoMethod: "ApplyRemovalPolicy"},
+			_jsii_.MemberProperty{JsiiProperty: "attrBandwidthGuaranteeMode", GoGetter: "AttrBandwidthGuaranteeMode"},
+			_jsii_.MemberProperty{JsiiProperty: "attrInterRegionTrafficQosPolicyDescription", GoGetter: "AttrInterRegionTrafficQosPolicyDescription"},
+			_jsii_.MemberProperty{JsiiProperty: "attrInterRegionTrafficQosPolicyId", GoGetter: "AttrInterRegionTrafficQosPolicyId"},
+			_jsii_.MemberProperty{JsiiProperty: "attrInterRegionTrafficQosPolicyName", GoGetter: "AttrInterRegionTrafficQosPolicyName"},
+			_jsii_.MemberProperty{JsiiProperty: "attrTransitRouterAttachmentId", GoGetter: "AttrTransitRouterAttachmentId"},
+			_jsii_.MemberProperty{JsiiProperty: "attrTransitRouterId", GoGetter: "AttrTransitRouterId"},
+			_jsii_.MemberProperty{JsiiProperty: "bandwidthGuaranteeMode", GoGetter: "BandwidthGuaranteeMode"},
+			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
+			_jsii_.MemberProperty{JsiiProperty: "enableResourcePropertyConstraint", GoGetter: "EnableResourcePropertyConstraint"},
+			_jsii_.MemberMethod{JsiiMethod: "fetchCondition", GoMethod: "FetchCondition"},
+			_jsii_.MemberMethod{JsiiMethod: "fetchDesc", GoMethod: "FetchDesc"},
+			_jsii_.MemberMethod{JsiiMethod: "fetchRosDependency", GoMethod: "FetchRosDependency"},
+			_jsii_.MemberMethod{JsiiMethod: "getAtt", GoMethod: "GetAtt"},
+			_jsii_.MemberProperty{JsiiProperty: "interRegionTrafficQosPolicyDescription", GoGetter: "InterRegionTrafficQosPolicyDescription"},
+			_jsii_.MemberProperty{JsiiProperty: "interRegionTrafficQosPolicyName", GoGetter: "InterRegionTrafficQosPolicyName"},
+			_jsii_.MemberProperty{JsiiProperty: "logicalId", GoGetter: "LogicalId"},
+			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
+			_jsii_.MemberMethod{JsiiMethod: "onPrepare", GoMethod: "OnPrepare"},
+			_jsii_.MemberMethod{JsiiMethod: "onSynthesize", GoMethod: "OnSynthesize"},
+			_jsii_.MemberMethod{JsiiMethod: "onValidate", GoMethod: "OnValidate"},
+			_jsii_.MemberMethod{JsiiMethod: "overrideLogicalId", GoMethod: "OverrideLogicalId"},
+			_jsii_.MemberMethod{JsiiMethod: "prepare", GoMethod: "Prepare"},
+			_jsii_.MemberProperty{JsiiProperty: "ref", GoGetter: "Ref"},
+			_jsii_.MemberMethod{JsiiMethod: "renderProperties", GoMethod: "RenderProperties"},
+			_jsii_.MemberProperty{JsiiProperty: "rosOptions", GoGetter: "RosOptions"},
+			_jsii_.MemberProperty{JsiiProperty: "rosProperties", GoGetter: "RosProperties"},
+			_jsii_.MemberProperty{JsiiProperty: "rosResourceType", GoGetter: "RosResourceType"},
+			_jsii_.MemberProperty{JsiiProperty: "stack", GoGetter: "Stack"},
+			_jsii_.MemberMethod{JsiiMethod: "synthesize", GoMethod: "Synthesize"},
+			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
+			_jsii_.MemberProperty{JsiiProperty: "transitRouterAttachmentId", GoGetter: "TransitRouterAttachmentId"},
+			_jsii_.MemberProperty{JsiiProperty: "transitRouterId", GoGetter: "TransitRouterId"},
+			_jsii_.MemberProperty{JsiiProperty: "updatedProperites", GoGetter: "UpdatedProperites"},
+			_jsii_.MemberMethod{JsiiMethod: "validate", GoMethod: "Validate"},
+			_jsii_.MemberMethod{JsiiMethod: "validateProperties", GoMethod: "ValidateProperties"},
+		},
+		func() interface{} {
+			j := jsiiProxy_RosInterRegionTrafficQosPolicy{}
+			_jsii_.InitJsiiProxy(&j.Type__alicloudroscdkcoreRosResource)
+			return &j
+		},
+	)
+	_jsii_.RegisterStruct(
+		"@alicloud/ros-cdk-cen.RosInterRegionTrafficQosPolicyProps",
+		reflect.TypeOf((*RosInterRegionTrafficQosPolicyProps)(nil)).Elem(),
+	)
+	_jsii_.RegisterClass(
+		"@alicloud/ros-cdk-cen.RosInterRegionTrafficQosQueue",
+		reflect.TypeOf((*RosInterRegionTrafficQosQueue)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberMethod{JsiiMethod: "addCondition", GoMethod: "AddCondition"},
+			_jsii_.MemberMethod{JsiiMethod: "addCount", GoMethod: "AddCount"},
+			_jsii_.MemberMethod{JsiiMethod: "addDeletionOverride", GoMethod: "AddDeletionOverride"},
+			_jsii_.MemberMethod{JsiiMethod: "addDependsOn", GoMethod: "AddDependsOn"},
+			_jsii_.MemberMethod{JsiiMethod: "addDesc", GoMethod: "AddDesc"},
+			_jsii_.MemberMethod{JsiiMethod: "addMetaData", GoMethod: "AddMetaData"},
+			_jsii_.MemberMethod{JsiiMethod: "addOverride", GoMethod: "AddOverride"},
+			_jsii_.MemberMethod{JsiiMethod: "addPropertyDeletionOverride", GoMethod: "AddPropertyDeletionOverride"},
+			_jsii_.MemberMethod{JsiiMethod: "addPropertyOverride", GoMethod: "AddPropertyOverride"},
+			_jsii_.MemberMethod{JsiiMethod: "addRosDependency", GoMethod: "AddRosDependency"},
+			_jsii_.MemberMethod{JsiiMethod: "applyRemovalPolicy", GoMethod: "ApplyRemovalPolicy"},
+			_jsii_.MemberProperty{JsiiProperty: "attrBandwidth", GoGetter: "AttrBandwidth"},
+			_jsii_.MemberProperty{JsiiProperty: "attrDscps", GoGetter: "AttrDscps"},
+			_jsii_.MemberProperty{JsiiProperty: "attrEffectiveBandwidth", GoGetter: "AttrEffectiveBandwidth"},
+			_jsii_.MemberProperty{JsiiProperty: "attrInterRegionTrafficQosQueueDescription", GoGetter: "AttrInterRegionTrafficQosQueueDescription"},
+			_jsii_.MemberProperty{JsiiProperty: "attrInterRegionTrafficQosQueueId", GoGetter: "AttrInterRegionTrafficQosQueueId"},
+			_jsii_.MemberProperty{JsiiProperty: "attrInterRegionTrafficQosQueueName", GoGetter: "AttrInterRegionTrafficQosQueueName"},
+			_jsii_.MemberProperty{JsiiProperty: "attrRemainBandwidthPercent", GoGetter: "AttrRemainBandwidthPercent"},
+			_jsii_.MemberProperty{JsiiProperty: "attrTrafficQosPolicyId", GoGetter: "AttrTrafficQosPolicyId"},
+			_jsii_.MemberProperty{JsiiProperty: "bandwidth", GoGetter: "Bandwidth"},
+			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
+			_jsii_.MemberProperty{JsiiProperty: "dscps", GoGetter: "Dscps"},
+			_jsii_.MemberProperty{JsiiProperty: "enableResourcePropertyConstraint", GoGetter: "EnableResourcePropertyConstraint"},
+			_jsii_.MemberMethod{JsiiMethod: "fetchCondition", GoMethod: "FetchCondition"},
+			_jsii_.MemberMethod{JsiiMethod: "fetchDesc", GoMethod: "FetchDesc"},
+			_jsii_.MemberMethod{JsiiMethod: "fetchRosDependency", GoMethod: "FetchRosDependency"},
+			_jsii_.MemberMethod{JsiiMethod: "getAtt", GoMethod: "GetAtt"},
+			_jsii_.MemberProperty{JsiiProperty: "interRegionTrafficQosQueueDescription", GoGetter: "InterRegionTrafficQosQueueDescription"},
+			_jsii_.MemberProperty{JsiiProperty: "interRegionTrafficQosQueueName", GoGetter: "InterRegionTrafficQosQueueName"},
+			_jsii_.MemberProperty{JsiiProperty: "logicalId", GoGetter: "LogicalId"},
+			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
+			_jsii_.MemberMethod{JsiiMethod: "onPrepare", GoMethod: "OnPrepare"},
+			_jsii_.MemberMethod{JsiiMethod: "onSynthesize", GoMethod: "OnSynthesize"},
+			_jsii_.MemberMethod{JsiiMethod: "onValidate", GoMethod: "OnValidate"},
+			_jsii_.MemberMethod{JsiiMethod: "overrideLogicalId", GoMethod: "OverrideLogicalId"},
+			_jsii_.MemberMethod{JsiiMethod: "prepare", GoMethod: "Prepare"},
+			_jsii_.MemberProperty{JsiiProperty: "ref", GoGetter: "Ref"},
+			_jsii_.MemberProperty{JsiiProperty: "remainBandwidthPercent", GoGetter: "RemainBandwidthPercent"},
+			_jsii_.MemberMethod{JsiiMethod: "renderProperties", GoMethod: "RenderProperties"},
+			_jsii_.MemberProperty{JsiiProperty: "rosOptions", GoGetter: "RosOptions"},
+			_jsii_.MemberProperty{JsiiProperty: "rosProperties", GoGetter: "RosProperties"},
+			_jsii_.MemberProperty{JsiiProperty: "rosResourceType", GoGetter: "RosResourceType"},
+			_jsii_.MemberProperty{JsiiProperty: "stack", GoGetter: "Stack"},
+			_jsii_.MemberMethod{JsiiMethod: "synthesize", GoMethod: "Synthesize"},
+			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
+			_jsii_.MemberProperty{JsiiProperty: "trafficQosPolicyId", GoGetter: "TrafficQosPolicyId"},
+			_jsii_.MemberProperty{JsiiProperty: "updatedProperites", GoGetter: "UpdatedProperites"},
+			_jsii_.MemberMethod{JsiiMethod: "validate", GoMethod: "Validate"},
+			_jsii_.MemberMethod{JsiiMethod: "validateProperties", GoMethod: "ValidateProperties"},
+		},
+		func() interface{} {
+			j := jsiiProxy_RosInterRegionTrafficQosQueue{}
+			_jsii_.InitJsiiProxy(&j.Type__alicloudroscdkcoreRosResource)
+			return &j
+		},
+	)
+	_jsii_.RegisterStruct(
+		"@alicloud/ros-cdk-cen.RosInterRegionTrafficQosQueueProps",
+		reflect.TypeOf((*RosInterRegionTrafficQosQueueProps)(nil)).Elem(),
+	)
+	_jsii_.RegisterClass(
 		"@alicloud/ros-cdk-cen.RosRouteEntry",
 		reflect.TypeOf((*RosRouteEntry)(nil)).Elem(),
 		[]_jsii_.Member{
@@ -1453,6 +1943,179 @@ func init() {
 		},
 	)
 	_jsii_.RegisterClass(
+		"@alicloud/ros-cdk-cen.RosTransitRouterCidr",
+		reflect.TypeOf((*RosTransitRouterCidr)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberMethod{JsiiMethod: "addCondition", GoMethod: "AddCondition"},
+			_jsii_.MemberMethod{JsiiMethod: "addCount", GoMethod: "AddCount"},
+			_jsii_.MemberMethod{JsiiMethod: "addDeletionOverride", GoMethod: "AddDeletionOverride"},
+			_jsii_.MemberMethod{JsiiMethod: "addDependsOn", GoMethod: "AddDependsOn"},
+			_jsii_.MemberMethod{JsiiMethod: "addDesc", GoMethod: "AddDesc"},
+			_jsii_.MemberMethod{JsiiMethod: "addMetaData", GoMethod: "AddMetaData"},
+			_jsii_.MemberMethod{JsiiMethod: "addOverride", GoMethod: "AddOverride"},
+			_jsii_.MemberMethod{JsiiMethod: "addPropertyDeletionOverride", GoMethod: "AddPropertyDeletionOverride"},
+			_jsii_.MemberMethod{JsiiMethod: "addPropertyOverride", GoMethod: "AddPropertyOverride"},
+			_jsii_.MemberMethod{JsiiMethod: "addRosDependency", GoMethod: "AddRosDependency"},
+			_jsii_.MemberMethod{JsiiMethod: "applyRemovalPolicy", GoMethod: "ApplyRemovalPolicy"},
+			_jsii_.MemberProperty{JsiiProperty: "attrCidr", GoGetter: "AttrCidr"},
+			_jsii_.MemberProperty{JsiiProperty: "attrDescription", GoGetter: "AttrDescription"},
+			_jsii_.MemberProperty{JsiiProperty: "attrFamily", GoGetter: "AttrFamily"},
+			_jsii_.MemberProperty{JsiiProperty: "attrPublishCidrRoute", GoGetter: "AttrPublishCidrRoute"},
+			_jsii_.MemberProperty{JsiiProperty: "attrTransitRouterCidrId", GoGetter: "AttrTransitRouterCidrId"},
+			_jsii_.MemberProperty{JsiiProperty: "attrTransitRouterCidrName", GoGetter: "AttrTransitRouterCidrName"},
+			_jsii_.MemberProperty{JsiiProperty: "attrTransitRouterId", GoGetter: "AttrTransitRouterId"},
+			_jsii_.MemberProperty{JsiiProperty: "cidr", GoGetter: "Cidr"},
+			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
+			_jsii_.MemberProperty{JsiiProperty: "description", GoGetter: "Description"},
+			_jsii_.MemberProperty{JsiiProperty: "enableResourcePropertyConstraint", GoGetter: "EnableResourcePropertyConstraint"},
+			_jsii_.MemberMethod{JsiiMethod: "fetchCondition", GoMethod: "FetchCondition"},
+			_jsii_.MemberMethod{JsiiMethod: "fetchDesc", GoMethod: "FetchDesc"},
+			_jsii_.MemberMethod{JsiiMethod: "fetchRosDependency", GoMethod: "FetchRosDependency"},
+			_jsii_.MemberMethod{JsiiMethod: "getAtt", GoMethod: "GetAtt"},
+			_jsii_.MemberProperty{JsiiProperty: "logicalId", GoGetter: "LogicalId"},
+			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
+			_jsii_.MemberMethod{JsiiMethod: "onPrepare", GoMethod: "OnPrepare"},
+			_jsii_.MemberMethod{JsiiMethod: "onSynthesize", GoMethod: "OnSynthesize"},
+			_jsii_.MemberMethod{JsiiMethod: "onValidate", GoMethod: "OnValidate"},
+			_jsii_.MemberMethod{JsiiMethod: "overrideLogicalId", GoMethod: "OverrideLogicalId"},
+			_jsii_.MemberMethod{JsiiMethod: "prepare", GoMethod: "Prepare"},
+			_jsii_.MemberProperty{JsiiProperty: "publishCidrRoute", GoGetter: "PublishCidrRoute"},
+			_jsii_.MemberProperty{JsiiProperty: "ref", GoGetter: "Ref"},
+			_jsii_.MemberMethod{JsiiMethod: "renderProperties", GoMethod: "RenderProperties"},
+			_jsii_.MemberProperty{JsiiProperty: "rosOptions", GoGetter: "RosOptions"},
+			_jsii_.MemberProperty{JsiiProperty: "rosProperties", GoGetter: "RosProperties"},
+			_jsii_.MemberProperty{JsiiProperty: "rosResourceType", GoGetter: "RosResourceType"},
+			_jsii_.MemberProperty{JsiiProperty: "stack", GoGetter: "Stack"},
+			_jsii_.MemberMethod{JsiiMethod: "synthesize", GoMethod: "Synthesize"},
+			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
+			_jsii_.MemberProperty{JsiiProperty: "transitRouterCidrName", GoGetter: "TransitRouterCidrName"},
+			_jsii_.MemberProperty{JsiiProperty: "transitRouterId", GoGetter: "TransitRouterId"},
+			_jsii_.MemberProperty{JsiiProperty: "updatedProperites", GoGetter: "UpdatedProperites"},
+			_jsii_.MemberMethod{JsiiMethod: "validate", GoMethod: "Validate"},
+			_jsii_.MemberMethod{JsiiMethod: "validateProperties", GoMethod: "ValidateProperties"},
+		},
+		func() interface{} {
+			j := jsiiProxy_RosTransitRouterCidr{}
+			_jsii_.InitJsiiProxy(&j.Type__alicloudroscdkcoreRosResource)
+			return &j
+		},
+	)
+	_jsii_.RegisterStruct(
+		"@alicloud/ros-cdk-cen.RosTransitRouterCidrProps",
+		reflect.TypeOf((*RosTransitRouterCidrProps)(nil)).Elem(),
+	)
+	_jsii_.RegisterClass(
+		"@alicloud/ros-cdk-cen.RosTransitRouterGrantAttachment",
+		reflect.TypeOf((*RosTransitRouterGrantAttachment)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberMethod{JsiiMethod: "addCondition", GoMethod: "AddCondition"},
+			_jsii_.MemberMethod{JsiiMethod: "addCount", GoMethod: "AddCount"},
+			_jsii_.MemberMethod{JsiiMethod: "addDeletionOverride", GoMethod: "AddDeletionOverride"},
+			_jsii_.MemberMethod{JsiiMethod: "addDependsOn", GoMethod: "AddDependsOn"},
+			_jsii_.MemberMethod{JsiiMethod: "addDesc", GoMethod: "AddDesc"},
+			_jsii_.MemberMethod{JsiiMethod: "addMetaData", GoMethod: "AddMetaData"},
+			_jsii_.MemberMethod{JsiiMethod: "addOverride", GoMethod: "AddOverride"},
+			_jsii_.MemberMethod{JsiiMethod: "addPropertyDeletionOverride", GoMethod: "AddPropertyDeletionOverride"},
+			_jsii_.MemberMethod{JsiiMethod: "addPropertyOverride", GoMethod: "AddPropertyOverride"},
+			_jsii_.MemberMethod{JsiiMethod: "addRosDependency", GoMethod: "AddRosDependency"},
+			_jsii_.MemberMethod{JsiiMethod: "applyRemovalPolicy", GoMethod: "ApplyRemovalPolicy"},
+			_jsii_.MemberProperty{JsiiProperty: "cenId", GoGetter: "CenId"},
+			_jsii_.MemberProperty{JsiiProperty: "cenOwnerId", GoGetter: "CenOwnerId"},
+			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
+			_jsii_.MemberProperty{JsiiProperty: "enableResourcePropertyConstraint", GoGetter: "EnableResourcePropertyConstraint"},
+			_jsii_.MemberMethod{JsiiMethod: "fetchCondition", GoMethod: "FetchCondition"},
+			_jsii_.MemberMethod{JsiiMethod: "fetchDesc", GoMethod: "FetchDesc"},
+			_jsii_.MemberMethod{JsiiMethod: "fetchRosDependency", GoMethod: "FetchRosDependency"},
+			_jsii_.MemberMethod{JsiiMethod: "getAtt", GoMethod: "GetAtt"},
+			_jsii_.MemberProperty{JsiiProperty: "instanceId", GoGetter: "InstanceId"},
+			_jsii_.MemberProperty{JsiiProperty: "instanceType", GoGetter: "InstanceType"},
+			_jsii_.MemberProperty{JsiiProperty: "logicalId", GoGetter: "LogicalId"},
+			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
+			_jsii_.MemberMethod{JsiiMethod: "onPrepare", GoMethod: "OnPrepare"},
+			_jsii_.MemberMethod{JsiiMethod: "onSynthesize", GoMethod: "OnSynthesize"},
+			_jsii_.MemberMethod{JsiiMethod: "onValidate", GoMethod: "OnValidate"},
+			_jsii_.MemberProperty{JsiiProperty: "orderType", GoGetter: "OrderType"},
+			_jsii_.MemberMethod{JsiiMethod: "overrideLogicalId", GoMethod: "OverrideLogicalId"},
+			_jsii_.MemberMethod{JsiiMethod: "prepare", GoMethod: "Prepare"},
+			_jsii_.MemberProperty{JsiiProperty: "ref", GoGetter: "Ref"},
+			_jsii_.MemberMethod{JsiiMethod: "renderProperties", GoMethod: "RenderProperties"},
+			_jsii_.MemberProperty{JsiiProperty: "rosOptions", GoGetter: "RosOptions"},
+			_jsii_.MemberProperty{JsiiProperty: "rosProperties", GoGetter: "RosProperties"},
+			_jsii_.MemberProperty{JsiiProperty: "rosResourceType", GoGetter: "RosResourceType"},
+			_jsii_.MemberProperty{JsiiProperty: "stack", GoGetter: "Stack"},
+			_jsii_.MemberMethod{JsiiMethod: "synthesize", GoMethod: "Synthesize"},
+			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
+			_jsii_.MemberProperty{JsiiProperty: "updatedProperites", GoGetter: "UpdatedProperites"},
+			_jsii_.MemberMethod{JsiiMethod: "validate", GoMethod: "Validate"},
+			_jsii_.MemberMethod{JsiiMethod: "validateProperties", GoMethod: "ValidateProperties"},
+		},
+		func() interface{} {
+			j := jsiiProxy_RosTransitRouterGrantAttachment{}
+			_jsii_.InitJsiiProxy(&j.Type__alicloudroscdkcoreRosResource)
+			return &j
+		},
+	)
+	_jsii_.RegisterStruct(
+		"@alicloud/ros-cdk-cen.RosTransitRouterGrantAttachmentProps",
+		reflect.TypeOf((*RosTransitRouterGrantAttachmentProps)(nil)).Elem(),
+	)
+	_jsii_.RegisterClass(
+		"@alicloud/ros-cdk-cen.RosTransitRouterMulticastDomainAssociation",
+		reflect.TypeOf((*RosTransitRouterMulticastDomainAssociation)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberMethod{JsiiMethod: "addCondition", GoMethod: "AddCondition"},
+			_jsii_.MemberMethod{JsiiMethod: "addCount", GoMethod: "AddCount"},
+			_jsii_.MemberMethod{JsiiMethod: "addDeletionOverride", GoMethod: "AddDeletionOverride"},
+			_jsii_.MemberMethod{JsiiMethod: "addDependsOn", GoMethod: "AddDependsOn"},
+			_jsii_.MemberMethod{JsiiMethod: "addDesc", GoMethod: "AddDesc"},
+			_jsii_.MemberMethod{JsiiMethod: "addMetaData", GoMethod: "AddMetaData"},
+			_jsii_.MemberMethod{JsiiMethod: "addOverride", GoMethod: "AddOverride"},
+			_jsii_.MemberMethod{JsiiMethod: "addPropertyDeletionOverride", GoMethod: "AddPropertyDeletionOverride"},
+			_jsii_.MemberMethod{JsiiMethod: "addPropertyOverride", GoMethod: "AddPropertyOverride"},
+			_jsii_.MemberMethod{JsiiMethod: "addRosDependency", GoMethod: "AddRosDependency"},
+			_jsii_.MemberMethod{JsiiMethod: "applyRemovalPolicy", GoMethod: "ApplyRemovalPolicy"},
+			_jsii_.MemberProperty{JsiiProperty: "attrTransitRouterAttachmentId", GoGetter: "AttrTransitRouterAttachmentId"},
+			_jsii_.MemberProperty{JsiiProperty: "attrTransitRouterMulticastDomainId", GoGetter: "AttrTransitRouterMulticastDomainId"},
+			_jsii_.MemberProperty{JsiiProperty: "attrVSwitchId", GoGetter: "AttrVSwitchId"},
+			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
+			_jsii_.MemberProperty{JsiiProperty: "enableResourcePropertyConstraint", GoGetter: "EnableResourcePropertyConstraint"},
+			_jsii_.MemberMethod{JsiiMethod: "fetchCondition", GoMethod: "FetchCondition"},
+			_jsii_.MemberMethod{JsiiMethod: "fetchDesc", GoMethod: "FetchDesc"},
+			_jsii_.MemberMethod{JsiiMethod: "fetchRosDependency", GoMethod: "FetchRosDependency"},
+			_jsii_.MemberMethod{JsiiMethod: "getAtt", GoMethod: "GetAtt"},
+			_jsii_.MemberProperty{JsiiProperty: "logicalId", GoGetter: "LogicalId"},
+			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
+			_jsii_.MemberMethod{JsiiMethod: "onPrepare", GoMethod: "OnPrepare"},
+			_jsii_.MemberMethod{JsiiMethod: "onSynthesize", GoMethod: "OnSynthesize"},
+			_jsii_.MemberMethod{JsiiMethod: "onValidate", GoMethod: "OnValidate"},
+			_jsii_.MemberMethod{JsiiMethod: "overrideLogicalId", GoMethod: "OverrideLogicalId"},
+			_jsii_.MemberMethod{JsiiMethod: "prepare", GoMethod: "Prepare"},
+			_jsii_.MemberProperty{JsiiProperty: "ref", GoGetter: "Ref"},
+			_jsii_.MemberMethod{JsiiMethod: "renderProperties", GoMethod: "RenderProperties"},
+			_jsii_.MemberProperty{JsiiProperty: "rosOptions", GoGetter: "RosOptions"},
+			_jsii_.MemberProperty{JsiiProperty: "rosProperties", GoGetter: "RosProperties"},
+			_jsii_.MemberProperty{JsiiProperty: "rosResourceType", GoGetter: "RosResourceType"},
+			_jsii_.MemberProperty{JsiiProperty: "stack", GoGetter: "Stack"},
+			_jsii_.MemberMethod{JsiiMethod: "synthesize", GoMethod: "Synthesize"},
+			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
+			_jsii_.MemberProperty{JsiiProperty: "transitRouterAttachmentId", GoGetter: "TransitRouterAttachmentId"},
+			_jsii_.MemberProperty{JsiiProperty: "transitRouterMulticastDomainId", GoGetter: "TransitRouterMulticastDomainId"},
+			_jsii_.MemberProperty{JsiiProperty: "updatedProperites", GoGetter: "UpdatedProperites"},
+			_jsii_.MemberMethod{JsiiMethod: "validate", GoMethod: "Validate"},
+			_jsii_.MemberMethod{JsiiMethod: "validateProperties", GoMethod: "ValidateProperties"},
+			_jsii_.MemberProperty{JsiiProperty: "vSwitchId", GoGetter: "VSwitchId"},
+		},
+		func() interface{} {
+			j := jsiiProxy_RosTransitRouterMulticastDomainAssociation{}
+			_jsii_.InitJsiiProxy(&j.Type__alicloudroscdkcoreRosResource)
+			return &j
+		},
+	)
+	_jsii_.RegisterStruct(
+		"@alicloud/ros-cdk-cen.RosTransitRouterMulticastDomainAssociationProps",
+		reflect.TypeOf((*RosTransitRouterMulticastDomainAssociationProps)(nil)).Elem(),
+	)
+	_jsii_.RegisterClass(
 		"@alicloud/ros-cdk-cen.RosTransitRouterPeerAttachment",
 		reflect.TypeOf((*RosTransitRouterPeerAttachment)(nil)).Elem(),
 		[]_jsii_.Member{
@@ -1467,25 +2130,15 @@ func init() {
 			_jsii_.MemberMethod{JsiiMethod: "addPropertyOverride", GoMethod: "AddPropertyOverride"},
 			_jsii_.MemberMethod{JsiiMethod: "addRosDependency", GoMethod: "AddRosDependency"},
 			_jsii_.MemberMethod{JsiiMethod: "applyRemovalPolicy", GoMethod: "ApplyRemovalPolicy"},
-			_jsii_.MemberProperty{JsiiProperty: "attrAutoPublishRouteEnabled", GoGetter: "AttrAutoPublishRouteEnabled"},
-			_jsii_.MemberProperty{JsiiProperty: "attrBandwidth", GoGetter: "AttrBandwidth"},
-			_jsii_.MemberProperty{JsiiProperty: "attrCenBandwidthPackageId", GoGetter: "AttrCenBandwidthPackageId"},
-			_jsii_.MemberProperty{JsiiProperty: "attrCenId", GoGetter: "AttrCenId"},
-			_jsii_.MemberProperty{JsiiProperty: "attrClientToken", GoGetter: "AttrClientToken"},
-			_jsii_.MemberProperty{JsiiProperty: "attrGeographicSpanId", GoGetter: "AttrGeographicSpanId"},
-			_jsii_.MemberProperty{JsiiProperty: "attrPeerTransitRouterId", GoGetter: "AttrPeerTransitRouterId"},
-			_jsii_.MemberProperty{JsiiProperty: "attrPeerTransitRouterOwnerId", GoGetter: "AttrPeerTransitRouterOwnerId"},
-			_jsii_.MemberProperty{JsiiProperty: "attrPeerTransitRouterRegionId", GoGetter: "AttrPeerTransitRouterRegionId"},
-			_jsii_.MemberProperty{JsiiProperty: "attrResourceType", GoGetter: "AttrResourceType"},
-			_jsii_.MemberProperty{JsiiProperty: "attrTransitRouterAttachmentDescription", GoGetter: "AttrTransitRouterAttachmentDescription"},
 			_jsii_.MemberProperty{JsiiProperty: "attrTransitRouterAttachmentId", GoGetter: "AttrTransitRouterAttachmentId"},
-			_jsii_.MemberProperty{JsiiProperty: "attrTransitRouterAttachmentName", GoGetter: "AttrTransitRouterAttachmentName"},
-			_jsii_.MemberProperty{JsiiProperty: "attrTransitRouterId", GoGetter: "AttrTransitRouterId"},
 			_jsii_.MemberProperty{JsiiProperty: "autoPublishRouteEnabled", GoGetter: "AutoPublishRouteEnabled"},
 			_jsii_.MemberProperty{JsiiProperty: "bandwidth", GoGetter: "Bandwidth"},
+			_jsii_.MemberProperty{JsiiProperty: "bandwidthType", GoGetter: "BandwidthType"},
 			_jsii_.MemberProperty{JsiiProperty: "cenBandwidthPackageId", GoGetter: "CenBandwidthPackageId"},
 			_jsii_.MemberProperty{JsiiProperty: "cenId", GoGetter: "CenId"},
 			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
+			_jsii_.MemberProperty{JsiiProperty: "defaultLinkType", GoGetter: "DefaultLinkType"},
+			_jsii_.MemberProperty{JsiiProperty: "deletionForce", GoGetter: "DeletionForce"},
 			_jsii_.MemberProperty{JsiiProperty: "enableResourcePropertyConstraint", GoGetter: "EnableResourcePropertyConstraint"},
 			_jsii_.MemberMethod{JsiiMethod: "fetchCondition", GoMethod: "FetchCondition"},
 			_jsii_.MemberMethod{JsiiMethod: "fetchDesc", GoMethod: "FetchDesc"},
@@ -1505,8 +2158,11 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "rosOptions", GoGetter: "RosOptions"},
 			_jsii_.MemberProperty{JsiiProperty: "rosProperties", GoGetter: "RosProperties"},
 			_jsii_.MemberProperty{JsiiProperty: "rosResourceType", GoGetter: "RosResourceType"},
+			_jsii_.MemberProperty{JsiiProperty: "routeTableAssociationEnabled", GoGetter: "RouteTableAssociationEnabled"},
+			_jsii_.MemberProperty{JsiiProperty: "routeTablePropagationEnabled", GoGetter: "RouteTablePropagationEnabled"},
 			_jsii_.MemberProperty{JsiiProperty: "stack", GoGetter: "Stack"},
 			_jsii_.MemberMethod{JsiiMethod: "synthesize", GoMethod: "Synthesize"},
+			_jsii_.MemberProperty{JsiiProperty: "tags", GoGetter: "Tags"},
 			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
 			_jsii_.MemberProperty{JsiiProperty: "transitRouterAttachmentDescription", GoGetter: "TransitRouterAttachmentDescription"},
 			_jsii_.MemberProperty{JsiiProperty: "transitRouterAttachmentName", GoGetter: "TransitRouterAttachmentName"},
@@ -1520,6 +2176,10 @@ func init() {
 			_jsii_.InitJsiiProxy(&j.Type__alicloudroscdkcoreRosResource)
 			return &j
 		},
+	)
+	_jsii_.RegisterStruct(
+		"@alicloud/ros-cdk-cen.RosTransitRouterPeerAttachment.TagsProperty",
+		reflect.TypeOf((*RosTransitRouterPeerAttachment_TagsProperty)(nil)).Elem(),
 	)
 	_jsii_.RegisterStruct(
 		"@alicloud/ros-cdk-cen.RosTransitRouterPeerAttachmentProps",
@@ -1705,6 +2365,59 @@ func init() {
 		reflect.TypeOf((*RosTransitRouterRouteTableAssociationProps)(nil)).Elem(),
 	)
 	_jsii_.RegisterClass(
+		"@alicloud/ros-cdk-cen.RosTransitRouterRouteTableAssociationReplacement",
+		reflect.TypeOf((*RosTransitRouterRouteTableAssociationReplacement)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberMethod{JsiiMethod: "addCondition", GoMethod: "AddCondition"},
+			_jsii_.MemberMethod{JsiiMethod: "addCount", GoMethod: "AddCount"},
+			_jsii_.MemberMethod{JsiiMethod: "addDeletionOverride", GoMethod: "AddDeletionOverride"},
+			_jsii_.MemberMethod{JsiiMethod: "addDependsOn", GoMethod: "AddDependsOn"},
+			_jsii_.MemberMethod{JsiiMethod: "addDesc", GoMethod: "AddDesc"},
+			_jsii_.MemberMethod{JsiiMethod: "addMetaData", GoMethod: "AddMetaData"},
+			_jsii_.MemberMethod{JsiiMethod: "addOverride", GoMethod: "AddOverride"},
+			_jsii_.MemberMethod{JsiiMethod: "addPropertyDeletionOverride", GoMethod: "AddPropertyDeletionOverride"},
+			_jsii_.MemberMethod{JsiiMethod: "addPropertyOverride", GoMethod: "AddPropertyOverride"},
+			_jsii_.MemberMethod{JsiiMethod: "addRosDependency", GoMethod: "AddRosDependency"},
+			_jsii_.MemberMethod{JsiiMethod: "applyRemovalPolicy", GoMethod: "ApplyRemovalPolicy"},
+			_jsii_.MemberProperty{JsiiProperty: "attrOriginalTransitRouterRouteTableId", GoGetter: "AttrOriginalTransitRouterRouteTableId"},
+			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
+			_jsii_.MemberProperty{JsiiProperty: "enableResourcePropertyConstraint", GoGetter: "EnableResourcePropertyConstraint"},
+			_jsii_.MemberMethod{JsiiMethod: "fetchCondition", GoMethod: "FetchCondition"},
+			_jsii_.MemberMethod{JsiiMethod: "fetchDesc", GoMethod: "FetchDesc"},
+			_jsii_.MemberMethod{JsiiMethod: "fetchRosDependency", GoMethod: "FetchRosDependency"},
+			_jsii_.MemberMethod{JsiiMethod: "getAtt", GoMethod: "GetAtt"},
+			_jsii_.MemberProperty{JsiiProperty: "logicalId", GoGetter: "LogicalId"},
+			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
+			_jsii_.MemberMethod{JsiiMethod: "onPrepare", GoMethod: "OnPrepare"},
+			_jsii_.MemberMethod{JsiiMethod: "onSynthesize", GoMethod: "OnSynthesize"},
+			_jsii_.MemberMethod{JsiiMethod: "onValidate", GoMethod: "OnValidate"},
+			_jsii_.MemberMethod{JsiiMethod: "overrideLogicalId", GoMethod: "OverrideLogicalId"},
+			_jsii_.MemberMethod{JsiiMethod: "prepare", GoMethod: "Prepare"},
+			_jsii_.MemberProperty{JsiiProperty: "ref", GoGetter: "Ref"},
+			_jsii_.MemberMethod{JsiiMethod: "renderProperties", GoMethod: "RenderProperties"},
+			_jsii_.MemberProperty{JsiiProperty: "rosOptions", GoGetter: "RosOptions"},
+			_jsii_.MemberProperty{JsiiProperty: "rosProperties", GoGetter: "RosProperties"},
+			_jsii_.MemberProperty{JsiiProperty: "rosResourceType", GoGetter: "RosResourceType"},
+			_jsii_.MemberProperty{JsiiProperty: "stack", GoGetter: "Stack"},
+			_jsii_.MemberMethod{JsiiMethod: "synthesize", GoMethod: "Synthesize"},
+			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
+			_jsii_.MemberProperty{JsiiProperty: "transitRouterAttachmentId", GoGetter: "TransitRouterAttachmentId"},
+			_jsii_.MemberProperty{JsiiProperty: "transitRouterRouteTableId", GoGetter: "TransitRouterRouteTableId"},
+			_jsii_.MemberProperty{JsiiProperty: "updatedProperites", GoGetter: "UpdatedProperites"},
+			_jsii_.MemberMethod{JsiiMethod: "validate", GoMethod: "Validate"},
+			_jsii_.MemberMethod{JsiiMethod: "validateProperties", GoMethod: "ValidateProperties"},
+		},
+		func() interface{} {
+			j := jsiiProxy_RosTransitRouterRouteTableAssociationReplacement{}
+			_jsii_.InitJsiiProxy(&j.Type__alicloudroscdkcoreRosResource)
+			return &j
+		},
+	)
+	_jsii_.RegisterStruct(
+		"@alicloud/ros-cdk-cen.RosTransitRouterRouteTableAssociationReplacementProps",
+		reflect.TypeOf((*RosTransitRouterRouteTableAssociationReplacementProps)(nil)).Elem(),
+	)
+	_jsii_.RegisterClass(
 		"@alicloud/ros-cdk-cen.RosTransitRouterRouteTablePropagation",
 		reflect.TypeOf((*RosTransitRouterRouteTablePropagation)(nil)).Elem(),
 		[]_jsii_.Member{
@@ -1847,7 +2560,6 @@ func init() {
 			_jsii_.MemberMethod{JsiiMethod: "addRosDependency", GoMethod: "AddRosDependency"},
 			_jsii_.MemberMethod{JsiiMethod: "applyRemovalPolicy", GoMethod: "ApplyRemovalPolicy"},
 			_jsii_.MemberProperty{JsiiProperty: "attrCenId", GoGetter: "AttrCenId"},
-			_jsii_.MemberProperty{JsiiProperty: "attrClientToken", GoGetter: "AttrClientToken"},
 			_jsii_.MemberProperty{JsiiProperty: "attrResourceType", GoGetter: "AttrResourceType"},
 			_jsii_.MemberProperty{JsiiProperty: "attrTransitRouterAttachmentDescription", GoGetter: "AttrTransitRouterAttachmentDescription"},
 			_jsii_.MemberProperty{JsiiProperty: "attrTransitRouterAttachmentId", GoGetter: "AttrTransitRouterAttachmentId"},
@@ -1856,6 +2568,7 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "attrVpcId", GoGetter: "AttrVpcId"},
 			_jsii_.MemberProperty{JsiiProperty: "attrVpcOwnerId", GoGetter: "AttrVpcOwnerId"},
 			_jsii_.MemberProperty{JsiiProperty: "autoCreateVpcRoute", GoGetter: "AutoCreateVpcRoute"},
+			_jsii_.MemberProperty{JsiiProperty: "autoPublishRouteEnabled", GoGetter: "AutoPublishRouteEnabled"},
 			_jsii_.MemberProperty{JsiiProperty: "cenId", GoGetter: "CenId"},
 			_jsii_.MemberProperty{JsiiProperty: "chargeType", GoGetter: "ChargeType"},
 			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
@@ -1885,6 +2598,7 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "transitRouterAttachmentDescription", GoGetter: "TransitRouterAttachmentDescription"},
 			_jsii_.MemberProperty{JsiiProperty: "transitRouterAttachmentName", GoGetter: "TransitRouterAttachmentName"},
 			_jsii_.MemberProperty{JsiiProperty: "transitRouterId", GoGetter: "TransitRouterId"},
+			_jsii_.MemberProperty{JsiiProperty: "transitRouterVpcAttachmentOptions", GoGetter: "TransitRouterVpcAttachmentOptions"},
 			_jsii_.MemberProperty{JsiiProperty: "updatedProperites", GoGetter: "UpdatedProperites"},
 			_jsii_.MemberMethod{JsiiMethod: "validate", GoMethod: "Validate"},
 			_jsii_.MemberMethod{JsiiMethod: "validateProperties", GoMethod: "ValidateProperties"},
@@ -2065,6 +2779,148 @@ func init() {
 		},
 	)
 	_jsii_.RegisterClass(
+		"@alicloud/ros-cdk-cen.TransitRouterCidr",
+		reflect.TypeOf((*TransitRouterCidr)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberMethod{JsiiMethod: "addCondition", GoMethod: "AddCondition"},
+			_jsii_.MemberMethod{JsiiMethod: "addCount", GoMethod: "AddCount"},
+			_jsii_.MemberMethod{JsiiMethod: "addDependency", GoMethod: "AddDependency"},
+			_jsii_.MemberMethod{JsiiMethod: "addResourceDesc", GoMethod: "AddResourceDesc"},
+			_jsii_.MemberMethod{JsiiMethod: "applyRemovalPolicy", GoMethod: "ApplyRemovalPolicy"},
+			_jsii_.MemberProperty{JsiiProperty: "attrCidr", GoGetter: "AttrCidr"},
+			_jsii_.MemberProperty{JsiiProperty: "attrDescription", GoGetter: "AttrDescription"},
+			_jsii_.MemberProperty{JsiiProperty: "attrFamily", GoGetter: "AttrFamily"},
+			_jsii_.MemberProperty{JsiiProperty: "attrPublishCidrRoute", GoGetter: "AttrPublishCidrRoute"},
+			_jsii_.MemberProperty{JsiiProperty: "attrTransitRouterCidrId", GoGetter: "AttrTransitRouterCidrId"},
+			_jsii_.MemberProperty{JsiiProperty: "attrTransitRouterCidrName", GoGetter: "AttrTransitRouterCidrName"},
+			_jsii_.MemberProperty{JsiiProperty: "attrTransitRouterId", GoGetter: "AttrTransitRouterId"},
+			_jsii_.MemberProperty{JsiiProperty: "enableResourcePropertyConstraint", GoGetter: "EnableResourcePropertyConstraint"},
+			_jsii_.MemberProperty{JsiiProperty: "env", GoGetter: "Env"},
+			_jsii_.MemberMethod{JsiiMethod: "fetchCondition", GoMethod: "FetchCondition"},
+			_jsii_.MemberMethod{JsiiMethod: "fetchDependency", GoMethod: "FetchDependency"},
+			_jsii_.MemberMethod{JsiiMethod: "fetchResourceDesc", GoMethod: "FetchResourceDesc"},
+			_jsii_.MemberMethod{JsiiMethod: "generatePhysicalName", GoMethod: "GeneratePhysicalName"},
+			_jsii_.MemberMethod{JsiiMethod: "getAtt", GoMethod: "GetAtt"},
+			_jsii_.MemberProperty{JsiiProperty: "id", GoGetter: "Id"},
+			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
+			_jsii_.MemberMethod{JsiiMethod: "onPrepare", GoMethod: "OnPrepare"},
+			_jsii_.MemberMethod{JsiiMethod: "onSynthesize", GoMethod: "OnSynthesize"},
+			_jsii_.MemberMethod{JsiiMethod: "onValidate", GoMethod: "OnValidate"},
+			_jsii_.MemberProperty{JsiiProperty: "physicalName", GoGetter: "PhysicalName"},
+			_jsii_.MemberMethod{JsiiMethod: "prepare", GoMethod: "Prepare"},
+			_jsii_.MemberProperty{JsiiProperty: "props", GoGetter: "Props"},
+			_jsii_.MemberProperty{JsiiProperty: "ref", GoGetter: "Ref"},
+			_jsii_.MemberProperty{JsiiProperty: "resource", GoGetter: "Resource"},
+			_jsii_.MemberProperty{JsiiProperty: "scope", GoGetter: "Scope"},
+			_jsii_.MemberMethod{JsiiMethod: "setMetadata", GoMethod: "SetMetadata"},
+			_jsii_.MemberProperty{JsiiProperty: "stack", GoGetter: "Stack"},
+			_jsii_.MemberMethod{JsiiMethod: "synthesize", GoMethod: "Synthesize"},
+			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
+			_jsii_.MemberMethod{JsiiMethod: "validate", GoMethod: "Validate"},
+		},
+		func() interface{} {
+			j := jsiiProxy_TransitRouterCidr{}
+			_jsii_.InitJsiiProxy(&j.Type__alicloudroscdkcoreResource)
+			_jsii_.InitJsiiProxy(&j.jsiiProxy_ITransitRouterCidr)
+			return &j
+		},
+	)
+	_jsii_.RegisterStruct(
+		"@alicloud/ros-cdk-cen.TransitRouterCidrProps",
+		reflect.TypeOf((*TransitRouterCidrProps)(nil)).Elem(),
+	)
+	_jsii_.RegisterClass(
+		"@alicloud/ros-cdk-cen.TransitRouterGrantAttachment",
+		reflect.TypeOf((*TransitRouterGrantAttachment)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberMethod{JsiiMethod: "addCondition", GoMethod: "AddCondition"},
+			_jsii_.MemberMethod{JsiiMethod: "addCount", GoMethod: "AddCount"},
+			_jsii_.MemberMethod{JsiiMethod: "addDependency", GoMethod: "AddDependency"},
+			_jsii_.MemberMethod{JsiiMethod: "addResourceDesc", GoMethod: "AddResourceDesc"},
+			_jsii_.MemberMethod{JsiiMethod: "applyRemovalPolicy", GoMethod: "ApplyRemovalPolicy"},
+			_jsii_.MemberProperty{JsiiProperty: "enableResourcePropertyConstraint", GoGetter: "EnableResourcePropertyConstraint"},
+			_jsii_.MemberProperty{JsiiProperty: "env", GoGetter: "Env"},
+			_jsii_.MemberMethod{JsiiMethod: "fetchCondition", GoMethod: "FetchCondition"},
+			_jsii_.MemberMethod{JsiiMethod: "fetchDependency", GoMethod: "FetchDependency"},
+			_jsii_.MemberMethod{JsiiMethod: "fetchResourceDesc", GoMethod: "FetchResourceDesc"},
+			_jsii_.MemberMethod{JsiiMethod: "generatePhysicalName", GoMethod: "GeneratePhysicalName"},
+			_jsii_.MemberMethod{JsiiMethod: "getAtt", GoMethod: "GetAtt"},
+			_jsii_.MemberProperty{JsiiProperty: "id", GoGetter: "Id"},
+			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
+			_jsii_.MemberMethod{JsiiMethod: "onPrepare", GoMethod: "OnPrepare"},
+			_jsii_.MemberMethod{JsiiMethod: "onSynthesize", GoMethod: "OnSynthesize"},
+			_jsii_.MemberMethod{JsiiMethod: "onValidate", GoMethod: "OnValidate"},
+			_jsii_.MemberProperty{JsiiProperty: "physicalName", GoGetter: "PhysicalName"},
+			_jsii_.MemberMethod{JsiiMethod: "prepare", GoMethod: "Prepare"},
+			_jsii_.MemberProperty{JsiiProperty: "props", GoGetter: "Props"},
+			_jsii_.MemberProperty{JsiiProperty: "ref", GoGetter: "Ref"},
+			_jsii_.MemberProperty{JsiiProperty: "resource", GoGetter: "Resource"},
+			_jsii_.MemberProperty{JsiiProperty: "scope", GoGetter: "Scope"},
+			_jsii_.MemberMethod{JsiiMethod: "setMetadata", GoMethod: "SetMetadata"},
+			_jsii_.MemberProperty{JsiiProperty: "stack", GoGetter: "Stack"},
+			_jsii_.MemberMethod{JsiiMethod: "synthesize", GoMethod: "Synthesize"},
+			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
+			_jsii_.MemberMethod{JsiiMethod: "validate", GoMethod: "Validate"},
+		},
+		func() interface{} {
+			j := jsiiProxy_TransitRouterGrantAttachment{}
+			_jsii_.InitJsiiProxy(&j.Type__alicloudroscdkcoreResource)
+			_jsii_.InitJsiiProxy(&j.jsiiProxy_ITransitRouterGrantAttachment)
+			return &j
+		},
+	)
+	_jsii_.RegisterStruct(
+		"@alicloud/ros-cdk-cen.TransitRouterGrantAttachmentProps",
+		reflect.TypeOf((*TransitRouterGrantAttachmentProps)(nil)).Elem(),
+	)
+	_jsii_.RegisterClass(
+		"@alicloud/ros-cdk-cen.TransitRouterMulticastDomainAssociation",
+		reflect.TypeOf((*TransitRouterMulticastDomainAssociation)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberMethod{JsiiMethod: "addCondition", GoMethod: "AddCondition"},
+			_jsii_.MemberMethod{JsiiMethod: "addCount", GoMethod: "AddCount"},
+			_jsii_.MemberMethod{JsiiMethod: "addDependency", GoMethod: "AddDependency"},
+			_jsii_.MemberMethod{JsiiMethod: "addResourceDesc", GoMethod: "AddResourceDesc"},
+			_jsii_.MemberMethod{JsiiMethod: "applyRemovalPolicy", GoMethod: "ApplyRemovalPolicy"},
+			_jsii_.MemberProperty{JsiiProperty: "attrTransitRouterAttachmentId", GoGetter: "AttrTransitRouterAttachmentId"},
+			_jsii_.MemberProperty{JsiiProperty: "attrTransitRouterMulticastDomainId", GoGetter: "AttrTransitRouterMulticastDomainId"},
+			_jsii_.MemberProperty{JsiiProperty: "attrVSwitchId", GoGetter: "AttrVSwitchId"},
+			_jsii_.MemberProperty{JsiiProperty: "enableResourcePropertyConstraint", GoGetter: "EnableResourcePropertyConstraint"},
+			_jsii_.MemberProperty{JsiiProperty: "env", GoGetter: "Env"},
+			_jsii_.MemberMethod{JsiiMethod: "fetchCondition", GoMethod: "FetchCondition"},
+			_jsii_.MemberMethod{JsiiMethod: "fetchDependency", GoMethod: "FetchDependency"},
+			_jsii_.MemberMethod{JsiiMethod: "fetchResourceDesc", GoMethod: "FetchResourceDesc"},
+			_jsii_.MemberMethod{JsiiMethod: "generatePhysicalName", GoMethod: "GeneratePhysicalName"},
+			_jsii_.MemberMethod{JsiiMethod: "getAtt", GoMethod: "GetAtt"},
+			_jsii_.MemberProperty{JsiiProperty: "id", GoGetter: "Id"},
+			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
+			_jsii_.MemberMethod{JsiiMethod: "onPrepare", GoMethod: "OnPrepare"},
+			_jsii_.MemberMethod{JsiiMethod: "onSynthesize", GoMethod: "OnSynthesize"},
+			_jsii_.MemberMethod{JsiiMethod: "onValidate", GoMethod: "OnValidate"},
+			_jsii_.MemberProperty{JsiiProperty: "physicalName", GoGetter: "PhysicalName"},
+			_jsii_.MemberMethod{JsiiMethod: "prepare", GoMethod: "Prepare"},
+			_jsii_.MemberProperty{JsiiProperty: "props", GoGetter: "Props"},
+			_jsii_.MemberProperty{JsiiProperty: "ref", GoGetter: "Ref"},
+			_jsii_.MemberProperty{JsiiProperty: "resource", GoGetter: "Resource"},
+			_jsii_.MemberProperty{JsiiProperty: "scope", GoGetter: "Scope"},
+			_jsii_.MemberMethod{JsiiMethod: "setMetadata", GoMethod: "SetMetadata"},
+			_jsii_.MemberProperty{JsiiProperty: "stack", GoGetter: "Stack"},
+			_jsii_.MemberMethod{JsiiMethod: "synthesize", GoMethod: "Synthesize"},
+			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
+			_jsii_.MemberMethod{JsiiMethod: "validate", GoMethod: "Validate"},
+		},
+		func() interface{} {
+			j := jsiiProxy_TransitRouterMulticastDomainAssociation{}
+			_jsii_.InitJsiiProxy(&j.Type__alicloudroscdkcoreResource)
+			_jsii_.InitJsiiProxy(&j.jsiiProxy_ITransitRouterMulticastDomainAssociation)
+			return &j
+		},
+	)
+	_jsii_.RegisterStruct(
+		"@alicloud/ros-cdk-cen.TransitRouterMulticastDomainAssociationProps",
+		reflect.TypeOf((*TransitRouterMulticastDomainAssociationProps)(nil)).Elem(),
+	)
+	_jsii_.RegisterClass(
 		"@alicloud/ros-cdk-cen.TransitRouterPeerAttachment",
 		reflect.TypeOf((*TransitRouterPeerAttachment)(nil)).Elem(),
 		[]_jsii_.Member{
@@ -2073,20 +2929,7 @@ func init() {
 			_jsii_.MemberMethod{JsiiMethod: "addDependency", GoMethod: "AddDependency"},
 			_jsii_.MemberMethod{JsiiMethod: "addResourceDesc", GoMethod: "AddResourceDesc"},
 			_jsii_.MemberMethod{JsiiMethod: "applyRemovalPolicy", GoMethod: "ApplyRemovalPolicy"},
-			_jsii_.MemberProperty{JsiiProperty: "attrAutoPublishRouteEnabled", GoGetter: "AttrAutoPublishRouteEnabled"},
-			_jsii_.MemberProperty{JsiiProperty: "attrBandwidth", GoGetter: "AttrBandwidth"},
-			_jsii_.MemberProperty{JsiiProperty: "attrCenBandwidthPackageId", GoGetter: "AttrCenBandwidthPackageId"},
-			_jsii_.MemberProperty{JsiiProperty: "attrCenId", GoGetter: "AttrCenId"},
-			_jsii_.MemberProperty{JsiiProperty: "attrClientToken", GoGetter: "AttrClientToken"},
-			_jsii_.MemberProperty{JsiiProperty: "attrGeographicSpanId", GoGetter: "AttrGeographicSpanId"},
-			_jsii_.MemberProperty{JsiiProperty: "attrPeerTransitRouterId", GoGetter: "AttrPeerTransitRouterId"},
-			_jsii_.MemberProperty{JsiiProperty: "attrPeerTransitRouterOwnerId", GoGetter: "AttrPeerTransitRouterOwnerId"},
-			_jsii_.MemberProperty{JsiiProperty: "attrPeerTransitRouterRegionId", GoGetter: "AttrPeerTransitRouterRegionId"},
-			_jsii_.MemberProperty{JsiiProperty: "attrResourceType", GoGetter: "AttrResourceType"},
-			_jsii_.MemberProperty{JsiiProperty: "attrTransitRouterAttachmentDescription", GoGetter: "AttrTransitRouterAttachmentDescription"},
 			_jsii_.MemberProperty{JsiiProperty: "attrTransitRouterAttachmentId", GoGetter: "AttrTransitRouterAttachmentId"},
-			_jsii_.MemberProperty{JsiiProperty: "attrTransitRouterAttachmentName", GoGetter: "AttrTransitRouterAttachmentName"},
-			_jsii_.MemberProperty{JsiiProperty: "attrTransitRouterId", GoGetter: "AttrTransitRouterId"},
 			_jsii_.MemberProperty{JsiiProperty: "enableResourcePropertyConstraint", GoGetter: "EnableResourcePropertyConstraint"},
 			_jsii_.MemberProperty{JsiiProperty: "env", GoGetter: "Env"},
 			_jsii_.MemberMethod{JsiiMethod: "fetchCondition", GoMethod: "FetchCondition"},
@@ -2273,6 +3116,51 @@ func init() {
 		reflect.TypeOf((*TransitRouterRouteTableAssociationProps)(nil)).Elem(),
 	)
 	_jsii_.RegisterClass(
+		"@alicloud/ros-cdk-cen.TransitRouterRouteTableAssociationReplacement",
+		reflect.TypeOf((*TransitRouterRouteTableAssociationReplacement)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberMethod{JsiiMethod: "addCondition", GoMethod: "AddCondition"},
+			_jsii_.MemberMethod{JsiiMethod: "addCount", GoMethod: "AddCount"},
+			_jsii_.MemberMethod{JsiiMethod: "addDependency", GoMethod: "AddDependency"},
+			_jsii_.MemberMethod{JsiiMethod: "addResourceDesc", GoMethod: "AddResourceDesc"},
+			_jsii_.MemberMethod{JsiiMethod: "applyRemovalPolicy", GoMethod: "ApplyRemovalPolicy"},
+			_jsii_.MemberProperty{JsiiProperty: "attrOriginalTransitRouterRouteTableId", GoGetter: "AttrOriginalTransitRouterRouteTableId"},
+			_jsii_.MemberProperty{JsiiProperty: "enableResourcePropertyConstraint", GoGetter: "EnableResourcePropertyConstraint"},
+			_jsii_.MemberProperty{JsiiProperty: "env", GoGetter: "Env"},
+			_jsii_.MemberMethod{JsiiMethod: "fetchCondition", GoMethod: "FetchCondition"},
+			_jsii_.MemberMethod{JsiiMethod: "fetchDependency", GoMethod: "FetchDependency"},
+			_jsii_.MemberMethod{JsiiMethod: "fetchResourceDesc", GoMethod: "FetchResourceDesc"},
+			_jsii_.MemberMethod{JsiiMethod: "generatePhysicalName", GoMethod: "GeneratePhysicalName"},
+			_jsii_.MemberMethod{JsiiMethod: "getAtt", GoMethod: "GetAtt"},
+			_jsii_.MemberProperty{JsiiProperty: "id", GoGetter: "Id"},
+			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
+			_jsii_.MemberMethod{JsiiMethod: "onPrepare", GoMethod: "OnPrepare"},
+			_jsii_.MemberMethod{JsiiMethod: "onSynthesize", GoMethod: "OnSynthesize"},
+			_jsii_.MemberMethod{JsiiMethod: "onValidate", GoMethod: "OnValidate"},
+			_jsii_.MemberProperty{JsiiProperty: "physicalName", GoGetter: "PhysicalName"},
+			_jsii_.MemberMethod{JsiiMethod: "prepare", GoMethod: "Prepare"},
+			_jsii_.MemberProperty{JsiiProperty: "props", GoGetter: "Props"},
+			_jsii_.MemberProperty{JsiiProperty: "ref", GoGetter: "Ref"},
+			_jsii_.MemberProperty{JsiiProperty: "resource", GoGetter: "Resource"},
+			_jsii_.MemberProperty{JsiiProperty: "scope", GoGetter: "Scope"},
+			_jsii_.MemberMethod{JsiiMethod: "setMetadata", GoMethod: "SetMetadata"},
+			_jsii_.MemberProperty{JsiiProperty: "stack", GoGetter: "Stack"},
+			_jsii_.MemberMethod{JsiiMethod: "synthesize", GoMethod: "Synthesize"},
+			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
+			_jsii_.MemberMethod{JsiiMethod: "validate", GoMethod: "Validate"},
+		},
+		func() interface{} {
+			j := jsiiProxy_TransitRouterRouteTableAssociationReplacement{}
+			_jsii_.InitJsiiProxy(&j.Type__alicloudroscdkcoreResource)
+			_jsii_.InitJsiiProxy(&j.jsiiProxy_ITransitRouterRouteTableAssociationReplacement)
+			return &j
+		},
+	)
+	_jsii_.RegisterStruct(
+		"@alicloud/ros-cdk-cen.TransitRouterRouteTableAssociationReplacementProps",
+		reflect.TypeOf((*TransitRouterRouteTableAssociationReplacementProps)(nil)).Elem(),
+	)
+	_jsii_.RegisterClass(
 		"@alicloud/ros-cdk-cen.TransitRouterRouteTablePropagation",
 		reflect.TypeOf((*TransitRouterRouteTablePropagation)(nil)).Elem(),
 		[]_jsii_.Member{
@@ -2388,7 +3276,6 @@ func init() {
 			_jsii_.MemberMethod{JsiiMethod: "addResourceDesc", GoMethod: "AddResourceDesc"},
 			_jsii_.MemberMethod{JsiiMethod: "applyRemovalPolicy", GoMethod: "ApplyRemovalPolicy"},
 			_jsii_.MemberProperty{JsiiProperty: "attrCenId", GoGetter: "AttrCenId"},
-			_jsii_.MemberProperty{JsiiProperty: "attrClientToken", GoGetter: "AttrClientToken"},
 			_jsii_.MemberProperty{JsiiProperty: "attrResourceType", GoGetter: "AttrResourceType"},
 			_jsii_.MemberProperty{JsiiProperty: "attrTransitRouterAttachmentDescription", GoGetter: "AttrTransitRouterAttachmentDescription"},
 			_jsii_.MemberProperty{JsiiProperty: "attrTransitRouterAttachmentId", GoGetter: "AttrTransitRouterAttachmentId"},

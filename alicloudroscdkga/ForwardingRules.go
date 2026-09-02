@@ -13,7 +13,7 @@ import (
 type ForwardingRules interface {
 	alicloudroscdkcore.Resource
 	IForwardingRules
-	// Attribute ForwardingRuleIds: The IDs of the endpoint groups.
+	// Attribute ForwardingRuleIds: The IDs of the forwarding rules.
 	AttrForwardingRuleIds() interface{}
 	EnableResourcePropertyConstraint() *bool
 	SetEnableResourcePropertyConstraint(val *bool)

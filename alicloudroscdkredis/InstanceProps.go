@@ -63,6 +63,10 @@ type InstanceProps struct {
 	//
 	// Valid values:Local: Community Edition(Local) or Enhanced Edition(Local)Tair_rdb: Performance Enhanced(Cloud Disk)Tair_scm: Persistent Memory(Cloud Disk)Tair_essd: Capacity Storage(Cloud Disk)OnECS: Community Edition(Cloud Disk).
 	ProductType interface{} `field:"optional" json:"productType" yaml:"productType"`
+	// Property readOnlyCount: The number of read replicas in the primary zone.
+	//
+	// Valid values: 1 to 9.
+	ReadOnlyCount interface{} `field:"optional" json:"readOnlyCount" yaml:"readOnlyCount"`
 	// Property resourceGroupId: Resource group id.
 	ResourceGroupId interface{} `field:"optional" json:"resourceGroupId" yaml:"resourceGroupId"`
 	// Property secondaryZoneId: The secondary zone ID of the instance.
@@ -86,6 +90,10 @@ type InstanceProps struct {
 	// Enable: enables SSL encryption.
 	// Update: updates the SSL certificate.
 	SslEnabled interface{} `field:"optional" json:"sslEnabled" yaml:"sslEnabled"`
+	// Property subscriptionDeletionForce: This option is only applicable to subscription instances.
+	//
+	// For subscription instances, if this option is true, the instance will be converted to a postpaid instance before being deleted. If false, the forced deletion will not be performed. This operation will incur additional fees, so choose carefully.
+	SubscriptionDeletionForce interface{} `field:"optional" json:"subscriptionDeletionForce" yaml:"subscriptionDeletionForce"`
 	// Property tags: Tags to attach to redis.
 	//
 	// Max support 20 tags to add during create redis. Each tag with two properties Key and Value, and Key is required.
@@ -94,6 +102,8 @@ type InstanceProps struct {
 	//
 	// This parameter is available only if the InstanceClass parameter is start with tair.
 	TairConfig interface{} `field:"optional" json:"tairConfig" yaml:"tairConfig"`
+	// Property tlsProtocol: The TLS version of the instance.
+	TlsProtocol interface{} `field:"optional" json:"tlsProtocol" yaml:"tlsProtocol"`
 	// Property vpcId: The VPC id to create ecs instance.
 	VpcId interface{} `field:"optional" json:"vpcId" yaml:"vpcId"`
 	// Property vpcPasswordFree: Specifies whether to enable password free for access within the VPC.

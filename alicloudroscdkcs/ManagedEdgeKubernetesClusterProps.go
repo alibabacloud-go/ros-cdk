@@ -31,10 +31,18 @@ type ManagedEdgeKubernetesClusterProps struct {
 	// false: disables deletion protection for the cluster.
 	// Default value: false.
 	DeletionProtection interface{} `field:"optional" json:"deletionProtection" yaml:"deletionProtection"`
+	// Property encryptionProviderKey: The ID of the key that is managed by Key Management Service (KMS).
+	//
+	// This key is used to encrypt data disks.You can use KMS in only professional managed Kubernetes clusters.
+	EncryptionProviderKey interface{} `field:"optional" json:"encryptionProviderKey" yaml:"encryptionProviderKey"`
 	// Property endpointPublicAccess: Whether to enable the public network API Server: true: which means that the public network API Server is open.
 	//
 	// false: If set to false, the API server on the public network will not be created, only the API server on the private network will be created.Default to true.
 	EndpointPublicAccess interface{} `field:"optional" json:"endpointPublicAccess" yaml:"endpointPublicAccess"`
+	// Property ipStack: The IP stack of the cluster.
+	//
+	// Value: ipv4 (Single stack) or ipv6 (Dual Stack). Default value: ipv4
+	IpStack interface{} `field:"optional" json:"ipStack" yaml:"ipStack"`
 	// Property isEnterpriseSecurityGroup: Specifies whether to create an advanced security group.
 	//
 	// This parameter takes effect only if security_group_id is left empty.
@@ -47,6 +55,8 @@ type ManagedEdgeKubernetesClusterProps struct {
 	//
 	// Specify one of KeyPair or LoginPassword.
 	KeyPair interface{} `field:"optional" json:"keyPair" yaml:"keyPair"`
+	// Property kubernetesVersion: The version of the Kubernetes cluster.
+	KubernetesVersion interface{} `field:"optional" json:"kubernetesVersion" yaml:"kubernetesVersion"`
 	// Property loginPassword: SSH login password.
 	//
 	// Password rules are 8-30 characters and contain three items (upper and lower case letters, numbers, and special symbols). Specify one of KeyPair or LoginPassword.
@@ -58,6 +68,8 @@ type ManagedEdgeKubernetesClusterProps struct {
 	// This number is determined by the specified pod CIDR block.
 	// This parameter takes effect only if the cluster uses the Flannel plug-in.Default value: 25.
 	NodeCidrMask interface{} `field:"optional" json:"nodeCidrMask" yaml:"nodeCidrMask"`
+	// Property nodePools: The configurations of Node pools.
+	NodePools interface{} `field:"optional" json:"nodePools" yaml:"nodePools"`
 	// Property profile: Edge cluster ID.
 	//
 	// The default value is Edge.
@@ -68,6 +80,8 @@ type ManagedEdgeKubernetesClusterProps struct {
 	ProxyMode interface{} `field:"optional" json:"proxyMode" yaml:"proxyMode"`
 	// Property resourceGroupId: The ID of resource group.
 	ResourceGroupId interface{} `field:"optional" json:"resourceGroupId" yaml:"resourceGroupId"`
+	// Property rrsaConfig: The configuration of RRSA.
+	RrsaConfig interface{} `field:"optional" json:"rrsaConfig" yaml:"rrsaConfig"`
 	// Property serviceCidr: The service network segment cannot conflict with the VPC network segment and the container network segment.
 	//
 	// When the system is selected to automatically create a VPC, the network segment 172.19.0.0\/20 is used by default.
@@ -91,6 +105,8 @@ type ManagedEdgeKubernetesClusterProps struct {
 	// If not set, the system will automatically create a VPC, and the VPC network segment created by the system is 192.168.0.0\/16.
 	// VpcId and VSwitchId can only be empty at the same time or set the corresponding values at the same time.
 	VpcId interface{} `field:"optional" json:"vpcId" yaml:"vpcId"`
+	// Property vSwitchIds: The virtual switch ID of the worker node.
+	VSwitchIds interface{} `field:"optional" json:"vSwitchIds" yaml:"vSwitchIds"`
 	// Property zoneIds: Zone ids of worker node virtual switches belongs to.
 	ZoneIds interface{} `field:"optional" json:"zoneIds" yaml:"zoneIds"`
 }

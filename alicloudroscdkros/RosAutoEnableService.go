@@ -9,7 +9,7 @@ import (
 	"github.com/aws/constructs-go/constructs/v3"
 )
 
-// This class is a base encapsulation around the ROS resource type `ALIYUN::ROS::AutoEnableService`.
+// This class is a base encapsulation around the ROS resource type `ALIYUN::ROS::AutoEnableService`, which is used to automatically activate an Alibaba Cloud service or feature.
 type RosAutoEnableService interface {
 	alicloudroscdkcore.RosResource
 	// Returns: the stack trace of the point where this Resource was created from, sourced
@@ -42,6 +42,8 @@ type RosAutoEnableService interface {
 	RosResourceType() *string
 	ServiceName() interface{}
 	SetServiceName(val interface{})
+	ServiceParameters() interface{}
+	SetServiceParameters(val interface{})
 	// The stack in which this element is defined.
 	//
 	// RosElements must be defined within a stack scope (directly or indirectly).
@@ -260,6 +262,16 @@ func (j *jsiiProxy_RosAutoEnableService) ServiceName() interface{} {
 	return returns
 }
 
+func (j *jsiiProxy_RosAutoEnableService) ServiceParameters() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"serviceParameters",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_RosAutoEnableService) Stack() alicloudroscdkcore.Stack {
 	var returns alicloudroscdkcore.Stack
 	_jsii_.Get(
@@ -326,6 +338,17 @@ func (j *jsiiProxy_RosAutoEnableService)SetServiceName(val interface{}) {
 	_jsii_.Set(
 		j,
 		"serviceName",
+		val,
+	)
+}
+
+func (j *jsiiProxy_RosAutoEnableService)SetServiceParameters(val interface{}) {
+	if err := j.validateSetServiceParametersParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"serviceParameters",
 		val,
 	)
 }

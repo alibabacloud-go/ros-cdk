@@ -16,7 +16,10 @@ type RosInstanceProps struct {
 	DestinationRegion interface{} `field:"optional" json:"destinationRegion" yaml:"destinationRegion"`
 	Du interface{} `field:"optional" json:"du" yaml:"du"`
 	FeeType interface{} `field:"optional" json:"feeType" yaml:"feeType"`
+	InsightModule interface{} `field:"optional" json:"insightModule" yaml:"insightModule"`
 	JobId interface{} `field:"optional" json:"jobId" yaml:"jobId"`
+	MaxDu interface{} `field:"optional" json:"maxDu" yaml:"maxDu"`
+	MinDu interface{} `field:"optional" json:"minDu" yaml:"minDu"`
 	Period interface{} `field:"optional" json:"period" yaml:"period"`
 	ResourceGroupId interface{} `field:"optional" json:"resourceGroupId" yaml:"resourceGroupId"`
 	SourceEndpointEngineName interface{} `field:"optional" json:"sourceEndpointEngineName" yaml:"sourceEndpointEngineName"`

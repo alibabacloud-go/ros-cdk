@@ -88,7 +88,15 @@ func (j *jsiiProxy_RosClusterApplication) validateSetClusterIdParameters(val int
 	return nil
 }
 
+func (j *jsiiProxy_RosClusterApplication) validateSetCreationModeParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_RosClusterApplication) validateSetDefaultNamespaceParameters(val interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_RosClusterApplication) validateSetDefaultNamespaceDeletionParameters(val interface{}) error {
 	return nil
 }
 

@@ -19,21 +19,21 @@ type AutoEnableServiceProps struct {
 	// BrainIndustrial: Brain Industrial
 	// CloudStorageGateway: Cloud Storage Gateway
 	// CMS: Cloud Monitor Service
-	// CR: Container Registry
 	// CS: Container Service
 	// DataHub: Data Hub
 	// DataWorks: DataWorks
 	// DCDN: Dynamic Route for CDN
 	// EDAS: Enterprise Distributed Application Service
 	// EMAS: Enterprise Mobile Application Studio
+	// EMR\/AICenter: EMR Serverless Spark AI Center
 	// FC: Function Compute
 	// FNF: Serverless Workflow
 	// MaxCompute: MaxCompute
+	// Milvus\/Function: Milvus Function
 	// NAS: Network Attached Storage
 	// MNS: Message Service (MNS)
 	// HBR: Hybrid Backup Recovery
 	// IMM: Intelligent Media Management
-	// IOT: IoT Platform
 	// KMS: Key Management Service
 	// NLP: Natural Language Processing
 	// OSS: Object Storage Service
@@ -57,5 +57,9 @@ type AutoEnableServiceProps struct {
 	// ControlPolicy: Control Policy
 	// DSC: Data Security Center Free Edition Service.
 	ServiceName interface{} `field:"required" json:"serviceName" yaml:"serviceName"`
+	// Property serviceParameters: The parameters that are required to enable the service.
+	//
+	// WorkspaceId is required when ServiceName is EMR\/AICenter.
+	ServiceParameters interface{} `field:"optional" json:"serviceParameters" yaml:"serviceParameters"`
 }
 

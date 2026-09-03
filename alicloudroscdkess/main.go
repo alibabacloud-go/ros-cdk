@@ -846,6 +846,7 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "attrScalingConfigurationId", GoGetter: "AttrScalingConfigurationId"},
 			_jsii_.MemberProperty{JsiiProperty: "attrScalingGroupId", GoGetter: "AttrScalingGroupId"},
 			_jsii_.MemberProperty{JsiiProperty: "cpu", GoGetter: "Cpu"},
+			_jsii_.MemberProperty{JsiiProperty: "cpuOptions", GoGetter: "CpuOptions"},
 			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
 			_jsii_.MemberProperty{JsiiProperty: "creditSpecification", GoGetter: "CreditSpecification"},
 			_jsii_.MemberProperty{JsiiProperty: "dedicatedHostId", GoGetter: "DedicatedHostId"},
@@ -934,6 +935,10 @@ func init() {
 		},
 	)
 	_jsii_.RegisterStruct(
+		"@alicloud/ros-cdk-ess.RosScalingConfiguration.CpuOptionsProperty",
+		reflect.TypeOf((*RosScalingConfiguration_CpuOptionsProperty)(nil)).Elem(),
+	)
+	_jsii_.RegisterStruct(
 		"@alicloud/ros-cdk-ess.RosScalingConfiguration.DiskMappingsProperty",
 		reflect.TypeOf((*RosScalingConfiguration_DiskMappingsProperty)(nil)).Elem(),
 	)
@@ -992,6 +997,7 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "groupDeletionProtection", GoGetter: "GroupDeletionProtection"},
 			_jsii_.MemberProperty{JsiiProperty: "groupType", GoGetter: "GroupType"},
 			_jsii_.MemberProperty{JsiiProperty: "healthCheckType", GoGetter: "HealthCheckType"},
+			_jsii_.MemberProperty{JsiiProperty: "healthCheckTypes", GoGetter: "HealthCheckTypes"},
 			_jsii_.MemberProperty{JsiiProperty: "instanceId", GoGetter: "InstanceId"},
 			_jsii_.MemberProperty{JsiiProperty: "launchTemplateId", GoGetter: "LaunchTemplateId"},
 			_jsii_.MemberProperty{JsiiProperty: "launchTemplateOverrides", GoGetter: "LaunchTemplateOverrides"},

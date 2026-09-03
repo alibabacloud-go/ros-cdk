@@ -9,7 +9,7 @@ import (
 	"github.com/aws/constructs-go/constructs/v3"
 )
 
-// This class encapsulates and extends the ROS resource type `ALIYUN::Flink::Instance`, which is used to create a subscription or pay-as-you-go Realtime Compute for Apache Flink instance.
+// This class encapsulates and extends the ROS resource type `ALIYUN::Flink::Instance`Creates a subscription or pay-as-you-go Realtime Compute for Apache Flink instance.
 type Instance interface {
 	alicloudroscdkcore.Resource
 	IInstance
@@ -17,6 +17,8 @@ type Instance interface {
 	AttrInstanceId() interface{}
 	// Attribute OrderId: Order information.
 	AttrOrderId() interface{}
+	// Attribute WorkspaceId: Workspace ID.
+	AttrWorkspaceId() interface{}
 	EnableResourcePropertyConstraint() *bool
 	SetEnableResourcePropertyConstraint(val *bool)
 	// The environment this resource belongs to.
@@ -127,6 +129,16 @@ func (j *jsiiProxy_Instance) AttrOrderId() interface{} {
 	_jsii_.Get(
 		j,
 		"attrOrderId",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Instance) AttrWorkspaceId() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"attrWorkspaceId",
 		&returns,
 	)
 	return returns

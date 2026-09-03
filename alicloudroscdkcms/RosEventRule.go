@@ -9,9 +9,7 @@ import (
 	"github.com/aws/constructs-go/constructs/v3"
 )
 
-// This class is a base encapsulation around the ROS resource type `ALIYUN::CMS::EventRule`, which is used to create or modify an event-triggered alert rule.
-//
-// If the specified rule name does not exist, an event-triggered alert rule is created. If the specified rule name exists, the specified event-triggered alert rule is modified.
+// This class is a base encapsulation around the ROS resource type `ALIYUN::CMS::EventRule`.
 type RosEventRule interface {
 	alicloudroscdkcore.RosResource
 	AttrData() alicloudroscdkcore.IResolvable
@@ -53,6 +51,8 @@ type RosEventRule interface {
 	RosResourceType() *string
 	RuleName() interface{}
 	SetRuleName(val interface{})
+	SilenceTime() interface{}
+	SetSilenceTime(val interface{})
 	// The stack in which this element is defined.
 	//
 	// RosElements must be defined within a stack scope (directly or indirectly).
@@ -323,6 +323,16 @@ func (j *jsiiProxy_RosEventRule) RuleName() interface{} {
 	return returns
 }
 
+func (j *jsiiProxy_RosEventRule) SilenceTime() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"silenceTime",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_RosEventRule) Stack() alicloudroscdkcore.Stack {
 	var returns alicloudroscdkcore.Stack
 	_jsii_.Get(
@@ -443,6 +453,17 @@ func (j *jsiiProxy_RosEventRule)SetRuleName(val interface{}) {
 	_jsii_.Set(
 		j,
 		"ruleName",
+		val,
+	)
+}
+
+func (j *jsiiProxy_RosEventRule)SetSilenceTime(val interface{}) {
+	if err := j.validateSetSilenceTimeParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"silenceTime",
 		val,
 	)
 }

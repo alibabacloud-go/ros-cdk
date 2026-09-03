@@ -9,7 +9,7 @@ import (
 	"github.com/aws/constructs-go/constructs/v3"
 )
 
-// This class is a base encapsulation around the ROS resource type `ALIYUN::ECS::Command`, which is used to create a Cloud Assistant command.
+// This class is a base encapsulation around the ROS resource type `ALIYUN::ECS::Command`.
 type RosCommand interface {
 	alicloudroscdkcore.RosResource
 	AttrCommandId() alicloudroscdkcore.IResolvable
@@ -27,6 +27,8 @@ type RosCommand interface {
 	SetEnableParameter(val interface{})
 	EnableResourcePropertyConstraint() *bool
 	SetEnableResourcePropertyConstraint(val *bool)
+	Launcher() interface{}
+	SetLauncher(val interface{})
 	// The logical ID for this stack element.
 	//
 	// The logical ID of the element
@@ -259,6 +261,16 @@ func (j *jsiiProxy_RosCommand) EnableResourcePropertyConstraint() *bool {
 	return returns
 }
 
+func (j *jsiiProxy_RosCommand) Launcher() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"launcher",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_RosCommand) LogicalId() *string {
 	var returns *string
 	_jsii_.Get(
@@ -478,6 +490,17 @@ func (j *jsiiProxy_RosCommand)SetEnableResourcePropertyConstraint(val *bool) {
 	_jsii_.Set(
 		j,
 		"enableResourcePropertyConstraint",
+		val,
+	)
+}
+
+func (j *jsiiProxy_RosCommand)SetLauncher(val interface{}) {
+	if err := j.validateSetLauncherParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"launcher",
 		val,
 	)
 }

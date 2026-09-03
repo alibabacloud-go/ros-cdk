@@ -59,6 +59,8 @@ type DBInstanceProps struct {
 	// :Monthly subscription: The auto-renewal cycle is one month.
 	// Annual subscription: The auto-renewal cycle is one year.
 	AutoRenew interface{} `field:"optional" json:"autoRenew" yaml:"autoRenew"`
+	// Property autoUpgradeMinorVersion: How the instance upgrades to a minor version.Valid values: - Auto (default) : Updates minor versions automatically. - Manual: No automatic upgrade, only forced when the current version is offline.
+	AutoUpgradeMinorVersion interface{} `field:"optional" json:"autoUpgradeMinorVersion" yaml:"autoUpgradeMinorVersion"`
 	// Property backUpCategory: Specifies whether to enable the second-level backup function.
 	//
 	// This function allows a backup
@@ -184,7 +186,7 @@ type DBInstanceProps struct {
 	LogBackupFrequency interface{} `field:"optional" json:"logBackupFrequency" yaml:"logBackupFrequency"`
 	// Property logBackupLocalRetentionNumber: The number of log backup files that can be retained on the instance.
 	//
-	// Default value: 60. Valid values: 6 to 100.
+	// Default value: 60. Valid values: 6 to 100. If the instance type is MySQL, you can pass in -1, which means there is no limit on the number of reserved local Binlogs.
 	LogBackupLocalRetentionNumber interface{} `field:"optional" json:"logBackupLocalRetentionNumber" yaml:"logBackupLocalRetentionNumber"`
 	// Property logBackupRetentionPeriod: The number of days for which to retain log backup files.
 	//
@@ -198,8 +200,13 @@ type DBInstanceProps struct {
 	// The format is HH:mmZ-HH:mmZ.
 	MaintainTime interface{} `field:"optional" json:"maintainTime" yaml:"maintainTime"`
 	// Property masterUsername: The master user name for the database instance.
+	//
+	// If specified, this user will have read and write permissions for all databases defined in DBMappings. Reserved keywords (which can be queried via DescribeInstanceKeywords), such as root, admin, administrator, etc., cannot be used.
+	// This parameter must be specified together with MasterUserPassword.
 	MasterUsername interface{} `field:"optional" json:"masterUsername" yaml:"masterUsername"`
 	// Property masterUserPassword: The master password for the database instance.
+	//
+	// This parameter must be specified together with MasterUsername.
 	MasterUserPassword interface{} `field:"optional" json:"masterUserPassword" yaml:"masterUserPassword"`
 	// Property masterUserType: Privilege type of account.
 	//
@@ -234,9 +241,8 @@ type DBInstanceProps struct {
 	PrivateIpAddress interface{} `field:"optional" json:"privateIpAddress" yaml:"privateIpAddress"`
 	// Property releasedKeepPolicy: The policy used to retain archived backups if the instance is released.
 	//
-	// Default value: None.
-	//   Valid values:
-	// Lastest: Only the last archived backup is retained.
+	// Valid values:
+	// None: No archived backup files are retained.Lastest: Only the last archived backup is retained.
 	//   All: All of the archived backups are retained.
 	ReleasedKeepPolicy interface{} `field:"optional" json:"releasedKeepPolicy" yaml:"releasedKeepPolicy"`
 	// Property resourceGroupId: Resource group id.
@@ -277,6 +283,10 @@ type DBInstanceProps struct {
 	StorageThreshold interface{} `field:"optional" json:"storageThreshold" yaml:"storageThreshold"`
 	// Property storageUpperBound: The total storage space upper limit for automatic storage space expansion, that is, automatic expansion will not cause the total storage space of the instance to exceed this value.
 	StorageUpperBound interface{} `field:"optional" json:"storageUpperBound" yaml:"storageUpperBound"`
+	// Property subscriptionDeletionForce: This option is only applicable to subscription instances.
+	//
+	// For subscription instances, if this option is true, the instance will be converted to a postpaid instance before being deleted. If false, the forced deletion will not be performed. This operation will incur additional fees, so choose carefully.
+	SubscriptionDeletionForce interface{} `field:"optional" json:"subscriptionDeletionForce" yaml:"subscriptionDeletionForce"`
 	// Property tags: The tags of an instance.
 	//
 	// You should input the information of the tag with the format of the Key-Value, such as {"key1":"value1","key2":"value2", ... "key5":"value5"}.

@@ -734,11 +734,13 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "deleteOptions", GoGetter: "DeleteOptions"},
 			_jsii_.MemberProperty{JsiiProperty: "deletionProtection", GoGetter: "DeletionProtection"},
 			_jsii_.MemberProperty{JsiiProperty: "enableResourcePropertyConstraint", GoGetter: "EnableResourcePropertyConstraint"},
+			_jsii_.MemberProperty{JsiiProperty: "encryptionProviderKey", GoGetter: "EncryptionProviderKey"},
 			_jsii_.MemberProperty{JsiiProperty: "endpointPublicAccess", GoGetter: "EndpointPublicAccess"},
 			_jsii_.MemberMethod{JsiiMethod: "fetchCondition", GoMethod: "FetchCondition"},
 			_jsii_.MemberMethod{JsiiMethod: "fetchDesc", GoMethod: "FetchDesc"},
 			_jsii_.MemberMethod{JsiiMethod: "fetchRosDependency", GoMethod: "FetchRosDependency"},
 			_jsii_.MemberMethod{JsiiMethod: "getAtt", GoMethod: "GetAtt"},
+			_jsii_.MemberProperty{JsiiProperty: "ipStack", GoGetter: "IpStack"},
 			_jsii_.MemberProperty{JsiiProperty: "kubernetesVersion", GoGetter: "KubernetesVersion"},
 			_jsii_.MemberProperty{JsiiProperty: "logicalId", GoGetter: "LogicalId"},
 			_jsii_.MemberProperty{JsiiProperty: "maintenanceWindow", GoGetter: "MaintenanceWindow"},
@@ -948,6 +950,7 @@ func init() {
 			_jsii_.MemberMethod{JsiiMethod: "onPrepare", GoMethod: "OnPrepare"},
 			_jsii_.MemberMethod{JsiiMethod: "onSynthesize", GoMethod: "OnSynthesize"},
 			_jsii_.MemberMethod{JsiiMethod: "onValidate", GoMethod: "OnValidate"},
+			_jsii_.MemberProperty{JsiiProperty: "overrideExisting", GoGetter: "OverrideExisting"},
 			_jsii_.MemberMethod{JsiiMethod: "overrideLogicalId", GoMethod: "OverrideLogicalId"},
 			_jsii_.MemberMethod{JsiiMethod: "prepare", GoMethod: "Prepare"},
 			_jsii_.MemberProperty{JsiiProperty: "ref", GoGetter: "Ref"},
@@ -1001,8 +1004,10 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "attrClusterId", GoGetter: "AttrClusterId"},
 			_jsii_.MemberProperty{JsiiProperty: "attrWaitUntilData", GoGetter: "AttrWaitUntilData"},
 			_jsii_.MemberProperty{JsiiProperty: "clusterId", GoGetter: "ClusterId"},
+			_jsii_.MemberProperty{JsiiProperty: "creationMode", GoGetter: "CreationMode"},
 			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
 			_jsii_.MemberProperty{JsiiProperty: "defaultNamespace", GoGetter: "DefaultNamespace"},
+			_jsii_.MemberProperty{JsiiProperty: "defaultNamespaceDeletion", GoGetter: "DefaultNamespaceDeletion"},
 			_jsii_.MemberProperty{JsiiProperty: "enableResourcePropertyConstraint", GoGetter: "EnableResourcePropertyConstraint"},
 			_jsii_.MemberMethod{JsiiMethod: "fetchCondition", GoMethod: "FetchCondition"},
 			_jsii_.MemberMethod{JsiiMethod: "fetchDesc", GoMethod: "FetchDesc"},
@@ -1073,9 +1078,11 @@ func init() {
 			_jsii_.MemberMethod{JsiiMethod: "fetchDesc", GoMethod: "FetchDesc"},
 			_jsii_.MemberMethod{JsiiMethod: "fetchRosDependency", GoMethod: "FetchRosDependency"},
 			_jsii_.MemberMethod{JsiiMethod: "getAtt", GoMethod: "GetAtt"},
+			_jsii_.MemberProperty{JsiiProperty: "ignoreExisting", GoGetter: "IgnoreExisting"},
 			_jsii_.MemberProperty{JsiiProperty: "logicalId", GoGetter: "LogicalId"},
 			_jsii_.MemberProperty{JsiiProperty: "name", GoGetter: "Name"},
 			_jsii_.MemberProperty{JsiiProperty: "namespace", GoGetter: "Namespace"},
+			_jsii_.MemberProperty{JsiiProperty: "namespaceDeletion", GoGetter: "NamespaceDeletion"},
 			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
 			_jsii_.MemberMethod{JsiiMethod: "onPrepare", GoMethod: "OnPrepare"},
 			_jsii_.MemberMethod{JsiiMethod: "onSynthesize", GoMethod: "OnSynthesize"},
@@ -1177,6 +1184,10 @@ func init() {
 	_jsii_.RegisterStruct(
 		"@alicloud/ros-cdk-cs.RosClusterNodePool.DataDisksProperty",
 		reflect.TypeOf((*RosClusterNodePool_DataDisksProperty)(nil)).Elem(),
+	)
+	_jsii_.RegisterStruct(
+		"@alicloud/ros-cdk-cs.RosClusterNodePool.InstancePatternsProperty",
+		reflect.TypeOf((*RosClusterNodePool_InstancePatternsProperty)(nil)).Elem(),
 	)
 	_jsii_.RegisterStruct(
 		"@alicloud/ros-cdk-cs.RosClusterNodePool.KubernetesConfigProperty",
@@ -1311,19 +1322,23 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
 			_jsii_.MemberProperty{JsiiProperty: "deletionProtection", GoGetter: "DeletionProtection"},
 			_jsii_.MemberProperty{JsiiProperty: "enableResourcePropertyConstraint", GoGetter: "EnableResourcePropertyConstraint"},
+			_jsii_.MemberProperty{JsiiProperty: "encryptionProviderKey", GoGetter: "EncryptionProviderKey"},
 			_jsii_.MemberProperty{JsiiProperty: "endpointPublicAccess", GoGetter: "EndpointPublicAccess"},
 			_jsii_.MemberMethod{JsiiMethod: "fetchCondition", GoMethod: "FetchCondition"},
 			_jsii_.MemberMethod{JsiiMethod: "fetchDesc", GoMethod: "FetchDesc"},
 			_jsii_.MemberMethod{JsiiMethod: "fetchRosDependency", GoMethod: "FetchRosDependency"},
 			_jsii_.MemberMethod{JsiiMethod: "getAtt", GoMethod: "GetAtt"},
+			_jsii_.MemberProperty{JsiiProperty: "ipStack", GoGetter: "IpStack"},
 			_jsii_.MemberProperty{JsiiProperty: "isEnterpriseSecurityGroup", GoGetter: "IsEnterpriseSecurityGroup"},
 			_jsii_.MemberProperty{JsiiProperty: "keyPair", GoGetter: "KeyPair"},
+			_jsii_.MemberProperty{JsiiProperty: "kubernetesVersion", GoGetter: "KubernetesVersion"},
 			_jsii_.MemberProperty{JsiiProperty: "logicalId", GoGetter: "LogicalId"},
 			_jsii_.MemberProperty{JsiiProperty: "loginPassword", GoGetter: "LoginPassword"},
 			_jsii_.MemberProperty{JsiiProperty: "maintenanceWindow", GoGetter: "MaintenanceWindow"},
 			_jsii_.MemberProperty{JsiiProperty: "name", GoGetter: "Name"},
 			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
 			_jsii_.MemberProperty{JsiiProperty: "nodeCidrMask", GoGetter: "NodeCidrMask"},
+			_jsii_.MemberProperty{JsiiProperty: "nodePools", GoGetter: "NodePools"},
 			_jsii_.MemberMethod{JsiiMethod: "onPrepare", GoMethod: "OnPrepare"},
 			_jsii_.MemberMethod{JsiiMethod: "onSynthesize", GoMethod: "OnSynthesize"},
 			_jsii_.MemberMethod{JsiiMethod: "onValidate", GoMethod: "OnValidate"},
@@ -1337,6 +1352,7 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "rosOptions", GoGetter: "RosOptions"},
 			_jsii_.MemberProperty{JsiiProperty: "rosProperties", GoGetter: "RosProperties"},
 			_jsii_.MemberProperty{JsiiProperty: "rosResourceType", GoGetter: "RosResourceType"},
+			_jsii_.MemberProperty{JsiiProperty: "rrsaConfig", GoGetter: "RrsaConfig"},
 			_jsii_.MemberProperty{JsiiProperty: "serviceCidr", GoGetter: "ServiceCidr"},
 			_jsii_.MemberProperty{JsiiProperty: "snatEntry", GoGetter: "SnatEntry"},
 			_jsii_.MemberProperty{JsiiProperty: "stack", GoGetter: "Stack"},
@@ -1348,6 +1364,7 @@ func init() {
 			_jsii_.MemberMethod{JsiiMethod: "validate", GoMethod: "Validate"},
 			_jsii_.MemberMethod{JsiiMethod: "validateProperties", GoMethod: "ValidateProperties"},
 			_jsii_.MemberProperty{JsiiProperty: "vpcId", GoGetter: "VpcId"},
+			_jsii_.MemberProperty{JsiiProperty: "vSwitchIds", GoGetter: "VSwitchIds"},
 			_jsii_.MemberProperty{JsiiProperty: "zoneIds", GoGetter: "ZoneIds"},
 		},
 		func() interface{} {
@@ -1361,12 +1378,52 @@ func init() {
 		reflect.TypeOf((*RosManagedEdgeKubernetesCluster_AddonsProperty)(nil)).Elem(),
 	)
 	_jsii_.RegisterStruct(
+		"@alicloud/ros-cdk-cs.RosManagedEdgeKubernetesCluster.DataDisksProperty",
+		reflect.TypeOf((*RosManagedEdgeKubernetesCluster_DataDisksProperty)(nil)).Elem(),
+	)
+	_jsii_.RegisterStruct(
+		"@alicloud/ros-cdk-cs.RosManagedEdgeKubernetesCluster.InstancePatternsProperty",
+		reflect.TypeOf((*RosManagedEdgeKubernetesCluster_InstancePatternsProperty)(nil)).Elem(),
+	)
+	_jsii_.RegisterStruct(
+		"@alicloud/ros-cdk-cs.RosManagedEdgeKubernetesCluster.KubernetesConfigProperty",
+		reflect.TypeOf((*RosManagedEdgeKubernetesCluster_KubernetesConfigProperty)(nil)).Elem(),
+	)
+	_jsii_.RegisterStruct(
+		"@alicloud/ros-cdk-cs.RosManagedEdgeKubernetesCluster.LabelsProperty",
+		reflect.TypeOf((*RosManagedEdgeKubernetesCluster_LabelsProperty)(nil)).Elem(),
+	)
+	_jsii_.RegisterStruct(
 		"@alicloud/ros-cdk-cs.RosManagedEdgeKubernetesCluster.MaintenanceWindowProperty",
 		reflect.TypeOf((*RosManagedEdgeKubernetesCluster_MaintenanceWindowProperty)(nil)).Elem(),
 	)
 	_jsii_.RegisterStruct(
+		"@alicloud/ros-cdk-cs.RosManagedEdgeKubernetesCluster.NodePoolInfoProperty",
+		reflect.TypeOf((*RosManagedEdgeKubernetesCluster_NodePoolInfoProperty)(nil)).Elem(),
+	)
+	_jsii_.RegisterStruct(
+		"@alicloud/ros-cdk-cs.RosManagedEdgeKubernetesCluster.NodePoolsProperty",
+		reflect.TypeOf((*RosManagedEdgeKubernetesCluster_NodePoolsProperty)(nil)).Elem(),
+	)
+	_jsii_.RegisterStruct(
+		"@alicloud/ros-cdk-cs.RosManagedEdgeKubernetesCluster.RrsaConfigProperty",
+		reflect.TypeOf((*RosManagedEdgeKubernetesCluster_RrsaConfigProperty)(nil)).Elem(),
+	)
+	_jsii_.RegisterStruct(
+		"@alicloud/ros-cdk-cs.RosManagedEdgeKubernetesCluster.ScalingGroupProperty",
+		reflect.TypeOf((*RosManagedEdgeKubernetesCluster_ScalingGroupProperty)(nil)).Elem(),
+	)
+	_jsii_.RegisterStruct(
+		"@alicloud/ros-cdk-cs.RosManagedEdgeKubernetesCluster.ScalingGroupTagsProperty",
+		reflect.TypeOf((*RosManagedEdgeKubernetesCluster_ScalingGroupTagsProperty)(nil)).Elem(),
+	)
+	_jsii_.RegisterStruct(
 		"@alicloud/ros-cdk-cs.RosManagedEdgeKubernetesCluster.TagsProperty",
 		reflect.TypeOf((*RosManagedEdgeKubernetesCluster_TagsProperty)(nil)).Elem(),
+	)
+	_jsii_.RegisterStruct(
+		"@alicloud/ros-cdk-cs.RosManagedEdgeKubernetesCluster.TaintsProperty",
+		reflect.TypeOf((*RosManagedEdgeKubernetesCluster_TaintsProperty)(nil)).Elem(),
 	)
 	_jsii_.RegisterStruct(
 		"@alicloud/ros-cdk-cs.RosManagedEdgeKubernetesClusterProps",
@@ -1399,6 +1456,7 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "attrScalingRuleId", GoGetter: "AttrScalingRuleId"},
 			_jsii_.MemberProperty{JsiiProperty: "attrTaskId", GoGetter: "AttrTaskId"},
 			_jsii_.MemberProperty{JsiiProperty: "attrWorkerRamRoleName", GoGetter: "AttrWorkerRamRoleName"},
+			_jsii_.MemberProperty{JsiiProperty: "autoMode", GoGetter: "AutoMode"},
 			_jsii_.MemberProperty{JsiiProperty: "cloudMonitorFlags", GoGetter: "CloudMonitorFlags"},
 			_jsii_.MemberProperty{JsiiProperty: "clusterSpec", GoGetter: "ClusterSpec"},
 			_jsii_.MemberProperty{JsiiProperty: "containerCidr", GoGetter: "ContainerCidr"},
@@ -1416,6 +1474,7 @@ func init() {
 			_jsii_.MemberMethod{JsiiMethod: "fetchRosDependency", GoMethod: "FetchRosDependency"},
 			_jsii_.MemberProperty{JsiiProperty: "formatDisk", GoGetter: "FormatDisk"},
 			_jsii_.MemberMethod{JsiiMethod: "getAtt", GoMethod: "GetAtt"},
+			_jsii_.MemberProperty{JsiiProperty: "ipStack", GoGetter: "IpStack"},
 			_jsii_.MemberProperty{JsiiProperty: "isEnterpriseSecurityGroup", GoGetter: "IsEnterpriseSecurityGroup"},
 			_jsii_.MemberProperty{JsiiProperty: "keepInstanceName", GoGetter: "KeepInstanceName"},
 			_jsii_.MemberProperty{JsiiProperty: "keyPair", GoGetter: "KeyPair"},
@@ -1444,6 +1503,7 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "rosOptions", GoGetter: "RosOptions"},
 			_jsii_.MemberProperty{JsiiProperty: "rosProperties", GoGetter: "RosProperties"},
 			_jsii_.MemberProperty{JsiiProperty: "rosResourceType", GoGetter: "RosResourceType"},
+			_jsii_.MemberProperty{JsiiProperty: "rrsaConfig", GoGetter: "RrsaConfig"},
 			_jsii_.MemberProperty{JsiiProperty: "runtime", GoGetter: "Runtime"},
 			_jsii_.MemberProperty{JsiiProperty: "securityGroupId", GoGetter: "SecurityGroupId"},
 			_jsii_.MemberProperty{JsiiProperty: "securityHardeningOs", GoGetter: "SecurityHardeningOs"},
@@ -1455,12 +1515,14 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "tags", GoGetter: "Tags"},
 			_jsii_.MemberProperty{JsiiProperty: "taint", GoGetter: "Taint"},
 			_jsii_.MemberProperty{JsiiProperty: "timeoutMins", GoGetter: "TimeoutMins"},
+			_jsii_.MemberProperty{JsiiProperty: "timeZone", GoGetter: "TimeZone"},
 			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
 			_jsii_.MemberProperty{JsiiProperty: "updatedProperites", GoGetter: "UpdatedProperites"},
 			_jsii_.MemberProperty{JsiiProperty: "userData", GoGetter: "UserData"},
 			_jsii_.MemberMethod{JsiiMethod: "validate", GoMethod: "Validate"},
 			_jsii_.MemberMethod{JsiiMethod: "validateProperties", GoMethod: "ValidateProperties"},
 			_jsii_.MemberProperty{JsiiProperty: "vpcId", GoGetter: "VpcId"},
+			_jsii_.MemberProperty{JsiiProperty: "vSwitchIds", GoGetter: "VSwitchIds"},
 			_jsii_.MemberProperty{JsiiProperty: "zoneIds", GoGetter: "ZoneIds"},
 		},
 		func() interface{} {
@@ -1474,12 +1536,20 @@ func init() {
 		reflect.TypeOf((*RosManagedKubernetesCluster_AddonsProperty)(nil)).Elem(),
 	)
 	_jsii_.RegisterStruct(
+		"@alicloud/ros-cdk-cs.RosManagedKubernetesCluster.AutoModeProperty",
+		reflect.TypeOf((*RosManagedKubernetesCluster_AutoModeProperty)(nil)).Elem(),
+	)
+	_jsii_.RegisterStruct(
 		"@alicloud/ros-cdk-cs.RosManagedKubernetesCluster.DataDisksProperty",
 		reflect.TypeOf((*RosManagedKubernetesCluster_DataDisksProperty)(nil)).Elem(),
 	)
 	_jsii_.RegisterStruct(
 		"@alicloud/ros-cdk-cs.RosManagedKubernetesCluster.DeleteOptionsProperty",
 		reflect.TypeOf((*RosManagedKubernetesCluster_DeleteOptionsProperty)(nil)).Elem(),
+	)
+	_jsii_.RegisterStruct(
+		"@alicloud/ros-cdk-cs.RosManagedKubernetesCluster.InstancePatternsProperty",
+		reflect.TypeOf((*RosManagedKubernetesCluster_InstancePatternsProperty)(nil)).Elem(),
 	)
 	_jsii_.RegisterStruct(
 		"@alicloud/ros-cdk-cs.RosManagedKubernetesCluster.KubernetesConfigProperty",
@@ -1500,6 +1570,10 @@ func init() {
 	_jsii_.RegisterStruct(
 		"@alicloud/ros-cdk-cs.RosManagedKubernetesCluster.NodePoolsProperty",
 		reflect.TypeOf((*RosManagedKubernetesCluster_NodePoolsProperty)(nil)).Elem(),
+	)
+	_jsii_.RegisterStruct(
+		"@alicloud/ros-cdk-cs.RosManagedKubernetesCluster.RrsaConfigProperty",
+		reflect.TypeOf((*RosManagedKubernetesCluster_RrsaConfigProperty)(nil)).Elem(),
 	)
 	_jsii_.RegisterStruct(
 		"@alicloud/ros-cdk-cs.RosManagedKubernetesCluster.RuntimeProperty",

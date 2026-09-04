@@ -31,6 +31,8 @@ type RosFunction interface {
 	SetCustomRuntimeConfig(val interface{})
 	Description() interface{}
 	SetDescription(val interface{})
+	DisableOndemand() interface{}
+	SetDisableOndemand(val interface{})
 	DiskSize() interface{}
 	SetDiskSize(val interface{})
 	EnableResourcePropertyConstraint() *bool
@@ -45,6 +47,8 @@ type RosFunction interface {
 	SetHandler(val interface{})
 	InstanceConcurrency() interface{}
 	SetInstanceConcurrency(val interface{})
+	InstanceIsolationMode() interface{}
+	SetInstanceIsolationMode(val interface{})
 	InstanceLifecycleConfig() interface{}
 	SetInstanceLifecycleConfig(val interface{})
 	InternetAccess() interface{}
@@ -85,10 +89,16 @@ type RosFunction interface {
 	RosResourceType() *string
 	Runtime() interface{}
 	SetRuntime(val interface{})
+	SessionAffinity() interface{}
+	SetSessionAffinity(val interface{})
+	SessionAffinityConfig() interface{}
+	SetSessionAffinityConfig(val interface{})
 	// The stack in which this element is defined.
 	//
 	// RosElements must be defined within a stack scope (directly or indirectly).
 	Stack() alicloudroscdkcore.Stack
+	Tags() *[]*RosFunction_TagsProperty
+	SetTags(val *[]*RosFunction_TagsProperty)
 	Timeout() interface{}
 	SetTimeout(val interface{})
 	TracingConfig() interface{}
@@ -319,6 +329,16 @@ func (j *jsiiProxy_RosFunction) Description() interface{} {
 	return returns
 }
 
+func (j *jsiiProxy_RosFunction) DisableOndemand() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"disableOndemand",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_RosFunction) DiskSize() interface{} {
 	var returns interface{}
 	_jsii_.Get(
@@ -384,6 +404,16 @@ func (j *jsiiProxy_RosFunction) InstanceConcurrency() interface{} {
 	_jsii_.Get(
 		j,
 		"instanceConcurrency",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_RosFunction) InstanceIsolationMode() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"instanceIsolationMode",
 		&returns,
 	)
 	return returns
@@ -539,11 +569,41 @@ func (j *jsiiProxy_RosFunction) Runtime() interface{} {
 	return returns
 }
 
+func (j *jsiiProxy_RosFunction) SessionAffinity() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"sessionAffinity",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_RosFunction) SessionAffinityConfig() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"sessionAffinityConfig",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_RosFunction) Stack() alicloudroscdkcore.Stack {
 	var returns alicloudroscdkcore.Stack
 	_jsii_.Get(
 		j,
 		"stack",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_RosFunction) Tags() *[]*RosFunction_TagsProperty {
+	var returns *[]*RosFunction_TagsProperty
+	_jsii_.Get(
+		j,
+		"tags",
 		&returns,
 	)
 	return returns
@@ -683,6 +743,17 @@ func (j *jsiiProxy_RosFunction)SetDescription(val interface{}) {
 	)
 }
 
+func (j *jsiiProxy_RosFunction)SetDisableOndemand(val interface{}) {
+	if err := j.validateSetDisableOndemandParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"disableOndemand",
+		val,
+	)
+}
+
 func (j *jsiiProxy_RosFunction)SetDiskSize(val interface{}) {
 	if err := j.validateSetDiskSizeParameters(val); err != nil {
 		panic(err)
@@ -756,6 +827,17 @@ func (j *jsiiProxy_RosFunction)SetInstanceConcurrency(val interface{}) {
 	_jsii_.Set(
 		j,
 		"instanceConcurrency",
+		val,
+	)
+}
+
+func (j *jsiiProxy_RosFunction)SetInstanceIsolationMode(val interface{}) {
+	if err := j.validateSetInstanceIsolationModeParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"instanceIsolationMode",
 		val,
 	)
 }
@@ -855,6 +937,39 @@ func (j *jsiiProxy_RosFunction)SetRuntime(val interface{}) {
 	_jsii_.Set(
 		j,
 		"runtime",
+		val,
+	)
+}
+
+func (j *jsiiProxy_RosFunction)SetSessionAffinity(val interface{}) {
+	if err := j.validateSetSessionAffinityParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"sessionAffinity",
+		val,
+	)
+}
+
+func (j *jsiiProxy_RosFunction)SetSessionAffinityConfig(val interface{}) {
+	if err := j.validateSetSessionAffinityConfigParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"sessionAffinityConfig",
+		val,
+	)
+}
+
+func (j *jsiiProxy_RosFunction)SetTags(val *[]*RosFunction_TagsProperty) {
+	if err := j.validateSetTagsParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"tags",
 		val,
 	)
 }

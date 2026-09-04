@@ -9,6 +9,55 @@ import (
 
 func init() {
 	_jsii_.RegisterClass(
+		"@alicloud/ros-cdk-dts.ConsumerChannel",
+		reflect.TypeOf((*ConsumerChannel)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberMethod{JsiiMethod: "addCondition", GoMethod: "AddCondition"},
+			_jsii_.MemberMethod{JsiiMethod: "addCount", GoMethod: "AddCount"},
+			_jsii_.MemberMethod{JsiiMethod: "addDependency", GoMethod: "AddDependency"},
+			_jsii_.MemberMethod{JsiiMethod: "addResourceDesc", GoMethod: "AddResourceDesc"},
+			_jsii_.MemberMethod{JsiiMethod: "applyRemovalPolicy", GoMethod: "ApplyRemovalPolicy"},
+			_jsii_.MemberProperty{JsiiProperty: "attrConsumerGroupId", GoGetter: "AttrConsumerGroupId"},
+			_jsii_.MemberProperty{JsiiProperty: "attrConsumerGroupName", GoGetter: "AttrConsumerGroupName"},
+			_jsii_.MemberProperty{JsiiProperty: "attrConsumerGroupUserName", GoGetter: "AttrConsumerGroupUserName"},
+			_jsii_.MemberProperty{JsiiProperty: "attrDtsInstanceId", GoGetter: "AttrDtsInstanceId"},
+			_jsii_.MemberProperty{JsiiProperty: "attrDtsJobId", GoGetter: "AttrDtsJobId"},
+			_jsii_.MemberProperty{JsiiProperty: "enableResourcePropertyConstraint", GoGetter: "EnableResourcePropertyConstraint"},
+			_jsii_.MemberProperty{JsiiProperty: "env", GoGetter: "Env"},
+			_jsii_.MemberMethod{JsiiMethod: "fetchCondition", GoMethod: "FetchCondition"},
+			_jsii_.MemberMethod{JsiiMethod: "fetchDependency", GoMethod: "FetchDependency"},
+			_jsii_.MemberMethod{JsiiMethod: "fetchResourceDesc", GoMethod: "FetchResourceDesc"},
+			_jsii_.MemberMethod{JsiiMethod: "generatePhysicalName", GoMethod: "GeneratePhysicalName"},
+			_jsii_.MemberMethod{JsiiMethod: "getAtt", GoMethod: "GetAtt"},
+			_jsii_.MemberProperty{JsiiProperty: "id", GoGetter: "Id"},
+			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
+			_jsii_.MemberMethod{JsiiMethod: "onPrepare", GoMethod: "OnPrepare"},
+			_jsii_.MemberMethod{JsiiMethod: "onSynthesize", GoMethod: "OnSynthesize"},
+			_jsii_.MemberMethod{JsiiMethod: "onValidate", GoMethod: "OnValidate"},
+			_jsii_.MemberProperty{JsiiProperty: "physicalName", GoGetter: "PhysicalName"},
+			_jsii_.MemberMethod{JsiiMethod: "prepare", GoMethod: "Prepare"},
+			_jsii_.MemberProperty{JsiiProperty: "props", GoGetter: "Props"},
+			_jsii_.MemberProperty{JsiiProperty: "ref", GoGetter: "Ref"},
+			_jsii_.MemberProperty{JsiiProperty: "resource", GoGetter: "Resource"},
+			_jsii_.MemberProperty{JsiiProperty: "scope", GoGetter: "Scope"},
+			_jsii_.MemberMethod{JsiiMethod: "setMetadata", GoMethod: "SetMetadata"},
+			_jsii_.MemberProperty{JsiiProperty: "stack", GoGetter: "Stack"},
+			_jsii_.MemberMethod{JsiiMethod: "synthesize", GoMethod: "Synthesize"},
+			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
+			_jsii_.MemberMethod{JsiiMethod: "validate", GoMethod: "Validate"},
+		},
+		func() interface{} {
+			j := jsiiProxy_ConsumerChannel{}
+			_jsii_.InitJsiiProxy(&j.Type__alicloudroscdkcoreResource)
+			_jsii_.InitJsiiProxy(&j.jsiiProxy_IConsumerChannel)
+			return &j
+		},
+	)
+	_jsii_.RegisterStruct(
+		"@alicloud/ros-cdk-dts.ConsumerChannelProps",
+		reflect.TypeOf((*ConsumerChannelProps)(nil)).Elem(),
+	)
+	_jsii_.RegisterClass(
 		"@alicloud/ros-cdk-dts.ConsumerGroup",
 		reflect.TypeOf((*ConsumerGroup)(nil)).Elem(),
 		[]_jsii_.Member{
@@ -56,6 +105,26 @@ func init() {
 		reflect.TypeOf((*ConsumerGroupProps)(nil)).Elem(),
 	)
 	_jsii_.RegisterInterface(
+		"@alicloud/ros-cdk-dts.IConsumerChannel",
+		reflect.TypeOf((*IConsumerChannel)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberProperty{JsiiProperty: "attrConsumerGroupId", GoGetter: "AttrConsumerGroupId"},
+			_jsii_.MemberProperty{JsiiProperty: "attrConsumerGroupName", GoGetter: "AttrConsumerGroupName"},
+			_jsii_.MemberProperty{JsiiProperty: "attrConsumerGroupUserName", GoGetter: "AttrConsumerGroupUserName"},
+			_jsii_.MemberProperty{JsiiProperty: "attrDtsInstanceId", GoGetter: "AttrDtsInstanceId"},
+			_jsii_.MemberProperty{JsiiProperty: "attrDtsJobId", GoGetter: "AttrDtsJobId"},
+			_jsii_.MemberProperty{JsiiProperty: "env", GoGetter: "Env"},
+			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
+			_jsii_.MemberProperty{JsiiProperty: "props", GoGetter: "Props"},
+			_jsii_.MemberProperty{JsiiProperty: "stack", GoGetter: "Stack"},
+		},
+		func() interface{} {
+			j := jsiiProxy_IConsumerChannel{}
+			_jsii_.InitJsiiProxy(&j.Type__alicloudroscdkcoreIResource)
+			return &j
+		},
+	)
+	_jsii_.RegisterInterface(
 		"@alicloud/ros-cdk-dts.IConsumerGroup",
 		reflect.TypeOf((*IConsumerGroup)(nil)).Elem(),
 		[]_jsii_.Member{
@@ -86,6 +155,28 @@ func init() {
 		},
 		func() interface{} {
 			j := jsiiProxy_IInstance{}
+			_jsii_.InitJsiiProxy(&j.Type__alicloudroscdkcoreIResource)
+			return &j
+		},
+	)
+	_jsii_.RegisterInterface(
+		"@alicloud/ros-cdk-dts.IJobMonitorRule",
+		reflect.TypeOf((*IJobMonitorRule)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberProperty{JsiiProperty: "attrDelayRuleTime", GoGetter: "AttrDelayRuleTime"},
+			_jsii_.MemberProperty{JsiiProperty: "attrDtsJobId", GoGetter: "AttrDtsJobId"},
+			_jsii_.MemberProperty{JsiiProperty: "attrPeriod", GoGetter: "AttrPeriod"},
+			_jsii_.MemberProperty{JsiiProperty: "attrPhones", GoGetter: "AttrPhones"},
+			_jsii_.MemberProperty{JsiiProperty: "attrState", GoGetter: "AttrState"},
+			_jsii_.MemberProperty{JsiiProperty: "attrTimes", GoGetter: "AttrTimes"},
+			_jsii_.MemberProperty{JsiiProperty: "attrType", GoGetter: "AttrType"},
+			_jsii_.MemberProperty{JsiiProperty: "env", GoGetter: "Env"},
+			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
+			_jsii_.MemberProperty{JsiiProperty: "props", GoGetter: "Props"},
+			_jsii_.MemberProperty{JsiiProperty: "stack", GoGetter: "Stack"},
+		},
+		func() interface{} {
+			j := jsiiProxy_IJobMonitorRule{}
 			_jsii_.InitJsiiProxy(&j.Type__alicloudroscdkcoreIResource)
 			return &j
 		},
@@ -191,6 +282,57 @@ func init() {
 		reflect.TypeOf((*InstanceProps)(nil)).Elem(),
 	)
 	_jsii_.RegisterClass(
+		"@alicloud/ros-cdk-dts.JobMonitorRule",
+		reflect.TypeOf((*JobMonitorRule)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberMethod{JsiiMethod: "addCondition", GoMethod: "AddCondition"},
+			_jsii_.MemberMethod{JsiiMethod: "addCount", GoMethod: "AddCount"},
+			_jsii_.MemberMethod{JsiiMethod: "addDependency", GoMethod: "AddDependency"},
+			_jsii_.MemberMethod{JsiiMethod: "addResourceDesc", GoMethod: "AddResourceDesc"},
+			_jsii_.MemberMethod{JsiiMethod: "applyRemovalPolicy", GoMethod: "ApplyRemovalPolicy"},
+			_jsii_.MemberProperty{JsiiProperty: "attrDelayRuleTime", GoGetter: "AttrDelayRuleTime"},
+			_jsii_.MemberProperty{JsiiProperty: "attrDtsJobId", GoGetter: "AttrDtsJobId"},
+			_jsii_.MemberProperty{JsiiProperty: "attrPeriod", GoGetter: "AttrPeriod"},
+			_jsii_.MemberProperty{JsiiProperty: "attrPhones", GoGetter: "AttrPhones"},
+			_jsii_.MemberProperty{JsiiProperty: "attrState", GoGetter: "AttrState"},
+			_jsii_.MemberProperty{JsiiProperty: "attrTimes", GoGetter: "AttrTimes"},
+			_jsii_.MemberProperty{JsiiProperty: "attrType", GoGetter: "AttrType"},
+			_jsii_.MemberProperty{JsiiProperty: "enableResourcePropertyConstraint", GoGetter: "EnableResourcePropertyConstraint"},
+			_jsii_.MemberProperty{JsiiProperty: "env", GoGetter: "Env"},
+			_jsii_.MemberMethod{JsiiMethod: "fetchCondition", GoMethod: "FetchCondition"},
+			_jsii_.MemberMethod{JsiiMethod: "fetchDependency", GoMethod: "FetchDependency"},
+			_jsii_.MemberMethod{JsiiMethod: "fetchResourceDesc", GoMethod: "FetchResourceDesc"},
+			_jsii_.MemberMethod{JsiiMethod: "generatePhysicalName", GoMethod: "GeneratePhysicalName"},
+			_jsii_.MemberMethod{JsiiMethod: "getAtt", GoMethod: "GetAtt"},
+			_jsii_.MemberProperty{JsiiProperty: "id", GoGetter: "Id"},
+			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
+			_jsii_.MemberMethod{JsiiMethod: "onPrepare", GoMethod: "OnPrepare"},
+			_jsii_.MemberMethod{JsiiMethod: "onSynthesize", GoMethod: "OnSynthesize"},
+			_jsii_.MemberMethod{JsiiMethod: "onValidate", GoMethod: "OnValidate"},
+			_jsii_.MemberProperty{JsiiProperty: "physicalName", GoGetter: "PhysicalName"},
+			_jsii_.MemberMethod{JsiiMethod: "prepare", GoMethod: "Prepare"},
+			_jsii_.MemberProperty{JsiiProperty: "props", GoGetter: "Props"},
+			_jsii_.MemberProperty{JsiiProperty: "ref", GoGetter: "Ref"},
+			_jsii_.MemberProperty{JsiiProperty: "resource", GoGetter: "Resource"},
+			_jsii_.MemberProperty{JsiiProperty: "scope", GoGetter: "Scope"},
+			_jsii_.MemberMethod{JsiiMethod: "setMetadata", GoMethod: "SetMetadata"},
+			_jsii_.MemberProperty{JsiiProperty: "stack", GoGetter: "Stack"},
+			_jsii_.MemberMethod{JsiiMethod: "synthesize", GoMethod: "Synthesize"},
+			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
+			_jsii_.MemberMethod{JsiiMethod: "validate", GoMethod: "Validate"},
+		},
+		func() interface{} {
+			j := jsiiProxy_JobMonitorRule{}
+			_jsii_.InitJsiiProxy(&j.Type__alicloudroscdkcoreResource)
+			_jsii_.InitJsiiProxy(&j.jsiiProxy_IJobMonitorRule)
+			return &j
+		},
+	)
+	_jsii_.RegisterStruct(
+		"@alicloud/ros-cdk-dts.JobMonitorRuleProps",
+		reflect.TypeOf((*JobMonitorRuleProps)(nil)).Elem(),
+	)
+	_jsii_.RegisterClass(
 		"@alicloud/ros-cdk-dts.MigrationJob2",
 		reflect.TypeOf((*MigrationJob2)(nil)).Elem(),
 		[]_jsii_.Member{
@@ -236,6 +378,66 @@ func init() {
 	_jsii_.RegisterStruct(
 		"@alicloud/ros-cdk-dts.MigrationJob2Props",
 		reflect.TypeOf((*MigrationJob2Props)(nil)).Elem(),
+	)
+	_jsii_.RegisterClass(
+		"@alicloud/ros-cdk-dts.RosConsumerChannel",
+		reflect.TypeOf((*RosConsumerChannel)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberMethod{JsiiMethod: "addCondition", GoMethod: "AddCondition"},
+			_jsii_.MemberMethod{JsiiMethod: "addCount", GoMethod: "AddCount"},
+			_jsii_.MemberMethod{JsiiMethod: "addDeletionOverride", GoMethod: "AddDeletionOverride"},
+			_jsii_.MemberMethod{JsiiMethod: "addDependsOn", GoMethod: "AddDependsOn"},
+			_jsii_.MemberMethod{JsiiMethod: "addDesc", GoMethod: "AddDesc"},
+			_jsii_.MemberMethod{JsiiMethod: "addMetaData", GoMethod: "AddMetaData"},
+			_jsii_.MemberMethod{JsiiMethod: "addOverride", GoMethod: "AddOverride"},
+			_jsii_.MemberMethod{JsiiMethod: "addPropertyDeletionOverride", GoMethod: "AddPropertyDeletionOverride"},
+			_jsii_.MemberMethod{JsiiMethod: "addPropertyOverride", GoMethod: "AddPropertyOverride"},
+			_jsii_.MemberMethod{JsiiMethod: "addRosDependency", GoMethod: "AddRosDependency"},
+			_jsii_.MemberMethod{JsiiMethod: "applyRemovalPolicy", GoMethod: "ApplyRemovalPolicy"},
+			_jsii_.MemberProperty{JsiiProperty: "attrConsumerGroupId", GoGetter: "AttrConsumerGroupId"},
+			_jsii_.MemberProperty{JsiiProperty: "attrConsumerGroupName", GoGetter: "AttrConsumerGroupName"},
+			_jsii_.MemberProperty{JsiiProperty: "attrConsumerGroupUserName", GoGetter: "AttrConsumerGroupUserName"},
+			_jsii_.MemberProperty{JsiiProperty: "attrDtsInstanceId", GoGetter: "AttrDtsInstanceId"},
+			_jsii_.MemberProperty{JsiiProperty: "attrDtsJobId", GoGetter: "AttrDtsJobId"},
+			_jsii_.MemberProperty{JsiiProperty: "consumerGroupName", GoGetter: "ConsumerGroupName"},
+			_jsii_.MemberProperty{JsiiProperty: "consumerGroupPassword", GoGetter: "ConsumerGroupPassword"},
+			_jsii_.MemberProperty{JsiiProperty: "consumerGroupUserName", GoGetter: "ConsumerGroupUserName"},
+			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
+			_jsii_.MemberProperty{JsiiProperty: "dtsInstanceId", GoGetter: "DtsInstanceId"},
+			_jsii_.MemberProperty{JsiiProperty: "dtsJobId", GoGetter: "DtsJobId"},
+			_jsii_.MemberProperty{JsiiProperty: "enableResourcePropertyConstraint", GoGetter: "EnableResourcePropertyConstraint"},
+			_jsii_.MemberMethod{JsiiMethod: "fetchCondition", GoMethod: "FetchCondition"},
+			_jsii_.MemberMethod{JsiiMethod: "fetchDesc", GoMethod: "FetchDesc"},
+			_jsii_.MemberMethod{JsiiMethod: "fetchRosDependency", GoMethod: "FetchRosDependency"},
+			_jsii_.MemberMethod{JsiiMethod: "getAtt", GoMethod: "GetAtt"},
+			_jsii_.MemberProperty{JsiiProperty: "logicalId", GoGetter: "LogicalId"},
+			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
+			_jsii_.MemberMethod{JsiiMethod: "onPrepare", GoMethod: "OnPrepare"},
+			_jsii_.MemberMethod{JsiiMethod: "onSynthesize", GoMethod: "OnSynthesize"},
+			_jsii_.MemberMethod{JsiiMethod: "onValidate", GoMethod: "OnValidate"},
+			_jsii_.MemberMethod{JsiiMethod: "overrideLogicalId", GoMethod: "OverrideLogicalId"},
+			_jsii_.MemberMethod{JsiiMethod: "prepare", GoMethod: "Prepare"},
+			_jsii_.MemberProperty{JsiiProperty: "ref", GoGetter: "Ref"},
+			_jsii_.MemberMethod{JsiiMethod: "renderProperties", GoMethod: "RenderProperties"},
+			_jsii_.MemberProperty{JsiiProperty: "rosOptions", GoGetter: "RosOptions"},
+			_jsii_.MemberProperty{JsiiProperty: "rosProperties", GoGetter: "RosProperties"},
+			_jsii_.MemberProperty{JsiiProperty: "rosResourceType", GoGetter: "RosResourceType"},
+			_jsii_.MemberProperty{JsiiProperty: "stack", GoGetter: "Stack"},
+			_jsii_.MemberMethod{JsiiMethod: "synthesize", GoMethod: "Synthesize"},
+			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
+			_jsii_.MemberProperty{JsiiProperty: "updatedProperites", GoGetter: "UpdatedProperites"},
+			_jsii_.MemberMethod{JsiiMethod: "validate", GoMethod: "Validate"},
+			_jsii_.MemberMethod{JsiiMethod: "validateProperties", GoMethod: "ValidateProperties"},
+		},
+		func() interface{} {
+			j := jsiiProxy_RosConsumerChannel{}
+			_jsii_.InitJsiiProxy(&j.Type__alicloudroscdkcoreRosResource)
+			return &j
+		},
+	)
+	_jsii_.RegisterStruct(
+		"@alicloud/ros-cdk-dts.RosConsumerChannelProps",
+		reflect.TypeOf((*RosConsumerChannelProps)(nil)).Elem(),
 	)
 	_jsii_.RegisterClass(
 		"@alicloud/ros-cdk-dts.RosConsumerGroup",
@@ -325,9 +527,12 @@ func init() {
 			_jsii_.MemberMethod{JsiiMethod: "fetchDesc", GoMethod: "FetchDesc"},
 			_jsii_.MemberMethod{JsiiMethod: "fetchRosDependency", GoMethod: "FetchRosDependency"},
 			_jsii_.MemberMethod{JsiiMethod: "getAtt", GoMethod: "GetAtt"},
+			_jsii_.MemberProperty{JsiiProperty: "insightModule", GoGetter: "InsightModule"},
 			_jsii_.MemberProperty{JsiiProperty: "instanceClass", GoGetter: "InstanceClass"},
 			_jsii_.MemberProperty{JsiiProperty: "jobId", GoGetter: "JobId"},
 			_jsii_.MemberProperty{JsiiProperty: "logicalId", GoGetter: "LogicalId"},
+			_jsii_.MemberProperty{JsiiProperty: "maxDu", GoGetter: "MaxDu"},
+			_jsii_.MemberProperty{JsiiProperty: "minDu", GoGetter: "MinDu"},
 			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
 			_jsii_.MemberMethod{JsiiMethod: "onPrepare", GoMethod: "OnPrepare"},
 			_jsii_.MemberMethod{JsiiMethod: "onSynthesize", GoMethod: "OnSynthesize"},
@@ -365,6 +570,70 @@ func init() {
 		reflect.TypeOf((*RosInstanceProps)(nil)).Elem(),
 	)
 	_jsii_.RegisterClass(
+		"@alicloud/ros-cdk-dts.RosJobMonitorRule",
+		reflect.TypeOf((*RosJobMonitorRule)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberMethod{JsiiMethod: "addCondition", GoMethod: "AddCondition"},
+			_jsii_.MemberMethod{JsiiMethod: "addCount", GoMethod: "AddCount"},
+			_jsii_.MemberMethod{JsiiMethod: "addDeletionOverride", GoMethod: "AddDeletionOverride"},
+			_jsii_.MemberMethod{JsiiMethod: "addDependsOn", GoMethod: "AddDependsOn"},
+			_jsii_.MemberMethod{JsiiMethod: "addDesc", GoMethod: "AddDesc"},
+			_jsii_.MemberMethod{JsiiMethod: "addMetaData", GoMethod: "AddMetaData"},
+			_jsii_.MemberMethod{JsiiMethod: "addOverride", GoMethod: "AddOverride"},
+			_jsii_.MemberMethod{JsiiMethod: "addPropertyDeletionOverride", GoMethod: "AddPropertyDeletionOverride"},
+			_jsii_.MemberMethod{JsiiMethod: "addPropertyOverride", GoMethod: "AddPropertyOverride"},
+			_jsii_.MemberMethod{JsiiMethod: "addRosDependency", GoMethod: "AddRosDependency"},
+			_jsii_.MemberMethod{JsiiMethod: "applyRemovalPolicy", GoMethod: "ApplyRemovalPolicy"},
+			_jsii_.MemberProperty{JsiiProperty: "attrDelayRuleTime", GoGetter: "AttrDelayRuleTime"},
+			_jsii_.MemberProperty{JsiiProperty: "attrDtsJobId", GoGetter: "AttrDtsJobId"},
+			_jsii_.MemberProperty{JsiiProperty: "attrPeriod", GoGetter: "AttrPeriod"},
+			_jsii_.MemberProperty{JsiiProperty: "attrPhones", GoGetter: "AttrPhones"},
+			_jsii_.MemberProperty{JsiiProperty: "attrState", GoGetter: "AttrState"},
+			_jsii_.MemberProperty{JsiiProperty: "attrTimes", GoGetter: "AttrTimes"},
+			_jsii_.MemberProperty{JsiiProperty: "attrType", GoGetter: "AttrType"},
+			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
+			_jsii_.MemberProperty{JsiiProperty: "delayRuleTime", GoGetter: "DelayRuleTime"},
+			_jsii_.MemberProperty{JsiiProperty: "dtsJobId", GoGetter: "DtsJobId"},
+			_jsii_.MemberProperty{JsiiProperty: "enableResourcePropertyConstraint", GoGetter: "EnableResourcePropertyConstraint"},
+			_jsii_.MemberMethod{JsiiMethod: "fetchCondition", GoMethod: "FetchCondition"},
+			_jsii_.MemberMethod{JsiiMethod: "fetchDesc", GoMethod: "FetchDesc"},
+			_jsii_.MemberMethod{JsiiMethod: "fetchRosDependency", GoMethod: "FetchRosDependency"},
+			_jsii_.MemberMethod{JsiiMethod: "getAtt", GoMethod: "GetAtt"},
+			_jsii_.MemberProperty{JsiiProperty: "logicalId", GoGetter: "LogicalId"},
+			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
+			_jsii_.MemberMethod{JsiiMethod: "onPrepare", GoMethod: "OnPrepare"},
+			_jsii_.MemberMethod{JsiiMethod: "onSynthesize", GoMethod: "OnSynthesize"},
+			_jsii_.MemberMethod{JsiiMethod: "onValidate", GoMethod: "OnValidate"},
+			_jsii_.MemberMethod{JsiiMethod: "overrideLogicalId", GoMethod: "OverrideLogicalId"},
+			_jsii_.MemberProperty{JsiiProperty: "period", GoGetter: "Period"},
+			_jsii_.MemberProperty{JsiiProperty: "phones", GoGetter: "Phones"},
+			_jsii_.MemberMethod{JsiiMethod: "prepare", GoMethod: "Prepare"},
+			_jsii_.MemberProperty{JsiiProperty: "ref", GoGetter: "Ref"},
+			_jsii_.MemberMethod{JsiiMethod: "renderProperties", GoMethod: "RenderProperties"},
+			_jsii_.MemberProperty{JsiiProperty: "rosOptions", GoGetter: "RosOptions"},
+			_jsii_.MemberProperty{JsiiProperty: "rosProperties", GoGetter: "RosProperties"},
+			_jsii_.MemberProperty{JsiiProperty: "rosResourceType", GoGetter: "RosResourceType"},
+			_jsii_.MemberProperty{JsiiProperty: "stack", GoGetter: "Stack"},
+			_jsii_.MemberProperty{JsiiProperty: "state", GoGetter: "State"},
+			_jsii_.MemberMethod{JsiiMethod: "synthesize", GoMethod: "Synthesize"},
+			_jsii_.MemberProperty{JsiiProperty: "times", GoGetter: "Times"},
+			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
+			_jsii_.MemberProperty{JsiiProperty: "type", GoGetter: "Type"},
+			_jsii_.MemberProperty{JsiiProperty: "updatedProperites", GoGetter: "UpdatedProperites"},
+			_jsii_.MemberMethod{JsiiMethod: "validate", GoMethod: "Validate"},
+			_jsii_.MemberMethod{JsiiMethod: "validateProperties", GoMethod: "ValidateProperties"},
+		},
+		func() interface{} {
+			j := jsiiProxy_RosJobMonitorRule{}
+			_jsii_.InitJsiiProxy(&j.Type__alicloudroscdkcoreRosResource)
+			return &j
+		},
+	)
+	_jsii_.RegisterStruct(
+		"@alicloud/ros-cdk-dts.RosJobMonitorRuleProps",
+		reflect.TypeOf((*RosJobMonitorRuleProps)(nil)).Elem(),
+	)
+	_jsii_.RegisterClass(
 		"@alicloud/ros-cdk-dts.RosMigrationJob2",
 		reflect.TypeOf((*RosMigrationJob2)(nil)).Elem(),
 		[]_jsii_.Member{
@@ -393,6 +662,8 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "delayPhone", GoGetter: "DelayPhone"},
 			_jsii_.MemberProperty{JsiiProperty: "delayRuleTime", GoGetter: "DelayRuleTime"},
 			_jsii_.MemberProperty{JsiiProperty: "destinationEndpoint", GoGetter: "DestinationEndpoint"},
+			_jsii_.MemberProperty{JsiiProperty: "destPrimaryVswId", GoGetter: "DestPrimaryVswId"},
+			_jsii_.MemberProperty{JsiiProperty: "destSecondaryVswId", GoGetter: "DestSecondaryVswId"},
 			_jsii_.MemberProperty{JsiiProperty: "disasterRecoveryJob", GoGetter: "DisasterRecoveryJob"},
 			_jsii_.MemberProperty{JsiiProperty: "dtsBisLabel", GoGetter: "DtsBisLabel"},
 			_jsii_.MemberProperty{JsiiProperty: "dtsInstanceId", GoGetter: "DtsInstanceId"},
@@ -407,6 +678,8 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "fileOssUrl", GoGetter: "FileOssUrl"},
 			_jsii_.MemberMethod{JsiiMethod: "getAtt", GoMethod: "GetAtt"},
 			_jsii_.MemberProperty{JsiiProperty: "logicalId", GoGetter: "LogicalId"},
+			_jsii_.MemberProperty{JsiiProperty: "maxDu", GoGetter: "MaxDu"},
+			_jsii_.MemberProperty{JsiiProperty: "minDu", GoGetter: "MinDu"},
 			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
 			_jsii_.MemberMethod{JsiiMethod: "onPrepare", GoMethod: "OnPrepare"},
 			_jsii_.MemberMethod{JsiiMethod: "onSynthesize", GoMethod: "OnSynthesize"},
@@ -416,10 +689,13 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "ref", GoGetter: "Ref"},
 			_jsii_.MemberMethod{JsiiMethod: "renderProperties", GoMethod: "RenderProperties"},
 			_jsii_.MemberProperty{JsiiProperty: "reserve", GoGetter: "Reserve"},
+			_jsii_.MemberProperty{JsiiProperty: "resourceGroupId", GoGetter: "ResourceGroupId"},
 			_jsii_.MemberProperty{JsiiProperty: "rosOptions", GoGetter: "RosOptions"},
 			_jsii_.MemberProperty{JsiiProperty: "rosProperties", GoGetter: "RosProperties"},
 			_jsii_.MemberProperty{JsiiProperty: "rosResourceType", GoGetter: "RosResourceType"},
 			_jsii_.MemberProperty{JsiiProperty: "sourceEndpoint", GoGetter: "SourceEndpoint"},
+			_jsii_.MemberProperty{JsiiProperty: "srcPrimaryVswId", GoGetter: "SrcPrimaryVswId"},
+			_jsii_.MemberProperty{JsiiProperty: "srcSecondaryVswId", GoGetter: "SrcSecondaryVswId"},
 			_jsii_.MemberProperty{JsiiProperty: "stack", GoGetter: "Stack"},
 			_jsii_.MemberProperty{JsiiProperty: "status", GoGetter: "Status"},
 			_jsii_.MemberProperty{JsiiProperty: "structureInitialization", GoGetter: "StructureInitialization"},
@@ -476,6 +752,8 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "delayNotice", GoGetter: "DelayNotice"},
 			_jsii_.MemberProperty{JsiiProperty: "delayPhone", GoGetter: "DelayPhone"},
 			_jsii_.MemberProperty{JsiiProperty: "delayRuleTime", GoGetter: "DelayRuleTime"},
+			_jsii_.MemberProperty{JsiiProperty: "destPrimaryVswId", GoGetter: "DestPrimaryVswId"},
+			_jsii_.MemberProperty{JsiiProperty: "destSecondaryVswId", GoGetter: "DestSecondaryVswId"},
 			_jsii_.MemberProperty{JsiiProperty: "dtsBisLabel", GoGetter: "DtsBisLabel"},
 			_jsii_.MemberProperty{JsiiProperty: "dtsInstanceId", GoGetter: "DtsInstanceId"},
 			_jsii_.MemberProperty{JsiiProperty: "dtsJobId", GoGetter: "DtsJobId"},
@@ -488,6 +766,8 @@ func init() {
 			_jsii_.MemberMethod{JsiiMethod: "fetchRosDependency", GoMethod: "FetchRosDependency"},
 			_jsii_.MemberMethod{JsiiMethod: "getAtt", GoMethod: "GetAtt"},
 			_jsii_.MemberProperty{JsiiProperty: "logicalId", GoGetter: "LogicalId"},
+			_jsii_.MemberProperty{JsiiProperty: "maxDu", GoGetter: "MaxDu"},
+			_jsii_.MemberProperty{JsiiProperty: "minDu", GoGetter: "MinDu"},
 			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
 			_jsii_.MemberMethod{JsiiMethod: "onPrepare", GoMethod: "OnPrepare"},
 			_jsii_.MemberMethod{JsiiMethod: "onSynthesize", GoMethod: "OnSynthesize"},
@@ -497,10 +777,13 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "ref", GoGetter: "Ref"},
 			_jsii_.MemberMethod{JsiiMethod: "renderProperties", GoMethod: "RenderProperties"},
 			_jsii_.MemberProperty{JsiiProperty: "reserve", GoGetter: "Reserve"},
+			_jsii_.MemberProperty{JsiiProperty: "resourceGroupId", GoGetter: "ResourceGroupId"},
 			_jsii_.MemberProperty{JsiiProperty: "rosOptions", GoGetter: "RosOptions"},
 			_jsii_.MemberProperty{JsiiProperty: "rosProperties", GoGetter: "RosProperties"},
 			_jsii_.MemberProperty{JsiiProperty: "rosResourceType", GoGetter: "RosResourceType"},
 			_jsii_.MemberProperty{JsiiProperty: "sourceEndpoint", GoGetter: "SourceEndpoint"},
+			_jsii_.MemberProperty{JsiiProperty: "srcPrimaryVswId", GoGetter: "SrcPrimaryVswId"},
+			_jsii_.MemberProperty{JsiiProperty: "srcSecondaryVswId", GoGetter: "SrcSecondaryVswId"},
 			_jsii_.MemberProperty{JsiiProperty: "stack", GoGetter: "Stack"},
 			_jsii_.MemberProperty{JsiiProperty: "status", GoGetter: "Status"},
 			_jsii_.MemberProperty{JsiiProperty: "subscriptionDataType", GoGetter: "SubscriptionDataType"},
@@ -562,6 +845,8 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "delayPhone", GoGetter: "DelayPhone"},
 			_jsii_.MemberProperty{JsiiProperty: "delayRuleTime", GoGetter: "DelayRuleTime"},
 			_jsii_.MemberProperty{JsiiProperty: "destinationEndpoint", GoGetter: "DestinationEndpoint"},
+			_jsii_.MemberProperty{JsiiProperty: "destPrimaryVswId", GoGetter: "DestPrimaryVswId"},
+			_jsii_.MemberProperty{JsiiProperty: "destSecondaryVswId", GoGetter: "DestSecondaryVswId"},
 			_jsii_.MemberProperty{JsiiProperty: "disasterRecoveryJob", GoGetter: "DisasterRecoveryJob"},
 			_jsii_.MemberProperty{JsiiProperty: "dtsBisLabel", GoGetter: "DtsBisLabel"},
 			_jsii_.MemberProperty{JsiiProperty: "dtsInstanceId", GoGetter: "DtsInstanceId"},
@@ -576,6 +861,8 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "fileOssUrl", GoGetter: "FileOssUrl"},
 			_jsii_.MemberMethod{JsiiMethod: "getAtt", GoMethod: "GetAtt"},
 			_jsii_.MemberProperty{JsiiProperty: "logicalId", GoGetter: "LogicalId"},
+			_jsii_.MemberProperty{JsiiProperty: "maxDu", GoGetter: "MaxDu"},
+			_jsii_.MemberProperty{JsiiProperty: "minDu", GoGetter: "MinDu"},
 			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
 			_jsii_.MemberMethod{JsiiMethod: "onPrepare", GoMethod: "OnPrepare"},
 			_jsii_.MemberMethod{JsiiMethod: "onSynthesize", GoMethod: "OnSynthesize"},
@@ -585,10 +872,13 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "ref", GoGetter: "Ref"},
 			_jsii_.MemberMethod{JsiiMethod: "renderProperties", GoMethod: "RenderProperties"},
 			_jsii_.MemberProperty{JsiiProperty: "reserve", GoGetter: "Reserve"},
+			_jsii_.MemberProperty{JsiiProperty: "resourceGroupId", GoGetter: "ResourceGroupId"},
 			_jsii_.MemberProperty{JsiiProperty: "rosOptions", GoGetter: "RosOptions"},
 			_jsii_.MemberProperty{JsiiProperty: "rosProperties", GoGetter: "RosProperties"},
 			_jsii_.MemberProperty{JsiiProperty: "rosResourceType", GoGetter: "RosResourceType"},
 			_jsii_.MemberProperty{JsiiProperty: "sourceEndpoint", GoGetter: "SourceEndpoint"},
+			_jsii_.MemberProperty{JsiiProperty: "srcPrimaryVswId", GoGetter: "SrcPrimaryVswId"},
+			_jsii_.MemberProperty{JsiiProperty: "srcSecondaryVswId", GoGetter: "SrcSecondaryVswId"},
 			_jsii_.MemberProperty{JsiiProperty: "stack", GoGetter: "Stack"},
 			_jsii_.MemberProperty{JsiiProperty: "status", GoGetter: "Status"},
 			_jsii_.MemberProperty{JsiiProperty: "structureInitialization", GoGetter: "StructureInitialization"},

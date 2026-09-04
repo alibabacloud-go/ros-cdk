@@ -9,19 +9,23 @@ import (
 	"github.com/aws/constructs-go/constructs/v3"
 )
 
-// This class is a base encapsulation around the ROS resource type `ALIYUN::CS::ClusterApplication`, which is used to deploy an application in a Container Service for Kubernetes (ACK) cluster.
+// This class is a base encapsulation around the ROS resource type `ALIYUN::CS::ClusterApplication`.
 type RosClusterApplication interface {
 	alicloudroscdkcore.RosResource
 	AttrClusterId() alicloudroscdkcore.IResolvable
 	AttrWaitUntilData() alicloudroscdkcore.IResolvable
 	ClusterId() interface{}
 	SetClusterId(val interface{})
+	CreationMode() interface{}
+	SetCreationMode(val interface{})
 	// Returns: the stack trace of the point where this Resource was created from, sourced
 	// from the +metadata+ entry typed +aliyun:ros:logicalId+, and with the bottom-most
 	// node +internal+ entries filtered.
 	CreationStack() *[]*string
 	DefaultNamespace() interface{}
 	SetDefaultNamespace(val interface{})
+	DefaultNamespaceDeletion() interface{}
+	SetDefaultNamespaceDeletion(val interface{})
 	EnableResourcePropertyConstraint() *bool
 	SetEnableResourcePropertyConstraint(val *bool)
 	// The logical ID for this stack element.
@@ -214,6 +218,16 @@ func (j *jsiiProxy_RosClusterApplication) ClusterId() interface{} {
 	return returns
 }
 
+func (j *jsiiProxy_RosClusterApplication) CreationMode() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"creationMode",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_RosClusterApplication) CreationStack() *[]*string {
 	var returns *[]*string
 	_jsii_.Get(
@@ -229,6 +243,16 @@ func (j *jsiiProxy_RosClusterApplication) DefaultNamespace() interface{} {
 	_jsii_.Get(
 		j,
 		"defaultNamespace",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_RosClusterApplication) DefaultNamespaceDeletion() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"defaultNamespaceDeletion",
 		&returns,
 	)
 	return returns
@@ -413,6 +437,17 @@ func (j *jsiiProxy_RosClusterApplication)SetClusterId(val interface{}) {
 	)
 }
 
+func (j *jsiiProxy_RosClusterApplication)SetCreationMode(val interface{}) {
+	if err := j.validateSetCreationModeParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"creationMode",
+		val,
+	)
+}
+
 func (j *jsiiProxy_RosClusterApplication)SetDefaultNamespace(val interface{}) {
 	if err := j.validateSetDefaultNamespaceParameters(val); err != nil {
 		panic(err)
@@ -420,6 +455,17 @@ func (j *jsiiProxy_RosClusterApplication)SetDefaultNamespace(val interface{}) {
 	_jsii_.Set(
 		j,
 		"defaultNamespace",
+		val,
+	)
+}
+
+func (j *jsiiProxy_RosClusterApplication)SetDefaultNamespaceDeletion(val interface{}) {
+	if err := j.validateSetDefaultNamespaceDeletionParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"defaultNamespaceDeletion",
 		val,
 	)
 }

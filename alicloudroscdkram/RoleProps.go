@@ -5,7 +5,12 @@ package alicloudroscdkram
 //
 // See https://www.alibabacloud.com/help/ros/developer-reference/aliyun-ram-role
 type RoleProps struct {
-	// Property assumeRolePolicyDocument: The RAM assume role policy that is associated with this role.
+	// Property assumeRolePolicyDocument: The trust policy that specifies one or more trusted entities allowed to assume the RAM role.
+	//
+	// Trusted entities can be cloud accounts, cloud
+	// services, or identity providers (IdPs).
+	// > RAM users cannot assume RAM roles whose trusted entity is a cloud
+	// service.
 	AssumeRolePolicyDocument interface{} `field:"required" json:"assumeRolePolicyDocument" yaml:"assumeRolePolicyDocument"`
 	// Property roleName: Specifies the role name, containing up to 64 characters.
 	RoleName interface{} `field:"required" json:"roleName" yaml:"roleName"`
@@ -26,5 +31,9 @@ type RoleProps struct {
 	Policies interface{} `field:"optional" json:"policies" yaml:"policies"`
 	// Property policyAttachments: System and custom policy names to attach.
 	PolicyAttachments interface{} `field:"optional" json:"policyAttachments" yaml:"policyAttachments"`
+	// Property tags: Tags to attach to role.
+	//
+	// Max support 20 tags to add during create role. Each tag with two properties Key and Value, and Key is required.
+	Tags *[]*RosRole_TagsProperty `field:"optional" json:"tags" yaml:"tags"`
 }
 

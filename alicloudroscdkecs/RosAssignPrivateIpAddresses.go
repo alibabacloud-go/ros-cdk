@@ -9,9 +9,7 @@ import (
 	"github.com/aws/constructs-go/constructs/v3"
 )
 
-// This class is a base encapsulation around the ROS resource type `ALIYUN::ECS::AssignPrivateIpAddresses`, which is used to assign one or more secondary private IP addresses to an ENI.
-//
-// You can specify private IP addresses within the CIDR block of the vSwitch that hosts the ENI. You can also specify the number of private IP addresses for ECS to assign them automatically.
+// This class is a base encapsulation around the ROS resource type `ALIYUN::ECS::AssignPrivateIpAddresses`.
 type RosAssignPrivateIpAddresses interface {
 	alicloudroscdkcore.RosResource
 	AttrNetworkInterfaceId() alicloudroscdkcore.IResolvable

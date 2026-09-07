@@ -19,11 +19,20 @@ type ClusterHelmApplicationProps struct {
 	//
 	// Only take effects when ChartUrl is the address of ACR repo.
 	Credential interface{} `field:"optional" json:"credential" yaml:"credential"`
+	// Property ignoreExisting: How to ignore existing helm application: Disabled(default): If a helm application with the same name exists, an error will be reported when creating it.
+	//
+	// SkipInstallIfExisting: If there is a helm application with the same name, the helm application creation process will be ignored.
+	// SkipAllOperationsIfExisting: If there is a helm application with the same name, the helm application creation process will be ignored. If the helm application is not created by this resource, it will be ignored during update and delete stage.
+	IgnoreExisting interface{} `field:"optional" json:"ignoreExisting" yaml:"ignoreExisting"`
 	// Property namespace: Namespace to use with helm.
 	//
 	// Default is default.
 	// If the Namespace does not exist, ROS will automatically create it and delete it during the deletion phase.
 	Namespace interface{} `field:"optional" json:"namespace" yaml:"namespace"`
+	// Property namespaceDeletion: Whether to delete the namespace specified.
+	//
+	// If Namespace is in ('default', 'kube-node-lease', 'kube-public', 'kube-system', 'arms-prom'), no matter whether NamespaceDeletion is true or not, it will not be deleted.
+	NamespaceDeletion interface{} `field:"optional" json:"namespaceDeletion" yaml:"namespaceDeletion"`
 	// Property rolePolicy: Before deploying the application, check the policies associated with the roles of the current user.
 	//
 	// Valid values:

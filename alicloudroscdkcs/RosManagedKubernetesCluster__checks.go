@@ -295,6 +295,30 @@ func (j *jsiiProxy_RosManagedKubernetesCluster) validateSetAddonsParameters(val 
 	return nil
 }
 
+func (j *jsiiProxy_RosManagedKubernetesCluster) validateSetAutoModeParameters(val interface{}) error {
+	switch val.(type) {
+	case alicloudroscdkcore.IResolvable:
+		// ok
+	case *RosManagedKubernetesCluster_AutoModeProperty:
+		val := val.(*RosManagedKubernetesCluster_AutoModeProperty)
+		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
+			return err
+		}
+	case RosManagedKubernetesCluster_AutoModeProperty:
+		val_ := val.(RosManagedKubernetesCluster_AutoModeProperty)
+		val := &val_
+		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
+			return err
+		}
+	default:
+		if !_jsii_.IsAnonymousProxy(val) {
+			return fmt.Errorf("parameter val must be one of the allowed types: alicloudroscdkcore.IResolvable, *RosManagedKubernetesCluster_AutoModeProperty; received %#v (a %T)", val, val)
+		}
+	}
+
+	return nil
+}
+
 func (j *jsiiProxy_RosManagedKubernetesCluster) validateSetCloudMonitorFlagsParameters(val interface{}) error {
 	switch val.(type) {
 	case *bool:
@@ -596,6 +620,23 @@ func (j *jsiiProxy_RosManagedKubernetesCluster) validateSetFormatDiskParameters(
 	default:
 		if !_jsii_.IsAnonymousProxy(val) {
 			return fmt.Errorf("parameter val must be one of the allowed types: *bool, alicloudroscdkcore.IResolvable; received %#v (a %T)", val, val)
+		}
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_RosManagedKubernetesCluster) validateSetIpStackParameters(val interface{}) error {
+	switch val.(type) {
+	case *string:
+		// ok
+	case string:
+		// ok
+	case alicloudroscdkcore.IResolvable:
+		// ok
+	default:
+		if !_jsii_.IsAnonymousProxy(val) {
+			return fmt.Errorf("parameter val must be one of the allowed types: *string, alicloudroscdkcore.IResolvable; received %#v (a %T)", val, val)
 		}
 	}
 
@@ -956,6 +997,30 @@ func (j *jsiiProxy_RosManagedKubernetesCluster) validateSetResourceGroupIdParame
 	return nil
 }
 
+func (j *jsiiProxy_RosManagedKubernetesCluster) validateSetRrsaConfigParameters(val interface{}) error {
+	switch val.(type) {
+	case alicloudroscdkcore.IResolvable:
+		// ok
+	case *RosManagedKubernetesCluster_RrsaConfigProperty:
+		val := val.(*RosManagedKubernetesCluster_RrsaConfigProperty)
+		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
+			return err
+		}
+	case RosManagedKubernetesCluster_RrsaConfigProperty:
+		val_ := val.(RosManagedKubernetesCluster_RrsaConfigProperty)
+		val := &val_
+		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
+			return err
+		}
+	default:
+		if !_jsii_.IsAnonymousProxy(val) {
+			return fmt.Errorf("parameter val must be one of the allowed types: alicloudroscdkcore.IResolvable, *RosManagedKubernetesCluster_RrsaConfigProperty; received %#v (a %T)", val, val)
+		}
+	}
+
+	return nil
+}
+
 func (j *jsiiProxy_RosManagedKubernetesCluster) validateSetRuntimeParameters(val interface{}) error {
 	switch val.(type) {
 	case alicloudroscdkcore.IResolvable:
@@ -1149,6 +1214,23 @@ func (j *jsiiProxy_RosManagedKubernetesCluster) validateSetTimeoutMinsParameters
 	return nil
 }
 
+func (j *jsiiProxy_RosManagedKubernetesCluster) validateSetTimeZoneParameters(val interface{}) error {
+	switch val.(type) {
+	case *string:
+		// ok
+	case string:
+		// ok
+	case alicloudroscdkcore.IResolvable:
+		// ok
+	default:
+		if !_jsii_.IsAnonymousProxy(val) {
+			return fmt.Errorf("parameter val must be one of the allowed types: *string, alicloudroscdkcore.IResolvable; received %#v (a %T)", val, val)
+		}
+	}
+
+	return nil
+}
+
 func (j *jsiiProxy_RosManagedKubernetesCluster) validateSetUserDataParameters(val interface{}) error {
 	switch val.(type) {
 	case *string:
@@ -1180,6 +1262,55 @@ func (j *jsiiProxy_RosManagedKubernetesCluster) validateSetVpcIdParameters(val i
 	default:
 		if !_jsii_.IsAnonymousProxy(val) {
 			return fmt.Errorf("parameter val must be one of the allowed types: *string, alicloudroscdkcore.IResolvable; received %#v (a %T)", val, val)
+		}
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_RosManagedKubernetesCluster) validateSetVSwitchIdsParameters(val interface{}) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+	switch val.(type) {
+	case alicloudroscdkcore.IResolvable:
+		// ok
+	case *[]interface{}:
+		val := val.(*[]interface{})
+		for idx_97dfc6, v := range *val {
+			switch v.(type) {
+			case *string:
+				// ok
+			case string:
+				// ok
+			case alicloudroscdkcore.IResolvable:
+				// ok
+			default:
+				if !_jsii_.IsAnonymousProxy(v) {
+					return fmt.Errorf("parameter val[%#v] must be one of the allowed types: *string, alicloudroscdkcore.IResolvable; received %#v (a %T)", idx_97dfc6, v, v)
+				}
+			}
+		}
+	case []interface{}:
+		val_ := val.([]interface{})
+		val := &val_
+		for idx_97dfc6, v := range *val {
+			switch v.(type) {
+			case *string:
+				// ok
+			case string:
+				// ok
+			case alicloudroscdkcore.IResolvable:
+				// ok
+			default:
+				if !_jsii_.IsAnonymousProxy(v) {
+					return fmt.Errorf("parameter val[%#v] must be one of the allowed types: *string, alicloudroscdkcore.IResolvable; received %#v (a %T)", idx_97dfc6, v, v)
+				}
+			}
+		}
+	default:
+		if !_jsii_.IsAnonymousProxy(val) {
+			return fmt.Errorf("parameter val must be one of the allowed types: alicloudroscdkcore.IResolvable, *[]interface{}; received %#v (a %T)", val, val)
 		}
 	}
 

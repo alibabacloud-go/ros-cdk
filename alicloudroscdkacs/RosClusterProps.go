@@ -8,13 +8,17 @@ type RosClusterProps struct {
 	Name interface{} `field:"required" json:"name" yaml:"name"`
 	Addons interface{} `field:"optional" json:"addons" yaml:"addons"`
 	ClusterSpec interface{} `field:"optional" json:"clusterSpec" yaml:"clusterSpec"`
+	ComputeClass interface{} `field:"optional" json:"computeClass" yaml:"computeClass"`
+	DeleteOptions interface{} `field:"optional" json:"deleteOptions" yaml:"deleteOptions"`
 	DeletionProtection interface{} `field:"optional" json:"deletionProtection" yaml:"deletionProtection"`
 	EndpointPublicAccess interface{} `field:"optional" json:"endpointPublicAccess" yaml:"endpointPublicAccess"`
 	IpStack interface{} `field:"optional" json:"ipStack" yaml:"ipStack"`
+	IsEnterpriseSecurityGroup interface{} `field:"optional" json:"isEnterpriseSecurityGroup" yaml:"isEnterpriseSecurityGroup"`
 	KubernetesVersion interface{} `field:"optional" json:"kubernetesVersion" yaml:"kubernetesVersion"`
 	LoadBalancerSpec interface{} `field:"optional" json:"loadBalancerSpec" yaml:"loadBalancerSpec"`
 	LoggingType interface{} `field:"optional" json:"loggingType" yaml:"loggingType"`
 	MaintenanceWindow interface{} `field:"optional" json:"maintenanceWindow" yaml:"maintenanceWindow"`
+	PodPostpaidSpec interface{} `field:"optional" json:"podPostpaidSpec" yaml:"podPostpaidSpec"`
 	PodVSwitchIds interface{} `field:"optional" json:"podVSwitchIds" yaml:"podVSwitchIds"`
 	ResourceGroupId interface{} `field:"optional" json:"resourceGroupId" yaml:"resourceGroupId"`
 	ServiceCidr interface{} `field:"optional" json:"serviceCidr" yaml:"serviceCidr"`
